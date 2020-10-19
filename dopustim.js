@@ -29,9 +29,9 @@ client.on("message", (msg) => {
     if (msg.content === "Ghbdtn") {
             msg.reply(' я тебя не понял, но привет');
     }
-    //if (msg.content === "Привет") {
-    //        msg.channel.send('Привет');
-    //}
+    if (msg.content === "одиночество") {
+            msg.channel.send('loneliness');
+    }
     if (msg.content.startsWith("я тут подумал")) {
             msg.channel.send('Не говори вслух, ты понижаешь IQ всей улицы');
     }

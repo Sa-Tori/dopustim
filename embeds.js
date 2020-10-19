@@ -32,6 +32,21 @@ client.on("ready", () => {
         .setImage("http://bestanimations.com/media/dragons/1758478091dragon-animated-gif-69.gif");
     message.channel.send(embed);
   }
+  if (message.content === "Одиночество") {
+    const embed = new MessageEmbed()
+        .setTitle("Всегда рядом")
+        .setColor(0x0d004d)
+        .setImage("https://media1.tenor.com/images/a5a88dd6f4b00b44361ec7ef55b85dd4/tenor.gif?itemid=7636561");
+    message.channel.send(embed);
+  }
+  if (message.content === "доброе утро") {
+    const embed = new MessageEmbed()
+        .setTitle("Ооооо, Утро")
+        .setDescription("Ну уж нет, я еще посплю")
+        .setColor(0x0d004d)
+        .setImage("https://i.gifer.com/Kzlh.gif");
+    message.channel.send(embed);
+  }
 });
 
 client.on('message', msg => {
