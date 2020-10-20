@@ -12,7 +12,7 @@ client.cmd_limiter=-1;//создаем переменную, где будет �
 client.on("message", async (message) => {try{
   
  let now = new Date().getTime();
-   if(message.content.startsWith('Картус ультуй')&&!message.author.bot){
+   if(message.content.startsWith('Картус ультуй') || message.content.startsWith('Картус где ганги') && !message.author.bot){
        if(client.cmd_limiter>now){
            
            let tag = client.cmd_limiter-now;

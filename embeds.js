@@ -45,7 +45,7 @@ client.on("ready", () => {
     if (message.author.id === "405109483396661268") {
         const embed = new MessageEmbed()
             .setTitle("Всегда рядом")
-            .setDescription("<@" + message.author.id + ">")
+            .setDescription(message.author)
             .setColor(0x0d004d)
             .setImage("https://media1.tenor.com/images/a5a88dd6f4b00b44361ec7ef55b85dd4/tenor.gif?itemid=7636561");
         message.channel.send(embed);
@@ -54,6 +54,23 @@ client.on("ready", () => {
             .setTitle("Да что ты знаешь об одиночестве??")
             .setColor(0x0d004d)
             .setImage("https://i.imgur.com/XWSzl8R.gif");
+        message.channel.send(embed);
+    }
+  }
+  if (message.content.toLowerCase() == "спокойной ночи") { //&& message.author.id === "405109483396661268"
+    if (message.author.id === "405109483396661268") {
+        const embed = new MessageEmbed()
+            .setTitle("И тебе, мой сладкий) <:1Rem:684121137386487833>")
+            .setDescription(message.author)
+            .setColor(0x0d004d)
+            .setImage("https://tenor.com/view/sleeping-kiss-hug-anime-gif-15619689");
+        message.channel.send(embed);
+    } else {
+        const embed = new MessageEmbed()
+            .setTitle("Я пока не знаю что тебе ответить...")
+            .setColor(0x0d004d)
+            .setDescription(message.author);
+            //.setVideo("https://media.tenor.co/videos/0816eaeed49fd319ab385fcaf2643d48/mp4");
         message.channel.send(embed);
     }
   }
@@ -91,7 +108,6 @@ if (msg.content === 'утра') {
         .setColor(0x0d004d)
         .setImage(word);
     msg.channel.send(embed);
- // msg.channel.send(word);
 }
 });
 
