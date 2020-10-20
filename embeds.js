@@ -25,19 +25,37 @@ client.on("ready", () => {
         .setImage("https://media.discordapp.net/attachments/499796673598586941/526742577878401035/24728.gif");
     message.channel.send(embed);
   }
-  if (message.content === ".Утра") {
+  if (message.content === "мех") {
+    if (message.author.id === "542663623789641729") {
     const embed = new MessageEmbed()
-        .setTitle("И тебе, мой сладкий)")
+        .setTitle("Мех")
         .setColor(0x0d004d)
         .setImage("http://bestanimations.com/media/dragons/1758478091dragon-animated-gif-69.gif");
     message.channel.send(embed);
+  } else {
+    const embed = new MessageEmbed()
+        .setTitle("Ты кто??")
+        .setColor(0x0d004d)
+        .setDescription("Досвидания, мне неприятно");
+       // .setImage("http://bestanimations.com/media/dragons/1758478091dragon-animated-gif-69.gif");
+    message.channel.send(embed);
+  }
   }
   if (message.content === "Одиночество") {
-    const embed = new MessageEmbed()
-        .setTitle("Всегда рядом")
-        .setColor(0x0d004d)
-        .setImage("https://media1.tenor.com/images/a5a88dd6f4b00b44361ec7ef55b85dd4/tenor.gif?itemid=7636561");
-    message.channel.send(embed);
+    if (message.author.id === "405109483396661268") {
+        const embed = new MessageEmbed()
+            .setTitle("Всегда рядом")
+            .setDescription("<@" + message.author.id + ">")
+            .setColor(0x0d004d)
+            .setImage("https://media1.tenor.com/images/a5a88dd6f4b00b44361ec7ef55b85dd4/tenor.gif?itemid=7636561");
+        message.channel.send(embed);
+    } else {
+        const embed = new MessageEmbed()
+            .setTitle("Да что ты знаешь об одиночестве??")
+            .setColor(0x0d004d)
+            .setImage("https://i.imgur.com/XWSzl8R.gif");
+        message.channel.send(embed);
+    }
   }
   if (message.content === "доброе утро") {
     const embed = new MessageEmbed()

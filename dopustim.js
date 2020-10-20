@@ -41,6 +41,13 @@ client.on("message", (msg) => {
     if (msg.content.startsWith("Картус хочешь роль?")) {
             msg.channel.send("Дайте мне пожалуйста роль @Пьяный Картус");
     }
+    if (msg.content.startsWith("С добрым утром")) {
+        if (msg.author.id === "297089757651927040") {
+            msg.channel.send("Здравствуй, <@" + msg.author.id + "> <:089:684120628734722048> ");
+        } else {
+            msg.channel.send("С каких пор утро доброе <:035:737098587728510996> ");
+        }
+    }
 
 });
 
