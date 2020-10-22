@@ -41,6 +41,9 @@ client.on("message", (msg) => {
     if (msg.content.startsWith("k!help")) {
             msg.channel.send("Ты за кого меня принимаешь??");
     }
+    if (msg.content.startsWith("K!HELP")) {
+            msg.channel.send("Не повышай на меня шрифт!");
+    }
     if (msg.content.startsWith("С добрым утром")) {
         if (msg.author.id === "297089757651927040") {
             msg.channel.send("Здравствуй, <@" + msg.author.id + "> <:089:684120628734722048> ");
@@ -48,10 +51,8 @@ client.on("message", (msg) => {
             msg.channel.send("С каких пор утро доброе <:035:737098587728510996> ");
         }
     }
-    if (msg.content.toLowerCase() == "картафилиус") {
-            msg.channel.send(`Время не стоит,
-Зло ли ты таишь в себе..
-Не поминай в суе.`);
+    if (msg.content.toLowerCase().indexOf("картафилиус")!=-1){
+            msg.channel.send("Время не стоит, \nЗло ли ты таишь в себе..\nНе поминай в суе.");
     }
     if (msg.content.toLowerCase() == "лень") {
             msg.channel.send("Олень");

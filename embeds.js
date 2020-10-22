@@ -1,4 +1,3 @@
-//'use strict';
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const { Client, MessageEmbed } = require('discord.js');
@@ -37,7 +36,6 @@ client.on("ready", () => {
         .setTitle("Ты кто??")
         .setColor(0x0d004d)
         .setDescription("Досвидания, мне неприятно");
-       // .setImage("http://bestanimations.com/media/dragons/1758478091dragon-animated-gif-69.gif");
     message.channel.send(embed);
   }
   }
@@ -70,7 +68,6 @@ client.on("ready", () => {
             .setTitle("Я пока не знаю что тебе ответить...")
             .setColor(0x0d004d)
             .setDescription(message.author);
-            //.setVideo("https://media.tenor.co/videos/0816eaeed49fd319ab385fcaf2643d48/mp4");
         message.channel.send(embed);
     }
   }
@@ -99,7 +96,6 @@ if (msg.content === 'утра') {
     "https://66.media.tumblr.com/2c1d62db5766573aed6b3c8d9b8c47e4/tumblr_n6ut5am3LQ1rmrywfo2_500.gif",
     "https://thumbs.gfycat.com/PessimisticPotableDuckbillplatypus-small.gif"
   ];
-
   const randomIndex = Math.floor(Math.random() * randomWords.length);
   const word = randomWords[randomIndex];
   const embed = new MessageEmbed()
@@ -109,6 +105,33 @@ if (msg.content === 'утра') {
         .setImage(word);
     msg.channel.send(embed);
 }
+if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
+  const randomWords = [
+    "https://i.imgur.com/BjoUh.gif",
+    "https://i.gifer.com/VkpB.gif",
+    "https://i.makeagif.com/media/12-03-2015/FDdSfM.gif",
+    "https://i.gifer.com/311q.gif",
+    "https://i.imgur.com/MgRSIYg.gif?noredirect",
+    "https://media1.tenor.com/images/d2d817f9f1a14f3805e6a7487169e5ee/tenor.gif?itemid=16584815",
+    "https://data.photofunky.net/output/image/c/c/b/3/ccb3c8/photofunky.gif",
+    "https://i.gifer.com/KbSl.gif",
+    "https://66.media.tumblr.com/tumblr_mbg6b3UyXh1qedvmno4_400.gif",
+    "https://i.gifer.com/IAQD.gif",
+    "https://69.media.tumblr.com/9e007d7f1fe860451b3cd86330333573/tumblr_oyo1dcqCto1r9dm6no1_400.gif",
+    "https://i.gifer.com/TffG.gif"
+  ];
+
+  const randomIndex = Math.floor(Math.random() * randomWords.length);
+  const word = randomWords[randomIndex];
+  const embed = new MessageEmbed()
+        //.setTitle("И тебе, радость моя)")
+        //.setDescription(msg.author)
+        .setColor(0x0d004d)
+        .setImage(word);
+    msg.channel.send(embed);
+}
+
+
 });
 
 
