@@ -3,8 +3,9 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 //подключенные файлы
-//const greeting = require("./greeting"); 
+//const greeting = require("./greeting");
 
+const replicas = require("./replicas");
 const avatars = require("./avatars");
 const embeds = require("./embeds");
 const theult = require("./theult"); 
@@ -18,7 +19,11 @@ client.on ("ready", () => {
 
 client.on("message", (msg) => {
     if (msg.content.startsWith("ping")) {
+        if (msg.author.id === "224197682510561280") {
+            msg.channel.send("Отстань от Кофуку ");
+        } else {
             msg.channel.send("pong");
+        }
     }
     if (msg.content.startsWith("картус где ганги")) {
             msg.channel.send("Никакого уважения..");
@@ -32,7 +37,7 @@ client.on("message", (msg) => {
     if (msg.content === "одиночество") {
             msg.channel.send('loneliness');
     }
-    if (msg.content.startsWith("я тут подумал")) {
+    if (msg.content.toLowerCase()("я тут подумал")) {
             msg.channel.send('Не говори вслух, ты понижаешь IQ всего сервера');
     }
     if (msg.content.startsWith("Допустим")) {
@@ -63,30 +68,12 @@ client.on("message", (msg) => {
     if (msg.content === "Тюлень" && msg.author.id === "523116257390886954") {
             msg.channel.send('Пельмень');
     }
-
+    if (msg.content.startsWith("MEH")) {
+            msg.channel.send("```diff\n- Тебе расчесать?```");            //"```md\n# Празднуйте свое уничтожение.```"); 
+    }
 });
 
 
-
-/*client.on('message', msg => {
-if (msg.content === 'рандом') {
-  const randomWords = [
-    ["key1"],
-    ["key2"],
-    ["key3"],
-    ["key4"],
-    ["key5"],
-    ["key6"]
-  ];
-
-  const randomIndex = Math.floor(Math.random() * randomWords.length);
-  const word = randomWords[randomIndex];
-
-  msg.channel.send(word);
-}
-});
-
-*/
 
 
 
