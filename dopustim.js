@@ -37,7 +37,7 @@ client.on("message", (msg) => {
     if (msg.content === "одиночество") {
             msg.channel.send('loneliness');
     }
-    if (msg.content.toLowerCase()("я тут подумал")) {
+    if (msg.content.startsWith("я тут подумал")) {
             msg.channel.send('Не говори вслух, ты понижаешь IQ всего сервера');
     }
     if (msg.content.startsWith("Допустим")) {
