@@ -14,7 +14,14 @@ const theult = require("./theult");
 
 client.on ("ready", () => {
  console.log("Ответы готовы");
-});
+ client.user.setPresence({
+        game: {
+            name: 'Я наблюдаю',
+            type: 0
+        },
+        status: 'online'
+    })
+ });
 
 
 client.on("message", (msg) => {
@@ -69,7 +76,7 @@ client.on("message", (msg) => {
             msg.channel.send('Пельмень');
     }
     if (msg.content.startsWith("MEH")) {
-            msg.channel.send("```diff\n- Тебе расчесать?```");            //"```md\n# Празднуйте свое уничтожение.```"); 
+            msg.channel.send("```diff\n- Тебе расчесать?```");         
     }
 });
 

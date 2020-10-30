@@ -85,7 +85,7 @@ function getStrof(s, w) {
 client.on("message", (msg) => {
  
 
-	if ((msg.guild.id == "622954155077533696" || msg.author.id == "542663623789641729" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
+	if ((msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.author.id == "542663623789641729" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
 		var m = msg.content; // получаем весь текст сообщения
 		var fl = 0;
 		if (msg.content.startsWith('ds')) { //если начинается с ds обрежем его и запомним, что так было в fl
@@ -98,7 +98,7 @@ client.on("message", (msg) => {
 		for (var i = 0; i < voice.length; i++) // находит все стихи, где есть это слово и записывает их в b
 			if (lowerCase(voice[i]).includes(rd))
 				b.push(voice[i]);
-		if (b.length != 0 && (getRandom(0, 50) == 13 || fl == 1)) { // если ести стихи с этим словом и рандом выпадает (или же у нас был запрос qt) отправим стих
+		if (b.length != 0 && (getRandom(0, 20) == 13 || fl == 1)) { // если ести стихи с этим словом и рандом выпадает (или же у нас был запрос qt) отправим стих
 			var t = getRandom(0, b.length); // выберем рандомный стих из b
 			msg.channel.send("```"+b[t]+"```"); // вот тут выберем предложение из стиха
 		}
