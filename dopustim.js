@@ -17,7 +17,7 @@ client.on ("ready", () => {
  client.user.setPresence({
         game: {
             name: 'Я наблюдаю',
-            type: 1
+            type: 2
         },
         status: 'online'
     })
