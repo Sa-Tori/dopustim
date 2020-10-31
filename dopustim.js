@@ -21,7 +21,7 @@ client.on ("ready", () => {
         },
         status: 'online'
     })
-  static void UpdatePresence()
+  /*static void UpdatePresence()
 {
     DiscordRichPresence discordPresence;
     memset(&discordPresence, 0, sizeof(discordPresence));
@@ -36,7 +36,7 @@ client.on ("ready", () => {
     discordPresence.partyMax = 5;
     discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
     Discord_UpdatePresence(&discordPresence);
-}
+}*/
  });
 
 
