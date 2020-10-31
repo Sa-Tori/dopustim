@@ -85,7 +85,7 @@ function getStrof(s, w) {
 client.on("message", (msg) => {
  
 
-	if ((msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.author.id == "542663623789641729" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
+	if ((msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
 		var m = msg.content; // получаем весь текст сообщения
 		var fl = 0;
 		if (msg.content.startsWith('ds')) { //если начинается с ds обрежем его и запомним, что так было в fl
