@@ -10,14 +10,18 @@ const avatars = require("./avatars");
 const embeds = require("./embeds");
 const theult = require("./theult"); 
 
+//дополнение
+
+const {noprefix, shprefix} = require('./poetry.json');
+
 //сообщения
 
 client.on ("ready", () => {
  console.log("Ответы готовы");
  client.user.setPresence({
         game: {
-            name: 'Я наблюдаю',
-            type: 2
+            name: 'в бездну',
+            type: 3
         },
         status: 'online'
     })
@@ -67,10 +71,10 @@ client.on("message", (msg) => {
     if (msg.content.startsWith("Допустим")) {
             msg.channel.send('???');
     }
-    if (msg.content.startsWith("k!help")) {
+    if (msg.content.startsWith(`${noprefix}`)) {
             msg.channel.send("Ты за кого меня принимаешь??");
     }
-    if (msg.content.startsWith("K!HELP")) {
+    if (msg.content.startsWith(`${shprefix}`)) {
             msg.channel.send("Не повышай на меня шрифт!");
     }
     if (msg.content.startsWith("С добрым утром")) {
