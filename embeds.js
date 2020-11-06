@@ -18,7 +18,7 @@ client.on("ready", () => {
       .setDescription("Досвидания, мне неприятно");
     message.channel.send(embed);
   }
-  if (message.content === "Утра") {
+  if (message.content === "Утра" && message.author.id === "542663623789641729") {
     const embed = new MessageEmbed()
         .setTitle("И тебе, мой сладкий)")
         .setColor(0x0d004d)
@@ -83,7 +83,7 @@ client.on("ready", () => {
 });
 
 client.on('message', msg => {
-if (msg.content.toLowerCase().indexOf("утр")!=-1 && msg.content != "доброе утро" && msg.content != "Утра") {
+if (msg.content.toLowerCase().indexOf("утро")!=-1 && msg.content != "доброе утро" || msg.content.toLowerCase().indexOf("утра")!=-1 || msg.content.toLowerCase().indexOf("утре")!=-1 || msg.content.toLowerCase().indexOf("утром")!=-1) {
   const dragon = poetry.dragon;
   const randomIndex = Math.floor(Math.random() * dragon.length);
   const word = dragon[randomIndex];
@@ -99,8 +99,6 @@ if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
   const randomIndex = Math.floor(Math.random() * nihua.length);
   const word = nihua[randomIndex];
   const embed = new MessageEmbed()
-        //.setTitle("И тебе, радость моя)")
-        //.setDescription(msg.author)
         .setColor(0x0d004d)
         .setImage(word);
     msg.channel.send(embed);

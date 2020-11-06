@@ -12,19 +12,20 @@ const theult = require("./theult");
 
 //дополнение
 
+const {poetry, alcohol} = require('./poetry.json');
 const {noprefix, shprefix} = require('./poetry.json');
 
 //сообщения
 
 client.on ("ready", () => {
- console.log("Ответы готовы");
- client.user.setPresence({
-        game: {
+    console.log("Ответы готовы");
+    client.user.setPresence({
+        status: 'online',
+        activity: {
+            type: 'WATCHING',
             name: 'в бездну',
-            type: 3
         },
-        status: 'online'
-    })
+    });
   /*static void UpdatePresence()
 {
     DiscordRichPresence discordPresence;
@@ -99,9 +100,51 @@ client.on("message", (msg) => {
     if (msg.content.startsWith("MEH")) {
             msg.channel.send("```diff\n- Тебе расчесать?```");         
     }
+    if (msg.content.toLowerCase().indexOf("ча")!=-1 && msg.content.toLowerCase().indexOf(" ча")!=-1 && msg.author.id === "654810705903484949"){
+            const alcohol = poetry.alcohol;
+            const randomIndex = Math.floor(Math.random() * alcohol.length);
+            const word = alcohol[randomIndex];
+            msg.channel.send(word+" <:mme:625115196637315124>");
+    }
 });
 
-
+client.on("message", (msg) => {
+    if (msg.content === "Картус" && msg.author.id === "542663623789641729") {
+        msg.channel.send('Что?');
+        warns: 1;
+        fs.writeFile("./data.json", JSON.stringify(warns), (err) => {
+        if (err) console.log(err)
+        });
+    };
+    if (msg.content === "Что?" && msg.author.id === "523116257390886954" && warns == 1) {
+        msg.channel.send('Что??');
+        warns.warns++;
+        fs.writeFile("./data.json", JSON.stringify(warns), (err) => {
+        if (err) console.log(err)
+        });
+    };
+    if (msg.content === "Что??" && msg.author.id === "523116257390886954" && warns == 2) {
+        msg.channel.send('Чего тебе, Сато???');
+        warns: 3
+    };
+    if (msg.content === "Привет" && msg.author.id === "542663623789641729" && warns == 3) {
+        warns: 0
+    };
+    
+    /*warns.warns++; // Если все проверки прошли успешно, к текущему количеству предупреждений пользователя прибавляется +1
+    fs.writeFile("./data.json", JSON.stringify(warns), (err) => { // Все данные сохраняются в .json файле
+        if (err) console.log(err)
+    });
+    if (warns.warns == 1) { // Если обнаружено 3+ предупреждений, то...
+    msg.channel.send('Что?');} // Кикнуть участника сервера по причине "3/3 предупреждений"
+    if (warns.warns == 2) {
+    msg.channel.send('Что??');}
+    if (warns.warns == 3) {
+    msg.channel.send('Чего тебе, Сато???');}
+    if (warns.warns >= 3) warns = { // Если обнаружено 3+ предупреждений, их количество устанавливается на 0
+            warns: 0
+    };*/
+});
 
 
 
