@@ -12,8 +12,8 @@ const theult = require("./theult");
 
 //дополнение
 
-const {poetry, alcohol} = require('./poetry.json');
-const {noprefix, shprefix} = require('./poetry.json');
+const poetry = require('./poetry.json');
+const {noprefix, shprefix, alcohol} = require('./poetry.json');
 
 //сообщения
 
@@ -23,7 +23,7 @@ client.on ("ready", () => {
         status: 'online',
         activity: {
             type: 'WATCHING',
-            name: 'в бездну',
+            name: 'на бухло',
         },
     });
   /*static void UpdatePresence()
@@ -85,8 +85,12 @@ client.on("message", (msg) => {
             msg.channel.send("С каких пор утро доброе <:035:737098587728510996> ");
         }
     }
-    if (msg.content.toLowerCase().indexOf("картафилиус")!=-1){
+    if (msg.content.toLowerCase().indexOf("картафилиус")!=-1 && msg.author.id != "172002275412279296" && msg.author.id != "276060004262477825"){
+        if (msg.author.id == "542663623789641729"){
+            msg.channel.send("Самовлюбленность..");
+        } else {
             msg.channel.send("Время не стоит, \nЗло ли ты таишь в себе..\nНе поминай в суе.");
+        }
     }
     if (msg.content.toLowerCase() == "лень") {
             msg.channel.send("Олень");

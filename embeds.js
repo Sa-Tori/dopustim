@@ -82,30 +82,48 @@ client.on("ready", () => {
   }
 });
 
+
+function isFinded(s, morn, morn2) {
+    for (var i = 0; i < morn.length; i++) {
+        if (s.indexOf(morn[i]) != -1) {
+            return true;
+        }
+    }
+    for (var i = 0; i < morn2.length; i++) {
+        if (s.indexOf(morn2[i]) != -1) {
+            return true;
+        }
+    }
+    return false;
+}
+
 client.on('message', msg => {
-if (msg.content.toLowerCase().indexOf("утро")!=-1 && msg.content != "доброе утро" || msg.content.toLowerCase().indexOf("утра")!=-1 || msg.content.toLowerCase().indexOf("утре")!=-1 || msg.content.toLowerCase().indexOf("утром")!=-1) {
-  const dragon = poetry.dragon;
-  const randomIndex = Math.floor(Math.random() * dragon.length);
-  const word = dragon[randomIndex];
-  const embed = new MessageEmbed()
-        .setTitle("И тебе, радость моя)")
-        .setDescription(msg.author)
-        .setColor(0x0d004d)
-        .setImage(word);
-    msg.channel.send(embed);
-}
-if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
-  const nihua = poetry.nihua;
-  const randomIndex = Math.floor(Math.random() * nihua.length);
-  const word = nihua[randomIndex];
-  const embed = new MessageEmbed()
-        .setColor(0x0d004d)
-        .setImage(word);
-    msg.channel.send(embed);
-}
-
-
+    const morning = poetry.morning;
+    const amorning = poetry.amorning;
+    if (isFinded(msg.content, morning, amorning) && msg.content != "доброе утро" && msg.content != "Утра") {
+        const randommorning = Math.floor(Math.random() * morning.length);
+        const morn = morning[randommorning];
+        const dragon = poetry.dragon;
+        const randomIndex = Math.floor(Math.random() * dragon.length);
+        const drag = dragon[randomIndex];
+        const embed = new MessageEmbed()
+            .setTitle("И тебе "+morn)
+            .setDescription(msg.author)
+            .setColor(0x0d004d)
+            .setImage(drag);
+        msg.channel.send(embed);
+    }
+    if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
+        const nihua = poetry.nihua;
+        const randomIndex = Math.floor(Math.random() * nihua.length);
+        const word = nihua[randomIndex];
+        const embed = new MessageEmbed()
+            .setColor(0x0d004d)
+            .setImage(word);
+        msg.channel.send(embed);
+    }
 });
+
 
 
 
