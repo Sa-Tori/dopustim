@@ -9,6 +9,7 @@ const replicas = require("./replicas");
 const avatars = require("./avatars");
 const embeds = require("./embeds");
 const theult = require("./theult"); 
+const reaction = require("./reaction");
 
 //дополнение
 
@@ -78,13 +79,13 @@ client.on("message", (msg) => {
     if (msg.content.startsWith(`${shprefix}`)) {
             msg.channel.send("Не повышай на меня шрифт!");
     }
-    if (msg.content.startsWith("С добрым утром")) {
+    /*if (msg.content.startsWith("С добрым утром")) {
         if (msg.author.id === "297089757651927040") {
             msg.channel.send("Здравствуй, <@" + msg.author.id + "> <:089:684120628734722048> ");
         } else {
             msg.channel.send("С каких пор утро доброе <:035:737098587728510996> ");
         }
-    }
+    }*/
     if (msg.content.toLowerCase().indexOf("картафилиус")!=-1 && msg.author.id != "172002275412279296" && msg.author.id != "276060004262477825"){
         if (msg.author.id == "542663623789641729"){
             msg.channel.send("Самовлюбленность..");
