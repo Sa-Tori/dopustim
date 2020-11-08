@@ -100,7 +100,7 @@ function isFinded(s, morn, morn2) {
 client.on('message', msg => {
     const morning = poetry.morning;
     const amorning = poetry.amorning;
-    if (isFinded(msg.content, morning, amorning) && msg.content != "доброе утро" && msg.content != "Утра") {
+    if (isFinded(msg.content.toLowerCase, morning, amorning) && msg.content != "доброе утро" && msg.content != "Утра") {
         const randommorning = Math.floor(Math.random() * morning.length);
         const morn = morning[randommorning];
         const dragon = poetry.dragon;
