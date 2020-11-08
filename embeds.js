@@ -85,12 +85,12 @@ client.on("ready", () => {
 
 function isFinded(s, morn, morn2) {
     for (var i = 0; i < morn.length; i++) {
-        if (s.indexOf(morn[i]) != -1) {
+        if (s.toLowerCase().indexOf(morn[i]) != -1) {
             return true;
         }
     }
     for (var i = 0; i < morn2.length; i++) {
-        if (s.indexOf(morn2[i]) != -1) {
+        if (s.toLowerCase().indexOf(morn2[i]) != -1) {
             return true;
         }
     }
@@ -100,7 +100,7 @@ function isFinded(s, morn, morn2) {
 client.on('message', msg => {
     const morning = poetry.morning;
     const amorning = poetry.amorning;
-    if (isFinded(msg.content.toLowerCase, morning, amorning) && msg.content != "доброе утро" && msg.content != "Утра") {
+    if (isFinded(msg.content, morning, amorning) && msg.content != "доброе утро" && msg.content != "Утра") {
         const randommorning = Math.floor(Math.random() * morning.length);
         const morn = morning[randommorning];
         const dragon = poetry.dragon;
