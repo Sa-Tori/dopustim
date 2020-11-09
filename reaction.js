@@ -26,7 +26,7 @@ client.on("message", (msg) => {
     if (msg.author.id === "542663623789641729") {
         const reactionEmoji = client.emojis.find(emoji => emoji.name === 'mme');
         //msg.react("<a:fire_green:768469897398190081>");
-        const reactionEmoji = message.guild.emojis.get("<625115196637315124>");
+        const reactionEmoji = client.emojis.cache.get("625115196637315124");
         msg.react(reactionEmoji);
         //msg.react("<:mme:625115196637315124>");
         //msg.react("💚");
