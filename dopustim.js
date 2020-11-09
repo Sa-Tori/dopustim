@@ -79,6 +79,9 @@ client.on("message", (msg) => {
     if (msg.content.startsWith(`${shprefix}`)) {
             msg.channel.send("Не повышай на меня шрифт!");
     }
+    if (msg.content.startsWith("kds")) {
+            msg.channel.send("<a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081>");
+    }
     /*if (msg.content.startsWith("С добрым утром")) {
         if (msg.author.id === "297089757651927040") {
             msg.channel.send("Здравствуй, <@" + msg.author.id + "> <:089:684120628734722048> ");

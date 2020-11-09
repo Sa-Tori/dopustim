@@ -14,7 +14,7 @@ function getRandom(l, r) {
 }
 
 client.on("message", (msg) => {
-    if (msg.author.id === "519186885331910676" && (getRandom(0, 2) == 1)) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 2) == 1)) {
         const flower = poetry.flower;
         const randomIndex = Math.floor(Math.random() * flower.length);
         const flo = flower[randomIndex];
