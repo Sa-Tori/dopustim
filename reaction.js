@@ -20,10 +20,11 @@ client.on("message", (msg) => {
         const flo = flower[randomIndex];
         msg.react(flo);  
     };
-    /*if (msg.author.id === "542663623789641729") {
+    if (msg.author.id === "155149108183695360") {
         msg.react("<:mme:625115196637315124>");  
-    };*/
+    };
 });
+
 
 
 client.login(process.env.BOT_TOKEN);
