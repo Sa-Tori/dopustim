@@ -24,7 +24,10 @@ client.on("message", (msg) => {
         msg.react("<:mme:625115196637315124>");  
     };
     if (msg.author.id === "542663623789641729") {
-        msg.react("<a:fire_green:768469897398190081>"); 
+        const reactionEmoji = client.emojis.find(emoji => emoji.name === 'mme');
+        //msg.react("<a:fire_green:768469897398190081>");
+        const reactionEmoji = message.guild.emojis.get("<625115196637315124>");
+        msg.react(reactionEmoji);
         //msg.react("<:mme:625115196637315124>");
         //msg.react("💚");
         //msg.react("<a:nya:526499575817699348>");
