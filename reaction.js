@@ -4,6 +4,8 @@ const client = new Discord.Client();
 
 const poetry = require('./poetry.json');
 const flower = require('./poetry.json');
+const fire = require('./poetry.json');
+const tea = require('./poetry.json');
 
 client.on('ready', () => {
   console.log('Реакции готовы');
@@ -21,7 +23,7 @@ client.on("message", (msg) => {
         const reactionEmoji = client.emojis.cache.get(flo);
         msg.react(reactionEmoji);  
     };
-    if (msg.author.id === "155149108183695360") {
+    /*if (msg.author.id === "155149108183695360") {
         msg.react("<:mme:625115196637315124>");  
     };
     if (msg.author.id === "542663623789641729") {
@@ -31,6 +33,20 @@ client.on("message", (msg) => {
         //msg.react("<:mme:625115196637315124>");
         //msg.react("💚");
         //msg.react("<a:nya:526499575817699348>");
+    };*/
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 4) == 2)) {
+        const fire = poetry.fire;
+        const randomIndex = Math.floor(Math.random() * fire.length);
+        const fir = fire[randomIndex];
+        const reactionEmoji = client.emojis.cache.get(fir);
+        msg.react(reactionEmoji);
+    };
+    if (msg.author.id === "654810705903484949" && (getRandom(0, 4) == 1)) {
+        const tea = poetry.tea;
+        const randomIndex = Math.floor(Math.random() * tea.length);
+        const flot = tea[randomIndex];
+        const reactionEmoji = client.emojis.cache.get(flot);
+        msg.react(reactionEmoji);  
     };
 });
 
