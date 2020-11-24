@@ -73,8 +73,8 @@ client.on("message", (msg) => {
     if (msg.content.startsWith("Допустим")) {
             msg.channel.send('???');
     }
-    if (msg.content.startsWith("Мерли")) {
-            msg.channel.send('где он??');
+    if (msg.content.startsWith("Мери")) {
+            msg.channel.send('Где он??');
     }
     if (msg.content.startsWith(`${noprefix}`)) {
             msg.channel.send("Ты за кого меня принимаешь??");
