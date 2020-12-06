@@ -24,7 +24,7 @@ client.on("message", (msg) => {
         msg.react(reactionEmoji);  
     };
   if (msg.author.id === "542663623789641729" && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
-msg.react("<a:fire_blue:768469879211687936>");
+msg.react("768469879211687936");
 
 }; 
     /*if (msg.author.id === "155149108183695360") {
