@@ -25,7 +25,9 @@ client.on("message", (msg) => {
     };
   if (msg.author.id === "542663623789641729" && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
 msg.react("768469879211687936");
-
+msg.react("768469897398190081");
+msg.react("768469924401250325");
+msg.react("768469943288332299");
 }; 
     /*if (msg.author.id === "155149108183695360") {
         msg.react("<:mme:625115196637315124>");  
