@@ -23,6 +23,12 @@ client.on("message", (msg) => {
         const reactionEmoji = client.emojis.cache.get(flo);
         msg.react(reactionEmoji);  
     };
+  if (msg.author.id === "542663623789641729" && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
+msg.react("<a:fire_blue:768469879211687936>");
+msg.react("<a:fire_green:768469897398190081>");
+msg.react("<a:fire_purple:768469924401250325>");
+msg.react("<a:fire1:768469943288332299>");
+}; 
     /*if (msg.author.id === "155149108183695360") {
         msg.react("<:mme:625115196637315124>");  
     };
