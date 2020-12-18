@@ -54,7 +54,7 @@ msg.react("768469943288332299");
         const reactionEmoji = client.emojis.cache.get(flot);
         msg.react(reactionEmoji);  
     };
-    if (msg.author.id === "654810705903484949" && msg.content.toLowerCase().indexOf("Новый год идет") != -1) {
+    if (msg.content.startsWith("Новый год идет") && msg.author.id === "654810705903484949") {
         msg.react("768779785114484736");
         msg.react("768779737765511169");
         msg.react("768779760456302602");
