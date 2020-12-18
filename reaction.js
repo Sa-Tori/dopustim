@@ -40,14 +40,14 @@ msg.react("768469943288332299");
         //msg.react("💚");
         //msg.react("<a:nya:526499575817699348>");
     };*/
-    if (msg.author.id === "542663623789641729" && (getRandom(0, 7) == 2)) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 5) == 2)) {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
         const reactionEmoji = client.emojis.cache.get(fir);
         msg.react(reactionEmoji);
     };
-    if (msg.author.id === "654810705903484949" && (getRandom(0, 4) == 1)) {
+    if (msg.author.id === "654810705903484949" && (getRandom(0, 4) == 1) && msg.content.startsWith != "Новый год идет") {
         const tea = poetry.tea;
         const randomIndex = Math.floor(Math.random() * tea.length);
         const flot = tea[randomIndex];
