@@ -83,9 +83,9 @@ client.on("ready", () => {
   if (message.content === "покажи") {
     const embed = new MessageEmbed()
         .setTitle("Пошел нахуй")
-        .setDescription("меня заебала твоя ссылка <a:KannaFu:706217449913188363>")
+        .setDescription("меня заебала твоя ссылка")
         .setColor(0x0d004d)
-        .setImage("https://apps.apple.com/app/apple-store/id917932200?pt=39040802&ct=Media1GIFV2&mt=8");
+        .setImage("https://media1.tenor.com/images/25ec03203265dee174003d8557e7c668/tenor.gif");
     message.channel.send(embed);
     }
 });
