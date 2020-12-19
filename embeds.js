@@ -126,7 +126,7 @@ client.on('message', msg => {
     const embed = new MessageEmbed()
         .setTitle("Нахуй иди)")
         .setColor(0x0d004d)
-        .setImage("https://media1.tenor.com/images/25ec03203265dee174003d8557e7c668/tenor.gif");
+        .setImage("https://tenor.com/view/secret-weeb-anime-gif-19531881");
     message.channel.send(embed);
   }
 });
