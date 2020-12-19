@@ -80,6 +80,14 @@ client.on("ready", () => {
         .setImage("https://i.gifer.com/Kzlh.gif");
     message.channel.send(embed);
   }
+  if (message.content === "покажи") {
+    const embed = new MessageEmbed()
+        .setTitle("Пошел нахуй")
+        .setDescription("меня заебала твоя ссылка <:KannaFu:706217449913188363>")
+        .setColor(0x0d004d)
+        .setImage("https://tenor.com/view/naruto-ricardo-kurama-milos-meme-gif-13427812");
+    message.channel.send(embed);
+    }
 });
 
 
@@ -122,13 +130,7 @@ client.on('message', msg => {
             .setImage(word);
         msg.channel.send(embed);
     }
-    if (message.content === "покажи" && message.author.id === "542663623789641729") {
-    const embed = new MessageEmbed()
-        .setTitle("Пошел нахуй меня заебала твоя ссылка")
-        .setColor(0x0d004d)
-        .setImage("https://media.discordapp.net/attachments/501832333750435861/789794095907340318/ricardo.gif");
-    message.channel.send(embed);
-  }
+    
 });
 
 
