@@ -122,6 +122,13 @@ client.on('message', msg => {
             .setImage(word);
         msg.channel.send(embed);
     }
+    if (message.content === "покажи" && message.author.id === "542663623789641729") {
+    const embed = new MessageEmbed()
+        .setTitle("Нахуй иди)")
+        .setColor(0x0d004d)
+        .setImage("https://media1.tenor.com/images/25ec03203265dee174003d8557e7c668/tenor.gif?itemid=13427812");
+    message.channel.send(embed);
+  }
 });
 
 
