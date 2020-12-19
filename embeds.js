@@ -124,9 +124,9 @@ client.on('message', msg => {
     }
     if (message.content === "покажи" && message.author.id === "542663623789641729") {
     const embed = new MessageEmbed()
-        .setTitle("Нахуй иди)")
+        .setTitle("Пошел нахуй меня заебала твоя ссылка")
         .setColor(0x0d004d)
-        .setImage("https://media.tenor.co/videos/357d98e72970e14e1fb58323b457bb3b/mp4");
+        .setImage("https://media.discordapp.net/attachments/501832333750435861/789794095907340318/ricardo.gif");
     message.channel.send(embed);
   }
 });
