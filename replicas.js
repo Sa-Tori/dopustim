@@ -85,7 +85,7 @@ function getStrof(s, w) {
 client.on("message", (msg) => {
  
 
-	if ((msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
+	if ((msg.guild.id == "683107614589976657" || msg.guild.id == "532954366571708427" || msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
 		var m = msg.content; // получаем весь текст сообщения
 		var fl = 0;
 		if (msg.content.startsWith('ds')) { //если начинается с ds обрежем его и запомним, что так было в fl
@@ -107,6 +107,42 @@ client.on("message", (msg) => {
 		}
 	}
 });
+
+
+client.on("message", async (msg) => {
+	const hokku = poetry.hokku;
+	const randomIndex = Math.floor(Math.random() * hokku.length);
+	const word = hokku[randomIndex];
+	try {
+		if (msg.content.toLowerCase().indexOf("т") != -1 && (getRandom(0, 150) == 7)) {
+			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+			await delay(30 * 60 *1000);
+			msg.channel.send(word);
+		}
+	} catch (err) { console.log(err); };
+	try {
+		if (msg.content.toLowerCase().indexOf("о") != -1 && (getRandom(0, 200) == 13)) {
+			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+			await delay(40* 60 *1000);
+			msg.channel.send(word);
+		}
+	} catch (err) { console.log(err); };
+	try {
+		if (msg.content.toLowerCase().indexOf("р") != -1 && (getRandom(0, 750) == 4)) {
+			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+			await delay(150*60*1000);
+			msg.channel.send(word);
+		}
+	} catch (err) { console.log(err); };
+	try {
+		if (msg.content.toLowerCase().indexOf("и") != -1 && (getRandom(0, 300) == 2)) {
+			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+			await delay(90*60*1000);
+			msg.channel.send(word);
+		}
+	} catch (err) { console.log(err); };
+});
+
 
 
 
