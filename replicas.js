@@ -114,28 +114,28 @@ client.on("message", async (msg) => {
 	const randomIndex = Math.floor(Math.random() * hokku.length);
 	const word = hokku[randomIndex];
 	try {
-		if (msg.content.toLowerCase().indexOf("т") != -1 && (getRandom(0, 150) == 7)) {
+		if (msg.content.toLowerCase().indexOf("т") != -1 && (getRandom(0, 15) == 7)) {
 			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 			await delay(30 * 60 *1000);
 			msg.channel.send(word);
 		}
 	} catch (err) { console.log(err); };
 	try {
-		if (msg.content.toLowerCase().indexOf("о") != -1 && (getRandom(0, 200) == 13)) {
+		if (msg.content.toLowerCase().indexOf("о") != -1 && (getRandom(0, 20) == 13)) {
 			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 			await delay(40* 60 *1000);
 			msg.channel.send(word);
 		}
 	} catch (err) { console.log(err); };
 	try {
-		if (msg.content.toLowerCase().indexOf("р") != -1 && (getRandom(0, 750) == 4)) {
+		if (msg.content.toLowerCase().indexOf("р") != -1 && (getRandom(0, 75) == 4)) {
 			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 			await delay(150*60*1000);
 			msg.channel.send(word);
 		}
 	} catch (err) { console.log(err); };
 	try {
-		if (msg.content.toLowerCase().indexOf("и") != -1 && (getRandom(0, 300) == 2)) {
+		if (msg.content.toLowerCase().indexOf("и") != -1 && (getRandom(0, 30) == 2)) {
 			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 			await delay(90*60*1000);
 			msg.channel.send(word);
