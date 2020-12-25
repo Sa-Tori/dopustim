@@ -18,7 +18,7 @@ client.on("ready", () => {
       .setDescription("Досвидания, мне неприятно");
     message.channel.send(embed);
   }
-  if (message.content === "Утра" && message.author.id === "542663623789641729") {
+  if (message.content === "Утра") {
     const embed = new MessageEmbed()
         .setTitle("И тебе, мой сладкий)")
         .setColor(0x0d004d)
