@@ -56,7 +56,7 @@ msg.react("768469943288332299");
         msg.react(reactionEmoji);  
     };
     if (msg.content.toLowerCase().indexOf("новый год") != -1) {
-        const rng = getRandom(0, 5);
+        const rng = getRandom(1, 5);
         if (rng == 1) {
             msg.react("768779785114484736");
             msg.react("768779737765511169");
