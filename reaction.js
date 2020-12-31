@@ -40,7 +40,7 @@ msg.react("768469943288332299");
         //msg.react("💚");
         //msg.react("<a:nya:526499575817699348>");
     };*/
-    if (msg.author.id === "542663623789641729" && (getRandom(0, 5) == 2) && msg.content.toLowerCase().indexOf("новый год") == -1) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 5) == 2) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
@@ -55,7 +55,7 @@ msg.react("768469943288332299");
         const reactionEmoji = client.emojis.cache.get(flot);
         msg.react(reactionEmoji);  
     };
-    if (msg.content.toLowerCase().indexOf("новый год") != -1) {
+    if (msg.content.toLowerCase().indexOf("нов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
         const rng = getRandom(1, 5);
         if (rng == 1) {
             msg.react("768779785114484736");
