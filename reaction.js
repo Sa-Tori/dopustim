@@ -40,7 +40,7 @@ msg.react("768469943288332299");
         //msg.react("💚");
         //msg.react("<a:nya:526499575817699348>");
     };*/
-    if (msg.author.id === "542663623789641729" && (getRandom(0, 5) == 2)) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 5) == 2) && msg.content.toLowerCase().indexOf("новый год") == -1) {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
