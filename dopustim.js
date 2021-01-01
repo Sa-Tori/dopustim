@@ -55,4 +55,4 @@ client2.on("message", (msg) => {
     }
 });
 
-client2.login("process.env.BOT_TOKEN2");
+client2.login(process.env.BOT_TOKEN2);
