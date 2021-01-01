@@ -10,6 +10,7 @@ const avatars = require("./avatars");
 const embeds = require("./embeds");
 const theult = require("./theult");
 const reaction = require("./reaction");
+const answer = require("./answer");
 
 //запуск
 
