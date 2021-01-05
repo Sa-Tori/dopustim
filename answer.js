@@ -2,15 +2,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-//подключенные файлы
-//const greeting = require("./greeting");
-
-const replicas = require("./replicas");
-const avatars = require("./avatars");
-const embeds = require("./embeds");
-const theult = require("./theult"); 
-const reaction = require("./reaction");
-
 //дополнение
 
 const poetry = require('./poetry.json');
@@ -39,7 +30,6 @@ client.on ("ready", () => {
     Discord_UpdatePresence(&discordPresence);
 }*/
  });
-
 
 
 client.on("message", (msg) => {
