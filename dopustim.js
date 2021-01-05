@@ -27,8 +27,8 @@ client.on("ready", () => {
 
 client.on("message", (msg) => {
     //if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
-    if (msg.content.startsWith("Центр управления в норме.") && msg.author.id === "776445694587306028") {
-        msg.channel.send("Ну я типа живой, да.");
+    if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
+        msg.channel.send("Изменения приняты.");
     }
 });
 
@@ -50,8 +50,8 @@ client2.on("ready", () => {
 });
 
 client2.on("message", (msg) => {
-    if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
-        msg.channel.send("Центр управления в норме.");
+    if (msg.content.startsWith("Изменения приняты.") && msg.author.id === "523116257390886954") {
+        msg.channel.send("```xl\n'Чуть потускнело.. но всё же работает!'```");
     }
 });
 
