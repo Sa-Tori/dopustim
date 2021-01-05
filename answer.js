@@ -29,7 +29,7 @@ client.on ("ready", () => {
     discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
     Discord_UpdatePresence(&discordPresence);
 }*/
- });
+ 
 
 
 client.on("message", (msg) => {
