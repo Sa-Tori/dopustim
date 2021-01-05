@@ -47,7 +47,7 @@ msg.react("768469943288332299");
         const reactionEmoji = client.emojis.cache.get(fir);
         msg.react(reactionEmoji);
     };
-    if (msg.author.id === "654810705903484949" && (getRandom(0, 4) == 1)) {
+    if (msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) {
       if (msg.content.toLowerCase().indexOf("новый год идет") != -1) return;
         const tea = poetry.tea;
         const randomIndex = Math.floor(Math.random() * tea.length);
