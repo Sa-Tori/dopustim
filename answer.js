@@ -20,13 +20,8 @@ const {noprefix, shprefix, alcohol} = require('./poetry.json');
 
 client.on ("ready", () => {
     console.log("Ответы готовы");
-    client.user.setPresence({
-        status: 'online',
-        activity: {
-            type: 'WATCHING',
-            name: 'на бухло',
-        },
-    });
+});
+
   /*static void UpdatePresence()
 {
     DiscordRichPresence discordPresence;
