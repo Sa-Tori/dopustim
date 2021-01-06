@@ -98,7 +98,7 @@ msg.react("768469943288332299");
         msg.channel.send(emoji);
     };
   if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
-        msg.channel.send(<a:g2774:760531480824512512>);
+        msg.channel.send("<a:g2774:760531480824512512>");
     };
 });
 
