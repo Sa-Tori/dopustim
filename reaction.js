@@ -102,8 +102,8 @@ msg.react("768469943288332299");
     };
 });
 
-client.on("message", async (msg) => {
-  if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
+client.on("message", (msg) => {
+  if (msg.content === "пика") {
         msg.channel.send("<a:cda8:526723928815566848>");
     };
 });
