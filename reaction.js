@@ -48,7 +48,7 @@ msg.react("768469943288332299");
         msg.react(reactionEmoji);
     };
     if (msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) {
-      if (msg.content.toLowerCase().indexOf("новый год идет") != -1) return;
+      if (msg.content.toLowerCase().indexOf("новый год") != -1) return;
         const tea = poetry.tea;
         const randomIndex = Math.floor(Math.random() * tea.length);
         const flot = tea[randomIndex];
@@ -96,6 +96,9 @@ msg.react("768469943288332299");
         const randomIndex = Math.floor(Math.random() * ng.length);
         const emoji = ng[randomIndex];
         msg.channel.send(emoji);
+    };
+  if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
+        msg.channel.send(<a:g2774:760531480824512512>);
     };
 });
 
