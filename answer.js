@@ -102,7 +102,7 @@ client.on("message", (msg) => {
             const word = alcohol[randomIndex];
             msg.channel.send(word+" <:mme:625115196637315124>");
     }
-    if (msg.content.startsWith("Привет") && msg.author.id == "542663623789641729") {
+    if (msg.content ==="Привет" && msg.author.id === "542663623789641729") {
             msg.channel.send("Где ты пропала?");
     }
 });
