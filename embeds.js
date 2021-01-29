@@ -11,7 +11,7 @@ client.on("ready", () => {
 
    client.on('message', message => {
  
-  if (message.content === "привет") {
+  if (message.content === "Привет") {
     const embed = new MessageEmbed()
       .setTitle("Приветствие")
       .setColor(0xff0000)
