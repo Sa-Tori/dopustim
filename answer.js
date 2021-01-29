@@ -157,7 +157,7 @@ client2.on("ready", () => {
 });
 
 client2.on("message", (msg) => {
-  if (msg.content.startsWith("Умерла я") && msg.author.id === "542663623789641729") {
+  if (msg.content.toLowerCase().indexOf("умерла я")!=-1 && msg.author.id === "542663623789641729") {
             msg.channel.send("Клянусь, нет её у меня!");
     };
 
