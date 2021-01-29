@@ -102,6 +102,9 @@ client.on("message", (msg) => {
             const word = alcohol[randomIndex];
             msg.channel.send(word+" <:mme:625115196637315124>");
     }
+    if (msg.content.startsWith("Привет") && msg.author.id === "542663623789641729") {
+            msg.channel.send("Где ты пропала?");
+    }
 });
 
 client.on("message", (msg) => {
@@ -143,6 +146,21 @@ client.on("message", (msg) => {
 });
 
 
-
-
 client.login(process.env.BOT_TOKEN);
+
+
+const Discord2 = require("discord.js");
+const client2 = new Discord2.Client();
+
+client2.on("ready", () => {
+    console.log('Реакции Мерлая готовы');
+});
+
+client2.on("message", (msg) => {
+  if (msg.content.startsWith("Умерла я") && msg.author.id === "542663623789641729") {
+            msg.channel.send("Клянусь, нет её у меня!");
+    };
+
+});
+
+client2.login(process.env.BOT_TOKEN2);
