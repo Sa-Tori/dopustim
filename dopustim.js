@@ -40,6 +40,7 @@ const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 
 //const answer = require("./merlai/answer.js");
+const reaction = require("./reaction");
 
 client2.on("ready", () => {
     console.log("Центр управления");
