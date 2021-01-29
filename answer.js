@@ -147,7 +147,7 @@ client.on("message", (msg) => {
 
 client.on("message", async (msg) => {
     try {
-        if ((msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729") {
+        if (msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729") {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
             await delay(5 * 1000);
             msg.channel.send("Где ты пропала?");
@@ -167,7 +167,7 @@ client2.on("ready", () => {
 
 client2.on("message", async (msg) => {
     try {
-        if ((msg.content.toLowerCase().indexOf("умерла я")!=-1 && msg.author.id === "542663623789641729") {
+        if (msg.content.toLowerCase().indexOf("умерла я")!=-1 && msg.author.id === "542663623789641729") {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
             await delay(5 * 1000);
             msg.channel.send("Где ты пропала?");
