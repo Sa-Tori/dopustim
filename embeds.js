@@ -11,7 +11,7 @@ client.on("ready", () => {
 
    client.on('message', message => {
  
-  if (message.content === "Привет") {
+  if (message.content === "Привет" && message.author.id != "542663623789641729") {
     const embed = new MessageEmbed()
       .setTitle("Приветствие")
       .setColor(0xff0000)
