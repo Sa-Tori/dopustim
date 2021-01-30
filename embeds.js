@@ -17,14 +17,14 @@ client.on("ready", () => {
       .setColor(0xff0000)
       .setDescription("Досвидания, мне неприятно");
     message.channel.send(embed);
-  }
+  };
   if (message.content === "Утра") {
     const embed = new MessageEmbed()
         .setTitle("И тебе, мой сладкий)")
         .setColor(0x0d004d)
         .setImage("https://media.discordapp.net/attachments/499796673598586941/526742577878401035/24728.gif");
     message.channel.send(embed);
-  }
+  };
   if (message.content === "мех") {
     if (message.author.id === "542663623789641729") {
     const embed = new MessageEmbed()
@@ -39,7 +39,7 @@ client.on("ready", () => {
         .setDescription("Досвидания, мне неприятно");
     message.channel.send(embed);
   }
-  }
+  };
   if (message.content === "Одиночество") {
     if (message.author.id === "405109483396661268") {
         const embed = new MessageEmbed()
@@ -55,7 +55,7 @@ client.on("ready", () => {
             .setImage("https://i.imgur.com/XWSzl8R.gif");
         message.channel.send(embed);
     }
-  }
+  };
   if (message.content.toLowerCase() == "спокойной ночи") { //&& message.author.id === "405109483396661268"
     if (message.author.id === "405109483396661268") {
         const embed = new MessageEmbed()
@@ -71,7 +71,7 @@ client.on("ready", () => {
             .setDescription(message.author);
         message.channel.send(embed);
     }
-  }
+  };
   if (message.content === "доброе утро") {
     const embed = new MessageEmbed()
         .setTitle("Ооооо, Утро")
@@ -79,7 +79,7 @@ client.on("ready", () => {
         .setColor(0x0d004d)
         .setImage("https://i.gifer.com/Kzlh.gif");
     message.channel.send(embed);
-  }
+  };
   if (message.content === "покажи") {
     const embed = new MessageEmbed()
         .setTitle("Пошел нахуй")
@@ -87,7 +87,7 @@ client.on("ready", () => {
         .setColor(0x0d004d)
         .setImage("https://media1.tenor.com/images/25ec03203265dee174003d8557e7c668/tenor.gif");
     message.channel.send(embed);
-    }
+    };
 });
 
 
