@@ -158,22 +158,3 @@ const client2 = new Discord2.Client();
 //const answer = require("./merlai/answer.js");
 //const reaction = require("./reaction");
 
-client2.on("ready", () => {
-    console.log("Центр управления");
-    client2.user.setPresence({
-        status: 'online',
-        activity: {
-            type: 'WATCHING',
-            name: 'в бездну',
-        },
-    });
-});
-
-client2.on("message", (msg) => {
-    if (msg.content.startsWith("Изменения приняты.") && msg.author.id === "523116257390886954") {
-        msg.channel.send("```xl\n'Чуть потускнело.. но всё же работает!'```");
-    }
-
-});
-
-client2.login(process.env.BOT_TOKEN2);
