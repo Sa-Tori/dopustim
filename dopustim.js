@@ -40,7 +40,7 @@ const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 
 
-const replicas = require("dopustim/merlai/replicas");
+const replicas = require("dopustim:/merlai/replicas");
 const embeds = require("./embeds");
 const reaction = require("./reaction");
 const answer = require("./answer");
