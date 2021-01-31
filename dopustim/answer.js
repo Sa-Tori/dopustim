@@ -118,7 +118,7 @@ const reaction = require("./reaction");
 const answer = require("./answer");
 
 //запуск
-
+/*
 client.on("ready", () => {
     console.log("Центр хранения файлов.");
     client.user.setPresence({
@@ -136,13 +136,13 @@ client.on("message", (msg) => {
         msg.channel.send("Изменения приняты.");
     }
 
-});
+});*/
 
 client.login(process.env.BOT_TOKEN);
 
 
 
-client.on("message", async (msg) => {
+/*client.on("message", async (msg) => {
     try {
         if (msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729" && msg.content != "Картус привет") {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
@@ -154,7 +154,7 @@ client.on("message", async (msg) => {
 
 const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
-
+*/
 //const answer = require("./merlai/answer.js");
 //const reaction = require("./reaction");
 
