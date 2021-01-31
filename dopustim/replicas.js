@@ -85,7 +85,7 @@ function getStrof(s, w) {
 client.on("message", (msg) => {
  
 
-	if ((msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
+	if ((msg.guild.id == "683107614589976657" || msg.guild.id == "532954366571708427" || msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
 		var m = msg.content; // получаем весь текст сообщения
 		var fl = 0;
 		if (msg.content.startsWith('ds')) { //если начинается с ds обрежем его и запомним, что так было в fl
@@ -105,6 +105,44 @@ client.on("message", (msg) => {
 		if (fl == 1 && b.length == 0) { // если был запрос ds и стихотворений нет
 			msg.reply("Прошу меня простить, меня ждут крипы.");
 		}
+	}
+});
+
+
+client.on("message", async (msg) => {
+	if (msg.author.id != "542663623789641729") {
+		const hokku = poetry.hokku;
+		const randomIndex = Math.floor(Math.random() * hokku.length);
+		const word = hokku[randomIndex];
+		const rng = getRandom(0, 2021);
+		try {
+			if (rng == 222) {
+				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+				await delay(22 * 3600 * 1000);
+				msg.channel.send("```xl\n'" + word + "'```");
+			}
+		} catch (err) { console.log(err); };
+		try {
+			if (rng == 444) {
+				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+				await delay(4 * 3600 * 1000);
+				msg.channel.send("```xl\n'" + word + "'```");
+			}
+		} catch (err) { console.log(err); };
+		try {
+			if (rng == 777) {
+				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+				await delay(15 * 3600 * 1000);
+				msg.channel.send("```xl\n'" + word + "'```");
+			}
+		} catch (err) { console.log(err); };
+		try {
+			if (rng == 13) {
+				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+				await delay(13 * 3600 * 1000);
+				msg.channel.send("```xl\n'" + word + "'```");
+			}
+		} catch (err) { console.log(err); };
 	}
 });
 

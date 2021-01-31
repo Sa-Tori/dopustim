@@ -28,6 +28,4 @@ var onlineCount = guild.members.filter(m => m.presence.status === 'online').size
 
 
 
-
-
 client.login(process.env.BOT_TOKEN);

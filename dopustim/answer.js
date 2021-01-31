@@ -2,15 +2,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-//подключенные файлы
-//const greeting = require("./greeting");
-
-const replicas = require("./replicas");
-const avatars = require("./avatars");
-const embeds = require("./embeds");
-const theult = require("./theult"); 
-const reaction = require("./reaction");
-
 //дополнение
 
 const poetry = require('./poetry.json');
@@ -20,16 +11,11 @@ const {noprefix, shprefix, alcohol} = require('./poetry.json');
 
 client.on ("ready", () => {
     console.log("Ответы готовы");
-    client.user.setPresence({
-        status: 'online',
-        activity: {
-            type: 'WATCHING',
-            name: 'на бухло',
-        },
-    });
+});
+
   /*static void UpdatePresence()
 {
-    DiscordRichPresence discordPresence;
+ DiscordRichPresence discordPresence;
     memset(&discordPresence, 0, sizeof(discordPresence));
     discordPresence.state = "Я наблюдаю";
     discordPresence.details = "Competitive";
@@ -43,8 +29,7 @@ client.on ("ready", () => {
     discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
     Discord_UpdatePresence(&discordPresence);
 }*/
- });
-
+ 
 
 
 client.on("message", (msg) => {
@@ -54,34 +39,37 @@ client.on("message", (msg) => {
         } else {
             msg.channel.send("pong");
         }
-    }
+    };
     if (msg.content.startsWith("картус где ганги")) {
             msg.channel.send("Никакого уважения..");
-    }
+    };
     if (msg.content.startsWith("Картус привет")) {
             msg.channel.send("Привет, а ты кто?");
-    }
+    };
     if (msg.content === "Ghbdtn") {
             msg.reply(' я тебя не понял, но привет');
-    }
+    };
     if (msg.content === "одиночество") {
             msg.channel.send('loneliness');
-    }
+    };
     if (msg.content.startsWith("я тут подумал")) {
             msg.channel.send('Не говори вслух, ты понижаешь IQ всего сервера');
-    }
+    };
     if (msg.content.startsWith("Допустим")) {
             msg.channel.send('???');
-    }
+    };
+    if (msg.content.startsWith("Мери")) {
+            msg.channel.send('Где он??');
+    };
     if (msg.content.startsWith(`${noprefix}`)) {
             msg.channel.send("Ты за кого меня принимаешь??");
-    }
+    };
     if (msg.content.startsWith(`${shprefix}`)) {
             msg.channel.send("Не повышай на меня шрифт!");
-    }
+    };
     if (msg.content.startsWith("kds")) {
             msg.channel.send("<a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081>");
-    }
+    };
     /*if (msg.content.startsWith("С добрым утром")) {
         if (msg.author.id === "297089757651927040") {
             msg.channel.send("Здравствуй, <@" + msg.author.id + "> <:089:684120628734722048> ");
@@ -94,26 +82,29 @@ client.on("message", (msg) => {
             msg.channel.send("Самовлюбленность..");
         } else {
             msg.channel.send("Время не стоит, \nЗло ли ты таишь в себе..\nНе поминай в суе.");
-        }
-    }
+        };
+    };
     if (msg.content.toLowerCase() == "лень") {
             msg.channel.send("Олень");
-    }
+    };
     if (msg.content === "Олень" && msg.author.id === "523116257390886954") {
             msg.channel.send('Тюлень');
-    }
+    };
     if (msg.content === "Тюлень" && msg.author.id === "523116257390886954") {
             msg.channel.send('Пельмень');
-    }
+    };
     if (msg.content.startsWith("MEH")) {
             msg.channel.send("```diff\n- Тебе расчесать?```");         
-    }
+    };
     if (msg.content.toLowerCase().indexOf("ча")!=-1 && msg.content.toLowerCase().indexOf(" ча")!=-1 && msg.author.id === "654810705903484949"){
             const alcohol = poetry.alcohol;
             const randomIndex = Math.floor(Math.random() * alcohol.length);
             const word = alcohol[randomIndex];
             msg.channel.send(word+" <:mme:625115196637315124>");
-    }
+    };
+    /*if (msg.content.toLowerCase().indexOf("привет")!=-1 && msg.author.id === "542663623789641729") {
+            msg.channel.send("Где ты пропала?");
+    };*/
 });
 
 client.on("message", (msg) => {
@@ -154,7 +145,14 @@ client.on("message", (msg) => {
     };*/
 });
 
-
-
+client.on("message", async (msg) => {
+    try {
+        if (msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729" && msg.content != "Картус привет") {
+            let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+            await delay(5 * 1000);
+            msg.channel.send("Где ты пропала?");
+        }
+    } catch (err) { console.log(err); };
+});
 
 client.login(process.env.BOT_TOKEN);
