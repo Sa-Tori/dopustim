@@ -40,10 +40,10 @@ const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 
 
-const replicas = require("dopustim:/merlai/replicas");
-const embeds = require("./embeds");
-const reaction = require("./reaction");
-const answer = require("./answer");
+const replicas2 = require("./merlai/replicas");
+const embeds2 = require("./embeds");
+const reaction2 = require("./reaction");
+const answer2 = require("./answer");
 
 client2.on("ready", () => {
     console.log("Центр управления");
