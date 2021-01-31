@@ -6,11 +6,11 @@ const client = new Discord.Client();
 //const greeting = require("./greeting");
 
 const replicas = require("./dopustim/replicas");
-const avatars = require("./avatars");
-const embeds = require("./embeds");
-const theult = require("./theult");
-const reaction = require("./reaction");
-const answer = require("./answer");
+const avatars = require("./dopustim/avatars");
+const embeds = require("./dopustim/embeds");
+const theult = require("./dopustim/theult");
+const reaction = require("./dopustim/reaction");
+const answer = require("./dopustim/answer");
 
 //запуск
 
@@ -41,9 +41,9 @@ const client2 = new Discord2.Client();
 
 
 const replicas2 = require("./merlai/replicas");
-const embeds2 = require("./embeds");
-const reaction2 = require("./reaction");
-const answer2 = require("./answer");
+const embeds2 = require("./merlai/embeds");
+const reaction2 = require("./merlai/reaction");
+const answer2 = require("./merlai/answer");
 
 client2.on("ready", () => {
     console.log("Центр управления");
