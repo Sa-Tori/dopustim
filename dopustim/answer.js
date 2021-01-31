@@ -2,6 +2,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+<<<<<<< HEAD:dopustim/answer.js
 //дополнение
 
 const poetry = require('./poetry.json');
@@ -105,46 +106,42 @@ client.on("message", (msg) => {
     /*if (msg.content.toLowerCase().indexOf("привет")!=-1 && msg.author.id === "542663623789641729") {
             msg.channel.send("Где ты пропала?");
     };*/
+=======
+//файлы
+//const greeting = require("./greeting");
+
+const replicas = require("./replicas");
+const avatars = require("./avatars");
+const embeds = require("./embeds");
+const theult = require("./theult");
+const reaction = require("./reaction");
+const answer = require("./answer");
+
+//запуск
+
+client.on("ready", () => {
+    console.log("Центр хранения файлов.");
+    client.user.setPresence({
+        status: 'online',
+        activity: {
+            type: 'WATCHING',
+            name: 'на бухло',
+        },
+    });
 });
 
 client.on("message", (msg) => {
-    if (msg.content === "Картус" && msg.author.id === "542663623789641729") {
-        msg.channel.send('Что?');
-        warns: 1;
-        fs.writeFile("./data.json", JSON.stringify(warns), (err) => {
-        if (err) console.log(err)
-        });
-    };
-    if (msg.content === "Что?" && msg.author.id === "523116257390886954" && warns == 1) {
-        msg.channel.send('Что??');
-        warns.warns++;
-        fs.writeFile("./data.json", JSON.stringify(warns), (err) => {
-        if (err) console.log(err)
-        });
-    };
-    if (msg.content === "Что??" && msg.author.id === "523116257390886954" && warns == 2) {
-        msg.channel.send('Чего тебе, Сато???');
-        warns: 3
-    };
-    if (msg.content === "Привет" && msg.author.id === "542663623789641729" && warns == 3) {
-        warns: 0
-    };
-    
-    /*warns.warns++; // Если все проверки прошли успешно, к текущему количеству предупреждений пользователя прибавляется +1
-    fs.writeFile("./data.json", JSON.stringify(warns), (err) => { // Все данные сохраняются в .json файле
-        if (err) console.log(err)
-    });
-    if (warns.warns == 1) { // Если обнаружено 3+ предупреждений, то...
-    msg.channel.send('Что?');} // Кикнуть участника сервера по причине "3/3 предупреждений"
-    if (warns.warns == 2) {
-    msg.channel.send('Что??');}
-    if (warns.warns == 3) {
-    msg.channel.send('Чего тебе, Сато???');}
-    if (warns.warns >= 3) warns = { // Если обнаружено 3+ предупреждений, их количество устанавливается на 0
-            warns: 0
-    };*/
+    //if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
+    if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
+        msg.channel.send("Изменения приняты.");
+    }
+>>>>>>> 24f53edcb85e270fa04239d16e66e40c2b835faf:dopustim.js
 });
 
+client.login(process.env.BOT_TOKEN);
+
+
+<<<<<<< HEAD:dopustim/answer.js
 client.on("message", async (msg) => {
     try {
         if (msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729" && msg.content != "Картус привет") {
@@ -153,6 +150,30 @@ client.on("message", async (msg) => {
             msg.channel.send("Где ты пропала?");
         }
     } catch (err) { console.log(err); };
+=======
+
+const Discord2 = require("discord.js");
+const client2 = new Discord2.Client();
+
+//const answer = require("./merlai/answer.js");
+//const reaction = require("./reaction");
+
+client2.on("ready", () => {
+    console.log("Центр управления");
+    client2.user.setPresence({
+        status: 'online',
+        activity: {
+            type: 'WATCHING',
+            name: 'в бездну',
+        },
+    });
 });
 
-client.login(process.env.BOT_TOKEN);
+client2.on("message", (msg) => {
+    if (msg.content.startsWith("Изменения приняты.") && msg.author.id === "523116257390886954") {
+        msg.channel.send("```xl\n'Чуть потускнело.. но всё же работает!'```");
+    }
+>>>>>>> 24f53edcb85e270fa04239d16e66e40c2b835faf:dopustim.js
+});
+
+client2.login(process.env.BOT_TOKEN2);

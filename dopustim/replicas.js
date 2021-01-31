@@ -147,5 +147,9 @@ client.on("message", async (msg) => {
 });
 
 
+<<<<<<< HEAD:dopustim/replicas.js
+=======
+
+>>>>>>> 24f53edcb85e270fa04239d16e66e40c2b835faf:replicas.js
 
 client.login(process.env.BOT_TOKEN);
