@@ -135,12 +135,7 @@ client.on('message', msg => {
 
 
 
-<<<<<<< HEAD:dopustim/embeds.js
-client.login(process.env.BOT_TOKEN);
-=======
-
-
 
 
 client.login(process.env.BOT_TOKEN);
->>>>>>> 24f53edcb85e270fa04239d16e66e40c2b835faf:embeds.js
+

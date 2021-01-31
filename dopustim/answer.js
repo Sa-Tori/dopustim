@@ -2,7 +2,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-<<<<<<< HEAD:dopustim/answer.js
+
 //дополнение
 
 const poetry = require('./poetry.json');
@@ -106,7 +106,7 @@ client.on("message", (msg) => {
     /*if (msg.content.toLowerCase().indexOf("привет")!=-1 && msg.author.id === "542663623789641729") {
             msg.channel.send("Где ты пропала?");
     };*/
-=======
+
 //файлы
 //const greeting = require("./greeting");
 
@@ -135,13 +135,13 @@ client.on("message", (msg) => {
     if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
         msg.channel.send("Изменения приняты.");
     }
->>>>>>> 24f53edcb85e270fa04239d16e66e40c2b835faf:dopustim.js
+
 });
 
 client.login(process.env.BOT_TOKEN);
 
 
-<<<<<<< HEAD:dopustim/answer.js
+
 client.on("message", async (msg) => {
     try {
         if (msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729" && msg.content != "Картус привет") {
@@ -150,7 +150,7 @@ client.on("message", async (msg) => {
             msg.channel.send("Где ты пропала?");
         }
     } catch (err) { console.log(err); };
-=======
+
 
 const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
@@ -173,7 +173,7 @@ client2.on("message", (msg) => {
     if (msg.content.startsWith("Изменения приняты.") && msg.author.id === "523116257390886954") {
         msg.channel.send("```xl\n'Чуть потускнело.. но всё же работает!'```");
     }
->>>>>>> 24f53edcb85e270fa04239d16e66e40c2b835faf:dopustim.js
+
 });
 
 client2.login(process.env.BOT_TOKEN2);
