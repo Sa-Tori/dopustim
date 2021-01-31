@@ -1,1 +1,1 @@
-worker: node host.js
+worker: node dopustim.js
