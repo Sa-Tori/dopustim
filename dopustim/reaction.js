@@ -55,7 +55,7 @@ msg.react("768469943288332299");
         const reactionEmoji = client.emojis.cache.get(flot);
         msg.react(reactionEmoji);
     };
-    if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
+    /*if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
         const rng = getRandom(1, 5);
         if (rng == 1) {
             msg.react("768779785114484736");
@@ -96,7 +96,7 @@ msg.react("768469943288332299");
         const randomIndex = Math.floor(Math.random() * ng.length);
         const emoji = ng[randomIndex];
         msg.channel.send(emoji);
-    };
+    };*/
   if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
         msg.channel.send("<a:g2774:760531480824512512>");
     };
