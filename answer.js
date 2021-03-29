@@ -13,25 +13,6 @@ client.on ("ready", () => {
     console.log("Ответы готовы");
 });
 
-  /*static void UpdatePresence()
-{
-    DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.state = "Я наблюдаю";
-    discordPresence.details = "Competitive";
-    discordPresence.startTimestamp = 1507665886;
-    discordPresence.endTimestamp = 1507665886;
-    discordPresence.largeImageText = "Допустим";
-    discordPresence.smallImageText = "Rogue - Level 100";
-    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-    discordPresence.partySize = 1;
-    discordPresence.partyMax = 5;
-    discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
-    Discord_UpdatePresence(&discordPresence);
-}*/
- 
-
-
 client.on("message", (msg) => {
     if (msg.content.startsWith("ping")) {
         if (msg.author.id === "224197682510561280") {
