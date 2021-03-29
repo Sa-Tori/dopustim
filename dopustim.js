@@ -20,7 +20,7 @@ client.on("ready", () => {
         status: 'online',
         activity: {
             type: 'WATCHING',
-            name: 'на бухло',
+            name: 'в бездну',
         },
     });
 });
@@ -51,7 +51,7 @@ client2.on("ready", () => {
         status: 'online',
         activity: {
             type: 'WATCHING',
-            name: 'в бездну',
+            name: 'на бухло',
         },
     });
 });
