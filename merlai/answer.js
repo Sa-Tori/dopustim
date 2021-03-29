@@ -3,7 +3,7 @@ const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 
 client2.on("ready", () => {
-    console.log('Реакции Мерлая готовы');
+    console.log('Ответы Мерлая готовы');
 });
 
 client2.on("message", async (msg) => {
