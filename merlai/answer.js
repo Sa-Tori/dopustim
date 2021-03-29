@@ -2,8 +2,12 @@
 const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 
+//дополнение
+
 const poetry = require('./poetry.json');
 const alcohol = require('./poetry.json');
+
+//сообщения
 
 client2.on("ready", () => {
     console.log('Ответы Мерлая готовы');
