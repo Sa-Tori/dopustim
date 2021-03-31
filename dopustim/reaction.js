@@ -109,7 +109,7 @@ msg.react("768469943288332299");
         msg.react(ah);
     };
 });
-});
+
 
 client.on("message", (msg) => {
   if (msg.content === "пика") {
