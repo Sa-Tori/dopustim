@@ -4,6 +4,7 @@ const client2 = new Discord2.Client();
 
 const poetry = require('./poetry.json');
 const ahegao = require('./poetry.json');
+const { fire, tea } = require('./poetry.json');
 
 client2.on("ready", () => {
     console.log('Реакции Мерлая готовы');
@@ -33,7 +34,20 @@ client2.on("message", (msg) => {
         const ah = ahegao[randomIndex];
         msg.react(ah);
     };
+    if (msg.author.id === "542663623789641729" && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
+        msg.react("768469879211687936");
+        msg.react("768469897398190081");
+        msg.react("768469924401250325");
+        msg.react("768469943288332299");
+    };
+    if (msg.author.id === "542663623789641729" && (getRandom(1, 7) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+        const fire = poetry.fire;
+        const randomIndex = Math.floor(Math.random() * fire.length);
+        const fir = fire[randomIndex];
+        const reactionEmoji = client.emojis.cache.get(fir);
+        msg.react(reactionEmoji);
+    };
 });
-});
+
 
 client2.login(process.env.BOT_TOKEN2);
