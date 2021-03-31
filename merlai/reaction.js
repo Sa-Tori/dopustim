@@ -44,7 +44,7 @@ client2.on("message", (msg) => {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
-        const reactionEmoji = client.emojis.cache.get(fir); msg.react(reactionEmoji);
+        msg.react(fir);
     };
 });
 
