@@ -40,12 +40,11 @@ client2.on("message", (msg) => {
         msg.react("768469924401250325");
         msg.react("768469943288332299");
     };
-    if (msg.author.id === "542663623789641729" && (getRandom(1, 3) == 3) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 4) == 2)) {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
-        const reactionEmoji = client.emojis.cache.get(fir);
-        msg.react(reactionEmoji);
+        const reactionEmoji = client.emojis.cache.get(fir); msg.react(reactionEmoji);
     };
 });
 
