@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const poetry = require('./poetry.json');
 const flower = require('./poetry.json');
-const { fire, tea } = require('./poetry.json');
+const { fire, tea, ahegao } = require('./poetry.json');
 //const tea = require('./poetry.json');
 
 client.on('ready', () => {
@@ -97,9 +97,17 @@ msg.react("768469943288332299");
         const emoji = ng[randomIndex];
         msg.channel.send(emoji);
     };*/
-  if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
+    if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
         msg.channel.send("<a:g2774:760531480824512512>");
     };
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 4) == 1) && msg.content.length == 0
+        && msg.channel.id == "804838051729637396" && msg.channel.id == "625758087554400266" && msg.channel.id == "816351964278292541" ) {
+        const ahegao = poetry.ahegao;
+        const randomIndex = Math.floor(Math.random() * ahegao.length);
+        const ah = ahegao[randomIndex];
+        msg.react(ah);
+    };
+});
 });
 
 client.on("message", (msg) => {
