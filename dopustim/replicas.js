@@ -81,7 +81,7 @@ function getStrof(s, w) {
 	return ans;
 }
 
-
+/*
 client.on("message", (msg) => {
  
 
@@ -106,7 +106,7 @@ client.on("message", (msg) => {
 			msg.reply("Прошу меня простить, меня ждут крипы.");
 		}
 	}
-});
+});*/
 
 
 client.on("message", async (msg) => {
