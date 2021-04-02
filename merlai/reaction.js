@@ -27,7 +27,7 @@ client2.on("message", (msg) => {
   if (msg.author.id === "523116257390886954" && msg.content.toLowerCase().indexOf("часть тебя безразлична")!=-1) { 
       msg.react("768469943288332299");
   };
-    if ((getRandom(0, 4) == 2) && msg.content.length == 0 && (msg.channel.id == "523123642293420052"
+    if ((getRandom(0, 7) == 2) && msg.content.length == 0 && (msg.channel.id == "523123642293420052"
         || msg.channel.id == "804838051729637396" || msg.channel.id == "625758087554400266" || msg.channel.id == "816351964278292541") ) {
         const ahegao = poetry.ahegao;
         const randomIndex = Math.floor(Math.random() * ahegao.length);
