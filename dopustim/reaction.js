@@ -101,7 +101,7 @@ msg.react("768469943288332299");
     if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
         msg.channel.send("<a:g2774:760531480824512512>");
     };
-    if ((getRandom(0, 4) == 2) && msg.content.length == 0 && msg.channel.id == "523123642293420052"
+    if ((getRandom(0, 7) == 4) && msg.content.length == 0 && msg.channel.id == "523123642293420052"
         || msg.channel.id == "804838051729637396" || msg.channel.id == "625758087554400266" || msg.channel.id == "816351964278292541" ) {
         const ahegao = poetry.ahegao;
         const randomIndex = Math.floor(Math.random() * ahegao.length);
