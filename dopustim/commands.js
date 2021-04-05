@@ -1,3 +1,8 @@
+'use strict';
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+
 if (!mess.member.hasPermission("MANAGE_MESSAGES")) return mess.channel.send("У  вас нет прав"); /* Если у исполнителя команды нету привилегии MANGAGE_MESSAGES, он не сможет её использовать */
 
 let robotmessage = args = mess.content.split(' '); // Пробелы между словами 
