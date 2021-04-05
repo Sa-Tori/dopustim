@@ -2,7 +2,7 @@
 const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 
-client.on("ready", () => {
+client2.on("ready", () => {
     console.log("Команды Мерлая готовы.");
     
 });
@@ -19,7 +19,7 @@ function say(msg) {
     }
 }
 
-client.on('message', (msg) => { 
+client2.on('message', (msg) => { 
     if (msg.content.startsWith("msay") && msg.author.id === "542663623789641729") {
         say(msg);
     };
