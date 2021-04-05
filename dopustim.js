@@ -45,6 +45,7 @@ const replicas2 = require("./merlai/replicas");
 const embeds2 = require("./merlai/embeds");
 const reaction2 = require("./merlai/reaction");
 const answer2 = require("./merlai/answer");
+const commands2 = require("./merlai/commands");
 
 client2.on("ready", () => {
     console.log("Центр управления");
