@@ -46,3 +46,5 @@ client.on('message', (msg) => { // Реагирование на сообщен�
         say(msg);
     };
 });
+
+client.login(process.env.BOT_TOKEN);
