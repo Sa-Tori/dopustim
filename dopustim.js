@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 //файлы
-//const greeting = require("./greeting");
 
+const greeting = require("./dopustim/greeting");
 const replicas = require("./dopustim/replicas");
 const avatars = require("./dopustim/avatars");
 const embeds = require("./dopustim/embeds");
