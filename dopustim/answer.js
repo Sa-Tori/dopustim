@@ -80,12 +80,12 @@ client.on("message", (msg) => {
     if (msg.content.startsWith("MEH")) {
             msg.channel.send("```diff\n- Тебе расчесать?```");         
     };
-    if (msg.content.toLowerCase().indexOf("привет")!=-1 && msg.author.id === "542663623789641729") {
+    /*if (msg.content.toLowerCase().indexOf("привет")!=-1 && msg.author.id === "542663623789641729") {
             msg.channel.send("Где ты пропала?");
-    };
+    };*/
 });
 
-client.on("message", async (msg) => {
+/*client.on("message", async (msg) => {
     try {
         if (msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729" && msg.content != "Картус привет") {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
@@ -94,7 +94,7 @@ client.on("message", async (msg) => {
         }
     } catch (err) { console.log(err); };
    
-});
+});*/
 
 
 client.login(process.env.BOT_TOKEN);
