@@ -12,6 +12,8 @@ const theult = require("./dopustim/theult");
 const reaction = require("./dopustim/reaction");
 const answer = require("./dopustim/answer");
 const commands = require("./dopustim/commands");
+const antinitro = require("./dopustim/antinitro");
+
 
 //запуск
 
