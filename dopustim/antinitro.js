@@ -104,6 +104,11 @@ client.on('message', (msg) => {
         msg.delete();
         msg.channel.send("<:009:592419660113117248>");
     };
+//
+    if (msg.content === "ди" || msg.content === "Ди") {
+        msg.delete();
+        msg.channel.send("<:047:684120725325742098>");
+    };
 //напоминание
     if (msg.content === "напомни") {
         const ebd = poetry.ebd;
