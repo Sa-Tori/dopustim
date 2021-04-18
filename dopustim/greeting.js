@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  console.log('Приветствие готово');
+  console.log('Приветствие Картуса готово');
 });
 
 client.on('guildMemberAdd', member => {
