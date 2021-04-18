@@ -18,5 +18,11 @@ client.on('guildMemberRemove', member => {
   channel.send(`Разбиты окна,\nМеркнет свет..\nНа голову надет пакет.`);
 });
 
+client.on("message", msg => {
+    if (msg.content.startsWith("Ниче не меркнет!") && message.author.id == "776445694587306028") {
+      msg.channel.send("Скатертью дорожка <:mme:625115196637315124>");
+    }   
+});
+
 
 client.login(process.env.BOT_TOKEN);
