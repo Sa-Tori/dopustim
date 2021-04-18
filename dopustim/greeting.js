@@ -19,7 +19,7 @@ client.on('guildMemberRemove', member => {
 });
 
 client.on("message", msg => {
-    if (msg.content.startsWith("Ниче не меркнет!") && message.author.id == "776445694587306028") {
+    if (msg.content.startsWith("Ниче не меркнет!") && msg.author.id == "776445694587306028") {
       msg.channel.send("Скатертью дорожка <:mme:625115196637315124>");
     }   
 });
