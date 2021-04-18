@@ -49,6 +49,7 @@ const reaction2 = require("./merlai/reaction");
 const answer2 = require("./merlai/answer");
 const commands2 = require("./merlai/commands");
 const antinitro2 = require("./merlai/antinitro");
+const greeting2 = require("./merlai/greeting");
 
 client2.on("ready", () => {
     console.log("Центр управления");
