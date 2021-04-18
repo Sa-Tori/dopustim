@@ -114,7 +114,7 @@ client.on("message", async (msg) => {
 		const hokku = poetry.hokku;
 		const randomIndex = Math.floor(Math.random() * hokku.length);
 		const word = hokku[randomIndex];
-		const rng = getRandom(0, 2021);
+		const rng = getRandom(0, 1021);
 		try {
 			if (rng == 222) {
 				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
