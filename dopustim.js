@@ -23,7 +23,7 @@ client.on("ready", () => {
         status: 'online',
         activity: {
             type: 'WATCHING',
-            name: 'в бездну',
+            name: 'из бездны',
         },
     });
 });
