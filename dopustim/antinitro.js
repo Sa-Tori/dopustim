@@ -15,19 +15,19 @@ client.on("ready", () => {
 client.on('message', (msg) => { 
     if (msg.author.id != "542663623789641729") return;
 //экспрессия
-    if (msg.content === "к" || msg.content === "К") {
+    if (msg.content === "кс1" || msg.content === "Кс1") {
         msg.delete();
         msg.channel.send("<:karthus:826580320044056576>");
     };
-    if (msg.content === "к2" || msg.content === "К2") {
+    if (msg.content === "кс2" || msg.content === "Кс2") {
         msg.delete();
         msg.channel.send("<:karthus2:826584480311279656>");
     };
-    if (msg.content === "кх2" || msg.content === "Кх") {
+    if (msg.content === "кх2" || msg.content === "Кх2") {
         msg.delete();
         msg.channel.send("<:kh2:827959675881652256>");
     };
-    if (msg.content === "кф" || msg.content === "Кф") {
+    if (msg.content === "кф1" || msg.content === "Кф1") {
         msg.delete();
         msg.channel.send("<:karthusf:827539023660449823>");
     };
@@ -47,7 +47,7 @@ client.on('message', (msg) => {
         msg.delete();
         msg.channel.send("<:kekv:821891736687214662>");
     };
-    if (msg.content === "кеквв" || msg.content === "Кеквв") {
+    if (msg.content === "кевк" || msg.content === "Кевк") {
         msg.delete();
         msg.channel.send("<:kekw:821053309087383633>");
     };
@@ -60,7 +60,7 @@ client.on('message', (msg) => {
         msg.channel.send("<:liba:508639165433249802>");
     };
 //кофейня
-    if (msg.content === "спанч" || msg.content === "Спанч") {
+    if (msg.content === "спнч" || msg.content === "Спнч") {
         msg.delete();
         msg.channel.send("<:089:592420693992538167>");
     };
@@ -68,15 +68,15 @@ client.on('message', (msg) => {
         msg.delete();
         msg.channel.send("<:087:592420677114396684>");
     };
-    if (msg.content === "ксетт" || msg.content === "Ксетт") {
+    if (msg.content === "сетт" || msg.content === "Сетт") {
         msg.delete();
         msg.channel.send("<:085:592420647812988930>");
     };
-    if (msg.content === "хахаск" || msg.content === "Хахаск") {
+    if (msg.content === "хаск" || msg.content === "Хаск") {
         msg.delete();
         msg.channel.send("<:079:592420490870521856>");
     };
-    if (msg.content === "ппстр" || msg.content === "Ппстр") {
+    if (msg.content === "ппср" || msg.content === "Ппср") {
         msg.delete();
         msg.channel.send("<:078:592420468397572106>");
     };
@@ -92,11 +92,11 @@ client.on('message', (msg) => {
         msg.delete();
         msg.channel.send("<:048:592420210359795712>");
     };
-    if (msg.content === "фп" || msg.content === "Фп") {
+    if (msg.content === "фпл" || msg.content === "Фпл") {
         msg.delete();
         msg.channel.send("<:049:592420229213061121>");
     };
-    if (msg.content === "персивонт" || msg.content === "Персивонт") {
+    if (msg.content === "прсв" || msg.content === "Прсв") {
         msg.delete();
         msg.channel.send("<:040:592419753776251002>");
     };
@@ -105,7 +105,7 @@ client.on('message', (msg) => {
         msg.channel.send("<:009:592419660113117248>");
     };
 //
-    if (msg.content === "ди" || msg.content === "Ди") {
+    if (msg.content === "дид" || msg.content === "Дид") {
         msg.delete();
         msg.channel.send("<:047:684120725325742098>");
     };
