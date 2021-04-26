@@ -18,7 +18,7 @@ const antinitro = require("./dopustim/antinitro");
 //запуск
 
 client.on("ready", () => {
-    console.log("Центр хранения файлов.");
+    console.log("Картус жив!");
     client.user.setPresence({
         status: 'online',
         activity: {
@@ -31,7 +31,7 @@ client.on("ready", () => {
 client.on("message", (msg) => {
     //if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
     if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
-        msg.channel.send("Изменения приняты.");
+        msg.channel.send("Изменения приняты, я жиф!");
     }
 });
 
@@ -52,7 +52,7 @@ const antinitro2 = require("./merlai/antinitro");
 const greeting2 = require("./merlai/greeting");
 
 client2.on("ready", () => {
-    console.log("Центр управления");
+    console.log("Мерлай жив!");
     client2.user.setPresence({
         status: 'online',
         activity: {
@@ -69,3 +69,31 @@ client2.on("message", (msg) => {
 });
 
 client2.login(process.env.BOT_TOKEN2);
+
+
+
+const Discord3 = require("discord.js");
+const client3 = new Discord3.Client();
+
+
+const answer3 = require("./baristan/answer");
+
+
+client3.on("ready", () => {
+    console.log("Баристан жив!");
+    client3.user.setPresence({
+        status: 'online',
+        activity: {
+            type: 'WATCHING',
+            name: 'на посетителей',
+        },
+    });
+});
+
+client3.on("message", (msg) => {
+    if (msg.content.startsWith("Изменения приняты.") && msg.author.id === "523116257390886954") {
+        msg.channel.send("Кому кофе <:073:592420364429164595>");
+    }
+});
+
+client2.login(process.env.BOT_TOKEN3);
