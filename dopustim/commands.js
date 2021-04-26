@@ -47,4 +47,8 @@ client.on('message', (msg) => { // Реагирование на сообщен�
     };
 });
 
+<<<<<<< HEAD
 client.login(process.env.BOT_TOKEN);
+=======
+client.login(process.env.BOT_TOKEN);
+>>>>>>> a0d8c04bfbd4fdbcd47082b785d4a92a75c79117
