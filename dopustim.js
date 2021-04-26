@@ -96,4 +96,4 @@ client3.on("message", (msg) => {
     }
 });
 
-client2.login(process.env.BOT_TOKEN3);
+client3.login(process.env.BOT_TOKEN3);
