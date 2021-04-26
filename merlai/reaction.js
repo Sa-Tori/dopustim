@@ -49,8 +49,6 @@ client2.on("message", (msg) => {
 });
 
 
-<<<<<<< HEAD
+
 client2.login(process.env.BOT_TOKEN2);
-=======
-client2.login(process.env.BOT_TOKEN2);
->>>>>>> a0d8c04bfbd4fdbcd47082b785d4a92a75c79117
+
