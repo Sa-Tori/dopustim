@@ -1,6 +1,6 @@
 'use strict';
 const Discord3 = require("discord.js");
-const client3 = new Discord2.Client();
+const client3 = new Discord3.Client();
 
 
 
