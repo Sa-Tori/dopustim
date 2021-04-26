@@ -2,44 +2,27 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-
 //дополнение
 
 const poetry = require('./poetry.json');
-const {noprefix, shprefix, alcohol} = require('./poetry.json');
+const {noprefix, shprefix} = require('./poetry.json');
 
 //сообщения
 
 client.on ("ready", () => {
-    console.log("Ответы готовы");
+    console.log("Ответы Картуса готовы");
 });
 
-  /*static void UpdatePresence()
-{
- DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.state = "Я наблюдаю";
-    discordPresence.details = "Competitive";
-    discordPresence.startTimestamp = 1507665886;
-    discordPresence.endTimestamp = 1507665886;
-    discordPresence.largeImageText = "Допустим";
-    discordPresence.smallImageText = "Rogue - Level 100";
-    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-    discordPresence.partySize = 1;
-    discordPresence.partyMax = 5;
-    discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
-    Discord_UpdatePresence(&discordPresence);
-}*/
- 
-
-
 client.on("message", (msg) => {
-    if (msg.content.startsWith("ping")) {
+    /*if (msg.content.startsWith("ping")) {
         if (msg.author.id === "224197682510561280") {
             msg.channel.send("Отстань от Кофуку ");
         } else {
             msg.channel.send("pong");
         }
+    };*/
+    if (msg.content === "pong" && msg.author.id === "519186885331910676") {
+            msg.channel.send('ping');
     };
     if (msg.content.startsWith("картус где ганги")) {
             msg.channel.send("Никакого уважения..");
@@ -97,52 +80,12 @@ client.on("message", (msg) => {
     if (msg.content.startsWith("MEH")) {
             msg.channel.send("```diff\n- Тебе расчесать?```");         
     };
-    if (msg.content.toLowerCase().indexOf("ча")!=-1 && msg.content.toLowerCase().indexOf(" ча")!=-1 && msg.author.id === "654810705903484949"){
-            const alcohol = poetry.alcohol;
-            const randomIndex = Math.floor(Math.random() * alcohol.length);
-            const word = alcohol[randomIndex];
-            msg.channel.send(word+" <:mme:625115196637315124>");
-    };
     /*if (msg.content.toLowerCase().indexOf("привет")!=-1 && msg.author.id === "542663623789641729") {
             msg.channel.send("Где ты пропала?");
     };*/
-
-//файлы
-//const greeting = require("./greeting");
-
-const replicas = require("./replicas");
-const avatars = require("./avatars");
-const embeds = require("./embeds");
-const theult = require("./theult");
-const reaction = require("./reaction");
-const answer = require("./answer");
-
-//запуск
-
-client.on("ready", () => {
-    console.log("Центр хранения файлов.");
-    client.user.setPresence({
-        status: 'online',
-        activity: {
-            type: 'WATCHING',
-            name: 'на бухло',
-        },
-    });
 });
 
-client.on("message", (msg) => {
-    //if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
-    if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
-        msg.channel.send("Изменения приняты.");
-    }
-
-});
-
-client.login(process.env.BOT_TOKEN);
-
-
-
-client.on("message", async (msg) => {
+/*client.on("message", async (msg) => {
     try {
         if (msg.content.toLowerCase().indexOf("привет") != -1 && msg.author.id === "542663623789641729" && msg.content != "Картус привет") {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
@@ -150,11 +93,8 @@ client.on("message", async (msg) => {
             msg.channel.send("Где ты пропала?");
         }
     } catch (err) { console.log(err); };
+   
+});*/
 
 
-const Discord2 = require("discord.js");
-const client2 = new Discord2.Client();
-
-//const answer = require("./merlai/answer.js");
-//const reaction = require("./reaction");
-
+client.login(process.env.BOT_TOKEN);

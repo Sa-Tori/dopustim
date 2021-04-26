@@ -81,10 +81,10 @@ function getStrof(s, w) {
 	return ans;
 }
 
-
+/*
 client.on("message", (msg) => {
- 
 
+ 
 	if ((msg.guild.id == "683107614589976657" || msg.guild.id == "532954366571708427" || msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
 		var m = msg.content; // получаем весь текст сообщения
 		var fl = 0;
@@ -106,7 +106,7 @@ client.on("message", (msg) => {
 			msg.reply("Прошу меня простить, меня ждут крипы.");
 		}
 	}
-});
+});*/
 
 
 client.on("message", async (msg) => {
@@ -114,7 +114,7 @@ client.on("message", async (msg) => {
 		const hokku = poetry.hokku;
 		const randomIndex = Math.floor(Math.random() * hokku.length);
 		const word = hokku[randomIndex];
-		const rng = getRandom(0, 2021);
+		const rng = getRandom(0, 1021);
 		try {
 			if (rng == 222) {
 				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };

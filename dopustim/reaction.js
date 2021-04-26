@@ -5,6 +5,7 @@ const client = new Discord.Client();
 const poetry = require('./poetry.json');
 const flower = require('./poetry.json');
 const { fire, tea } = require('./poetry.json');
+const ahegao = require('./poetry.json');
 //const tea = require('./poetry.json');
 
 client.on('ready', () => {
@@ -40,7 +41,7 @@ msg.react("768469943288332299");
         //msg.react("💚");
         //msg.react("<a:nya:526499575817699348>");
     };*/
-    if (msg.author.id === "542663623789641729" && (getRandom(1, 7) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 14) == 14) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
@@ -55,7 +56,7 @@ msg.react("768469943288332299");
         const reactionEmoji = client.emojis.cache.get(flot);
         msg.react(reactionEmoji);
     };
-    if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
+    /*if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
         const rng = getRandom(1, 5);
         if (rng == 1) {
             msg.react("768779785114484736");
@@ -96,11 +97,19 @@ msg.react("768469943288332299");
         const randomIndex = Math.floor(Math.random() * ng.length);
         const emoji = ng[randomIndex];
         msg.channel.send(emoji);
-    };
-  if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
+    };*/
+    if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
         msg.channel.send("<a:g2774:760531480824512512>");
     };
+    if ((getRandom(0, 7) == 4) && msg.content.length == 0 && ( msg.channel.id == "523123642293420052"
+        || msg.channel.id == "804838051729637396" || msg.channel.id == "625758087554400266" || msg.channel.id == "816351964278292541" ) ) {
+        const ahegao = poetry.ahegao;
+        const randomIndex = Math.floor(Math.random() * ahegao.length);
+        const ah = ahegao[randomIndex];
+        msg.react(ah);
+    };
 });
+
 
 client.on("message", (msg) => {
   if (msg.content === "пика") {

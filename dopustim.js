@@ -3,14 +3,17 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 //файлы
-//const greeting = require("./greeting");
 
+const greeting = require("./dopustim/greeting");
 const replicas = require("./dopustim/replicas");
 const avatars = require("./dopustim/avatars");
 const embeds = require("./dopustim/embeds");
 const theult = require("./dopustim/theult");
 const reaction = require("./dopustim/reaction");
 const answer = require("./dopustim/answer");
+const commands = require("./dopustim/commands");
+const antinitro = require("./dopustim/antinitro");
+
 
 //запуск
 
@@ -20,7 +23,7 @@ client.on("ready", () => {
         status: 'online',
         activity: {
             type: 'WATCHING',
-            name: 'на бухло',
+            name: 'из бездны',
         },
     });
 });
@@ -44,6 +47,9 @@ const replicas2 = require("./merlai/replicas");
 const embeds2 = require("./merlai/embeds");
 const reaction2 = require("./merlai/reaction");
 const answer2 = require("./merlai/answer");
+const commands2 = require("./merlai/commands");
+const antinitro2 = require("./merlai/antinitro");
+const greeting2 = require("./merlai/greeting");
 
 client2.on("ready", () => {
     console.log("Центр управления");
@@ -51,7 +57,7 @@ client2.on("ready", () => {
         status: 'online',
         activity: {
             type: 'WATCHING',
-            name: 'в бездну',
+            name: 'на бухло',
         },
     });
 });
