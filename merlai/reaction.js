@@ -28,7 +28,7 @@ client2.on("message", (msg) => {
       msg.react("768469943288332299");
   };
     if ((getRandom(1, 7) == 7) && msg.content.length == 0 && ( msg.channel.id == "523123642293420052"
-        || msg.channel.id == "804838051729637396" || msg.channel.id == "625758087554400266" || msg.channel.id == "816351964278292541" ) ) {
+        || msg.channel.id == "804838051729637396" || msg.channel.id == "625758087554400266" || msg.channel.id == "816351964278292541" || msg.channel.id == "837061475902160967") ) {
         const ahegao = poetry.ahegao;
         const randomIndex = Math.floor(Math.random() * ahegao.length);
         const ah = ahegao[randomIndex];
