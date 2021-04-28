@@ -18,6 +18,14 @@ client2.on('guildMemberRemove', async (member) => {
     } catch (err) { console.log(err); };
 });
 
+//выдача роли в империуме
+
+client2.on('guildMemberAdd',  async (member) => {
+    const channel = member.guild.channels.cache.get('749945494880649267');
+    if (!channel) return;
+    var role = member.guild.roles.cache.find(role => role.id === "699912160494747648");
+    member.roles.add(role);
+});
 
 client2.login(process.env.BOT_TOKEN2);
 
