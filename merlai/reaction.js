@@ -40,7 +40,7 @@ client2.on("message", (msg) => {
         msg.react("768469924401250325");
         msg.react("768469943288332299");
     };
-    if (msg.author.id === "542663623789641729" && (getRandom(0, 7) == 7)) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 8) == 7)) {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
