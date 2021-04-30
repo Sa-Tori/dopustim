@@ -41,12 +41,12 @@ msg.react("768469943288332299");
         //msg.react("💚");
         //msg.react("<a:nya:526499575817699348>");
     };*/
-    if (msg.author.id === "542663623789641729" && (getRandom(0, 8) == 7)) {
+    /*if (msg.author.id === "542663623789641729" && (getRandom(0, 8) == 7)) {
         const fire = poetry.fire;
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
         msg.react(fir);
-    };
+    };*/
     if ((msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) || (msg.guild.id == "532954366571708427" && (msg.content.toLowerCase().indexOf("чай") != -1 || msg.content.toLowerCase().indexOf("чая") != -1))) {
         if (msg.content.toLowerCase().indexOf("новый год") != -1) return;
         const tea = poetry.tea;
@@ -109,6 +109,17 @@ msg.react("768469943288332299");
     };
 });
 
+client.on("message", async (msg) => {
+    try {
+        if (msg.author.id === "542663623789641729" && (getRandom(0, 9) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+            const fire = poetry.fire;
+            const randomIndex = Math.floor(Math.random() * fire.length);
+            const fir = fire[randomIndex];
+            const reactionEmoji = client.emojis.cache.get(fir);
+            msg.react(reactionEmoji);
+        }
+    } catch (err) { console.log(err); };
+});
 
 client.on("message", (msg) => {
   if (msg.content === "пика") {
