@@ -118,6 +118,7 @@ client.on("message", async (msg) => {
         const fir = fire[randomIndex];
         f = fir;
         const reactionEmoji = client.emojis.cache.get(fir);
+        if(!reactionEmoji) {return console.log("Эмоджи не существует "+fir)}
         msg.react(reactionEmoji);
      }catch(err=>{console.log('ЭМОДЖИ '+f);console.log(err)})
     };
