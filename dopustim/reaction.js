@@ -120,7 +120,8 @@ client.on("message", async (msg) => {
         const reactionEmoji = client.emojis.cache.get(fir);
         if(!reactionEmoji) {return console.log("Эмоджи не существует "+fir)}
         msg.react(reactionEmoji);
-     } catch (err) { console.log('ЭМОДЖИ ' + f); console.log(err) };
+     }catch(err){console.log('ЭМОДЖИ '+f);console.log(err)}
+    };
 });
 
 client.on("message", (msg) => {
