@@ -110,15 +110,17 @@ msg.react("768469943288332299");
 });
 
 client.on("message", async (msg) => {
-    try {
-        if (msg.author.id === "542663623789641729" && (getRandom(0, 9) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
-            const fire = poetry.fire;
-            const randomIndex = Math.floor(Math.random() * fire.length);
-            const fir = fire[randomIndex];
-            const reactionEmoji = client.emojis.cache.get(fir);
-            msg.react(reactionEmoji);
-        }
-    } catch (err) { console.log(err); };
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 9) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+   let f = '';
+   try{
+        const fire = poetry.fire;
+        const randomIndex = Math.floor(Math.random() * fire.length);
+        const fir = fire[randomIndex];
+        f = fir;
+        const reactionEmoji = client.emojis.cache.get(fir);
+        msg.react(reactionEmoji);
+     }catch(err=>{console.log('ЭМОДЖИ '+f);console.log(err)})
+    };
 });
 
 client.on("message", (msg) => {
