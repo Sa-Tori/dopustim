@@ -8,12 +8,13 @@ client2.on("ready", () => {
 
 client2.on('guildMemberRemove', async (member) => {
     const channel = member.guild.channels.cache.find(ch => ch.name === '🍓врата' || ch.name === "🤖ваш-покорный-слуга");
+    let UserTag = member.user.tag;
     if (!channel) return;
     try {
         if (channel) {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
             await delay(5 * 1000);
-            channel.send("Ниче не меркнет! Это <@" + member.id + "> покинул нас.");
+            channel.send("Ниче не меркнет! Это " + UserTag + " покинул нас.");
         }
     } catch (err) { console.log(err); };
 });
