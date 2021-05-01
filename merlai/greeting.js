@@ -13,7 +13,7 @@ client2.on('guildMemberRemove', async (member) => {
         if (channel) {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
             await delay(5 * 1000);
-            channel.send(`Ниче не меркнет! Это ${member} покинул нас.`);
+            channel.send(`Ниче не меркнет! Это {member} покинул нас.`);
         }
     } catch (err) { console.log(err); };
 });
