@@ -110,7 +110,7 @@ msg.react("768469943288332299");
 });
 
 client.on("message", async (msg) => {
-    if (msg.author.id === "542663623789641729" && (getRandom(0, 9) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+    if (msg.author.id === "542663623789641729" && (getRandom(0, 13) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
    let f = '';
    try{
         const fire = poetry.fire;
