@@ -27,7 +27,7 @@ function teareact(msg) {
     }
 }
 
-client.on("message", (msg) => {
+client.on("message", async (msg) => {
 const atea = poetry.atea;
     if (isFinded(msg.content, atea) && msg.author.id != "523116257390886954" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099")) {
         const tea = poetry.tea;
