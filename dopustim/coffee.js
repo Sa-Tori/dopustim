@@ -19,7 +19,7 @@ function isFinded(s, ate) {
 
 function teareact(msg) {
     try {
-        let text = msg.content.substring();
+        let text = msg.content;
         msg.react(text);
     } catch {
         msg.reply("**ERROR!!**");
