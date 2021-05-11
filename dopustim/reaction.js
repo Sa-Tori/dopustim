@@ -47,14 +47,15 @@ msg.react("768469943288332299");
         const fir = fire[randomIndex];
         msg.react(fir);
     };*/
-    if ((msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) || (msg.guild.id == "532954366571708427" && (msg.content.toLowerCase().indexOf("чай") != -1 || msg.content.toLowerCase().indexOf("чая ") != -1))) {
+//чайные реакции 
+    /*if ((msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) || (msg.guild.id == "532954366571708427" && (msg.content.toLowerCase().indexOf("чай") != -1 || msg.content.toLowerCase().indexOf("чая ") != -1))) {
         if (msg.content.toLowerCase().indexOf("новый год") != -1) return;
         const tea = poetry.tea;
         const randomIndex = Math.floor(Math.random() * tea.length);
         const flot = tea[randomIndex];
         const reactionEmoji = client.emojis.cache.get(flot);
         msg.react(reactionEmoji);
-    };
+    };*/
     /*if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
         const rng = getRandom(1, 5);
         if (rng == 1) {
