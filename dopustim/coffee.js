@@ -43,7 +43,7 @@ const atea = poetry.atea;
             teareact(msg);
     };
  if (msg.content.startsWith("тестча")) {
-            msg.react("<:tea002:796066261565833226>");
+            msg.react(":tea002:");
     };
     
 });
