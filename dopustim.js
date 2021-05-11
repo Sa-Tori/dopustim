@@ -23,8 +23,8 @@ client.on("ready", () => {
     client.user.setPresence({
         status: 'online',
         activity: {
-            type: 'WATCHING',
-            name: 'из бездны',
+            type: 'PLAYING',
+            name: 'бездне',
         },
     });
 });
