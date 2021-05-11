@@ -42,6 +42,9 @@ const atea = poetry.atea;
     if (msg.content.startsWith("<:tea0") && msg.author.id === "523116257390886954") {
             teareact(msg);
     };
+ if (msg.content.startsWith("тестча")) {
+            msg.react("<:tea002:796066261565833226>");
+    };
     
 });
 
