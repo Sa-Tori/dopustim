@@ -63,7 +63,7 @@ client2.on("ready", () => {
 });
 
 client2.on("message", (msg) => {
-    if (msg.content.startsWith("Изменения приняты.") && msg.author.id === "523116257390886954") {
+    if (msg.content.startsWith("Изменения приняты") && msg.author.id === "523116257390886954") {
         msg.channel.send("```xl\n'Чуть потускнело.. но всё же работает!'```");
     }
 });
@@ -91,7 +91,7 @@ client3.on("ready", () => {
 });
 
 client3.on("message", (msg) => {
-    if (msg.content.startsWith("Изменения приняты.") && msg.author.id === "523116257390886954") {
+    if (msg.content.startsWith("Изменения приняты") && msg.author.id === "523116257390886954") {
         msg.channel.send("Кому кофе <:073:592420364429164595>");
     }
 });
