@@ -1,3 +1,4 @@
+'use strict';
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
@@ -19,7 +20,7 @@ function isFinded(s, ate) {
 
 function teareact(msg) {
     try {
-        let text = msg.content;
+        let text = msg.content.substring();
         msg.react(text);
     } catch {
         msg.reply("**ERROR!!**");
