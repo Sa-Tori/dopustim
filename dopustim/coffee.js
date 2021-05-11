@@ -20,8 +20,12 @@ function isFinded(s, ate) {
 
 function teareact(msg) {
     try {
-        let text = msg.content.substring();
-        msg.react(text);
+        let p1 = msg.content.indexOf(':');
+        let text = msg.content.substring(p1 + 1);
+        p1 = text.indexOf('>');
+        let ch_id = text.substring(7, p1);
+        text = text.substring(p1 + 1);
+        msg.react(ch_id);
     } catch {
         msg.reply("**ERROR!!**");
     }
@@ -41,9 +45,6 @@ const atea = poetry.atea;
     };
     if (msg.content.startsWith("<:tea0") && msg.author.id === "523116257390886954") {
             teareact(msg);
-    };
- if (msg.content.startsWith("тестча")) {
-            msg.react("625115196637315124");
     };
     
 });
