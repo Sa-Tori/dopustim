@@ -39,13 +39,13 @@ const atea = poetry.atea;
         const flot = tea[randomIndex];
      
         const teafire = poetry.teafire;
-        const randptea = Math.floor(Math.random() * teafire.length);
+        const randteafire = Math.floor(Math.random() * teafire.length);
         const rtf = teafire[randteafire];
         
         const ptea = poetry.ptea;
         const randptea = Math.floor(Math.random() * ptea.length);
         const word = ptea[randptea];
-        msg.channel.send(word);
+        msg.channel.send(rtf + " " + word);
         msg.channel.send(flot);
     };
     if (msg.content === "<:tea002:796066261565833226>" && msg.author.id === "523116257390886954") {
