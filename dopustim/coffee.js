@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const poetry = require('./poetry.json');
-const tea = require('./poetry.json');
+const {tea, ptea, teafire} = require('./poetry.json');
 
 client.on ("ready", () => {
  console.log("Чай готов!");
@@ -37,7 +37,15 @@ const atea = poetry.atea;
         const tea = poetry.tea;
         const randomIndex = Math.floor(Math.random() * tea.length);
         const flot = tea[randomIndex];
-        msg.channel.send("Вот ваш чай.");
+     
+        const teafire = poetry.teafire;
+        const randptea = Math.floor(Math.random() * teafire.length);
+        const rtf = teafire[randteafire];
+        
+        const ptea = poetry.ptea;
+        const randptea = Math.floor(Math.random() * ptea.length);
+        const word = ptea[randptea];
+        msg.channel.send(rtf + " " + word);
         msg.channel.send(flot);
     };
     if (msg.content === "<:tea002:796066261565833226>" && msg.author.id === "523116257390886954") {
