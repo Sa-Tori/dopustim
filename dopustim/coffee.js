@@ -23,9 +23,9 @@ function teareact(msg) {
         let p1 = msg.content.indexOf(':');
         let text = msg.content.substring(p1 + 1);
         p1 = text.indexOf('>');
-        let ch_id = text.substring(7, p1);
+        let ch2 = text.substring(7, p1);
         text = text.substring(p1 + 1);
-        msg.react(ch_id);
+        msg.react(ch2);
     } catch {
         msg.reply("**ERROR!!**");
     }
