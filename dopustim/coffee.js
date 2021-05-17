@@ -33,7 +33,7 @@ function teareact(msg) {
 
 client.on("message", async (msg) => {
 const atea = poetry.atea;
-    if (msg.content.toLowerCase().indexOf("чаян")!=-1 || msg.content.toLowerCase().indexOf("чайн")!=-1 || msg.content.toLowerCase().indexOf("чает")!=-1) return;
+    if (isFinded(msg.content, notea) return;
     if ((isFinded(msg.content, atea) && msg.author.id != "523116257390886954" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099")) || 
         msg.author.id != "523116257390886954" && msg.author.id != "654810705903484949" && (msg.content.startsWith("чай") || msg.content.startsWith("Чай")) && msg.guild.id == "622954155077533696") {
         const tea = poetry.tea;
