@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const poetry = require('./poetry.json');
-const {tea, ptea, teafire} = require('./poetry.json');
+const {tea, ptea, teafire, notea} = require('./poetry.json');
 
 client.on ("ready", () => {
  console.log("Чай готов!");
