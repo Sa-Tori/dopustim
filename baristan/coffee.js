@@ -52,7 +52,7 @@ client3.on("message", async (msg) => {
     if (msg.content === "<:cof108:851846442674946088>" && msg.author.id === "836240368206872576") {
         msg.channel.send('Приятно пожевать <:096:592420847017263134>');
     };
-    if (msg.content.startsWith("<:cof0") && msg.author.id === "836240368206872576") {
+    if (msg.content.startsWith("<:cof") && msg.author.id === "836240368206872576") {
         cofreact(msg);
     };
 
