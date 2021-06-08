@@ -3,10 +3,9 @@ const Discord3 = require("discord.js");
 const client3 = new Discord3.Client();
 
 const poetry = require('./poetry.json');
-const {tea, ptea, teafire, notea} = require('./poetry.json');
 
-client3.on ("ready", () => {
- console.log("Чай готов!");
+client3.on("ready", () => {
+    console.log("Кофе готов!");
 });
 
 function isFinded(s, ate) {
@@ -18,7 +17,7 @@ function isFinded(s, ate) {
     return false;
 }
 
-function teareact(msg) {
+function cofreact(msg) {
     try {
         let p1 = msg.content.indexOf(':');
         let text = msg.content.substring(p1 + 1);
@@ -32,32 +31,31 @@ function teareact(msg) {
 }
 
 client3.on("message", async (msg) => {
-    const atea = poetry.atea;
-    const notea = poetry.notea;
-    if (isFinded(msg.content, notea)) return;
-    if ((isFinded(msg.content, atea) && msg.author.id != "523116257390886954" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099")) || 
-        msg.author.id != "523116257390886954" && msg.author.id != "654810705903484949" && (msg.content.startsWith("чaй") || msg.content.startsWith("Чaй")) && msg.guild.id == "622954155077533696") {
-        const tea = poetry.tea;
-        const randomIndex = Math.floor(Math.random() * tea.length);
-        const flot = tea[randomIndex];
-     
-        const teafire = poetry.teafire;
-        const randteafire = Math.floor(Math.random() * teafire.length);
-        const rtf = teafire[randteafire];
-        
-        const ptea = poetry.ptea;
-        const randptea = Math.floor(Math.random() * ptea.length);
-        const word = ptea[randptea];
+    const acof = poetry.acof;
+    const nocof = poetry.nocof;
+    if (isFinded(msg.content, nocof)) return;
+    if (isFinded(msg.content, acof) && msg.author.id != "836240368206872576" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099")) {
+        const cof = poetry.cof;
+        const randomIndex = Math.floor(Math.random() * cof.length);
+        const flot = cof[randomIndex];
+
+        const coffire = poetry.coffire;
+        const randcoffire = Math.floor(Math.random() * coffire.length);
+        const rtf = coffire[randcoffire];
+
+        const pcof = poetry.pcof;
+        const randpcof = Math.floor(Math.random() * pcof.length);
+        const word = pcof[randpcof];
         msg.channel.send(rtf + " " + word);
         msg.channel.send(flot);
     };
-    if (msg.content === "<:tea002:796066261565833226>" && msg.author.id === "523116257390886954") {
-            msg.channel.send('Приятно пожевать <:096:592420847017263134>');
+    if (msg.content === "<:cof108:851846442674946088>" && msg.author.id === "836240368206872576") {
+        msg.channel.send('Приятно пожевать <:096:592420847017263134>');
     };
-    if (msg.content.startsWith("<:tea0") && msg.author.id === "523116257390886954") {
-            teareact(msg);
+    if (msg.content.startsWith("<:cof0") && msg.author.id === "836240368206872576") {
+        cofreact(msg);
     };
-    
+
 });
 
 
