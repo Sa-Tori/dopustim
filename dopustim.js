@@ -78,6 +78,7 @@ const client3 = new Discord3.Client();
 
 
 const answer3 = require("./baristan/answer");
+const coffee3 = require("./baristan/coffee");
 
 
 client3.on("ready", () => {
