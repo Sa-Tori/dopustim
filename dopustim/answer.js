@@ -51,6 +51,10 @@ client.on("message", (msg) => {
     if (msg.content.startsWith(`${shprefix}`)) {
             msg.channel.send("Не повышай на меня шрифт!");
     };
+    if (msg.content.toLowerCase().indexOf("твой папочка вернулся")!=-1 && msg.author.id == "478669590365339649") {
+            msg.channel.send("Мог бы и не возвращаться <:084:592420618084024320>");
+    };
+    
     if (msg.content.startsWith("kds")) {
             msg.channel.send("<a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081><a:fire_green:768469897398190081>");
     };
