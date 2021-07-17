@@ -24,7 +24,7 @@ client.on("ready", () => {
         status: 'online',
         activity: {
             type: 'PLAYING',
-            name: 'бездне',
+            name: 'Сумеречных островах',
         },
     });
 });
