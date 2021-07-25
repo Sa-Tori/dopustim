@@ -1,13 +1,14 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const { Client, MessageEmbed } = require('discord.js');
-const fs = require("fs");
+//const { Client, MessageEmbed } = require('discord.js');
+//const fs = require("fs");
 const poetry = require('./poetry.json');
-const servers = ["381829822982389771", "471630590806851584"];
+const league = require('./league.json');
+//const servers = ["381829822982389771", "471630590806851584"];
 
 
 client.on ("ready", () => {
- console.log("Реплики готовы");
+ console.log("Реплики Картуса готовы");
 });
 
 
@@ -81,7 +82,7 @@ function getStrof(s, w) {
 	return ans;
 }
 
-/*
+
 client.on("message", (msg) => {
 
  
@@ -94,7 +95,7 @@ client.on("message", (msg) => {
 		}
 		var rd = rand_word(m); // достает рандомное слово из строки m
 		var b = [];
-		var voice = poetry.voice; // массив всех стихов
+		var voice = league.voice; // массив всех стихов
 		for (var i = 0; i < voice.length; i++) // находит все стихи, где есть это слово и записывает их в b
 			if (lowerCase(voice[i]).includes(rd))
 				b.push(voice[i]);
@@ -106,7 +107,7 @@ client.on("message", (msg) => {
 			msg.reply("Прошу меня простить, меня ждут крипы.");
 		}
 	}
-});*/
+});
 
 
 client.on("message", async (msg) => {
