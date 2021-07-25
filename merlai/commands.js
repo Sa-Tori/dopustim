@@ -20,7 +20,7 @@ function say(msg) {
 }
 
 client2.on('message', (msg) => { 
-    if (msg.content.startsWith("msay") && msg.author.id === "542663623789641729") {
+    if (msg.content.startsWith("msay") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
         say(msg);
     };
 });
