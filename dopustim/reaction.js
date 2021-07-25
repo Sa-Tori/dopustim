@@ -24,7 +24,7 @@ client.on("message", (msg) => {
         const reactionEmoji = client.emojis.cache.get(flo);
         msg.react(reactionEmoji);  
     };
-  if (msg.author.id === "542663623789641729" && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
+  if ((msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649") && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
 msg.react("768469879211687936");
 msg.react("768469897398190081");
 msg.react("768469924401250325");
@@ -112,7 +112,7 @@ msg.react("768469943288332299");
 });
 
 client.on("message", async (msg) => {
-    if (msg.author.id === "542663623789641729" && (getRandom(0, 13) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+    if ((msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649") && (getRandom(0, 13) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
    let f = '';
    try{
         const fire = poetry.fire;
