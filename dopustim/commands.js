@@ -22,7 +22,7 @@ function say(msg) {
 client.on('message', (msg) => { // Реагирование на сообщения
     const arggs = msg.content.split(' ').slice(1); // Все аргументы за именем команды с префиксом
     const amount = arggs.join(' '); // Количество сообщений, которые должны быть удалены
-    if (msg.content.startsWith("delete") && msg.author.id === "542663623789641729") {
+    if (msg.content.startsWith("delete") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
         
         if (!amount) return msg.channel.send('Вы не указали, сколько сообщений нужно удалить!'); // Проверка, задан ли параметр количества
         if (isNaN(amount)) return msg.channel.send('Это не число!'); // Проверка, является ли числом ввод пользователя 
@@ -42,7 +42,7 @@ client.on('message', (msg) => { // Реагирование на сообщен�
         delete_messages();
     };
     
-    if (msg.content.startsWith("ksay") && msg.author.id === "542663623789641729") {
+    if (msg.content.startsWith("ksay") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
         say(msg);
     };
 });
