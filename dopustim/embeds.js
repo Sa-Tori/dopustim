@@ -106,19 +106,24 @@ function isFinded(s, morn, morn2) {
 }
 
 client.on('message', msg => {
+    let UserTag = msg.author.tag;
+    let us = client.users.cache.get('523116257390886954');
     const morning = poetry.morning;
     const amorning = poetry.amorning;
-     if (isFinded(msg.content, morning, amorning) && msg.content != "доброе утро" && msg.content != "Утра" && msg.author.id != "297089757651927040" && msg.content.length<30) {
+    if (isFinded(msg.content, morning, amorning) && msg.content != "доброе утро" && msg.content != "Утра" && msg.author.id != "297089757651927040" && msg.content.length < 30) {
         const randommorning = Math.floor(Math.random() * morning.length);
         const morn = morning[randommorning];
         const dragon = poetry.dragon;
         const randomIndex = Math.floor(Math.random() * dragon.length);
         const drag = dragon[randomIndex];
         const embed = new MessageEmbed()
-            .setTitle("И тебе "+morn)
-            .setDescription(msg.author)
-            .setColor(0x0d004d)
-            .setImage(drag);
+            .setTitle("<a:firea:872262702389669969>И тебе " + morn + " <:dragwu:838458320531619930>")
+            .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
+            .setThumbnail('https://i.ibb.co/ctR84n3/torch11.gif')
+            .setColor(0x368ba2)
+            .setImage(drag)
+            .setTimestamp()
+            .setFooter('Утро тогда, когда проснулся. ', us.avatarURL({ dynamic: true }));
         msg.channel.send(embed);
     }
     if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
