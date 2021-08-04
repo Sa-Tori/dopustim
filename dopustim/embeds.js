@@ -14,14 +14,14 @@ client.on("ready", () => {
   if (message.content === "Привет" && message.author.id != "542663623789641729") {
     const embed = new MessageEmbed()
       .setTitle("Приветствие")
-      .setColor(0xff0000)
+      .setColor(0x368ba2)
       .setDescription("Досвидания, мне неприятно");
     message.channel.send(embed);
   };
   if (message.content === "Утра") {
     const embed = new MessageEmbed()
         .setTitle("И тебе, мой сладкий)")
-        .setColor(0x0d004d)
+        .setColor(0x368ba2)
         .setImage("https://media.discordapp.net/attachments/499796673598586941/526742577878401035/24728.gif");
     message.channel.send(embed);
   };
@@ -29,13 +29,13 @@ client.on("ready", () => {
     if (message.author.id === "542663623789641729") {
     const embed = new MessageEmbed()
         .setTitle("Мех")
-        .setColor(0x0d004d)
+        .setColor(0x368ba2)
         .setImage("http://bestanimations.com/media/dragons/1758478091dragon-animated-gif-69.gif");
     message.channel.send(embed);
   } else {
     const embed = new MessageEmbed()
         .setTitle("Ты кто??")
-        .setColor(0x0d004d)
+        .setColor(0x368ba2)
         .setDescription("Досвидания, мне неприятно");
     message.channel.send(embed);
   }
@@ -45,13 +45,13 @@ client.on("ready", () => {
         const embed = new MessageEmbed()
             .setTitle("Всегда рядом")
             .setDescription(message.author)
-            .setColor(0x0d004d)
+            .setColor(0x368ba2)
             .setImage("https://media1.tenor.com/images/a5a88dd6f4b00b44361ec7ef55b85dd4/tenor.gif?itemid=7636561");
         message.channel.send(embed);
     } else {
         const embed = new MessageEmbed()
             .setTitle("Да что ты знаешь об одиночестве??")
-            .setColor(0x0d004d)
+            .setColor(0x368ba2)
             .setImage("https://i.imgur.com/XWSzl8R.gif");
         message.channel.send(embed);
     }
@@ -61,13 +61,13 @@ client.on("ready", () => {
         const embed = new MessageEmbed()
             .setTitle("И тебе, мой сладкий) <:1Rem:684121137386487833>")
             .setDescription(message.author)
-            .setColor(0x0d004d)
+            .setColor(0x368ba2)
             .setImage("https://tenor.com/view/sleeping-kiss-hug-anime-gif-15619689");
         message.channel.send(embed);
     } else {
         const embed = new MessageEmbed()
             .setTitle("Я пока не знаю что тебе ответить...")
-            .setColor(0x0d004d)
+            .setColor(0x368ba2)
             .setDescription(message.author);
         message.channel.send(embed);
     }
@@ -76,7 +76,7 @@ client.on("ready", () => {
     const embed = new MessageEmbed()
         .setTitle("Ооооо, Утро")
         .setDescription("Ну уж нет, я еще посплю")
-        .setColor(0x0d004d)
+        .setColor(0x368ba2)
         .setImage("https://i.gifer.com/Kzlh.gif");
     message.channel.send(embed);
   };
@@ -84,7 +84,7 @@ client.on("ready", () => {
     const embed = new MessageEmbed()
         .setTitle("Пошел нахуй")
         .setDescription("меня заебала твоя ссылка")
-        .setColor(0x0d004d)
+        .setColor(0x368ba2)
         .setImage("https://media1.tenor.com/images/25ec03203265dee174003d8557e7c668/tenor.gif");
     message.channel.send(embed);
     };
@@ -131,7 +131,7 @@ client.on('message', msg => {
         const randomIndex = Math.floor(Math.random() * nihua.length);
         const word = nihua[randomIndex];
         const embed = new MessageEmbed()
-            .setColor(0x0d004d)
+            .setColor(0x368ba2)
             .setImage(word);
         msg.channel.send(embed);
     }
