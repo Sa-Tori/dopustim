@@ -30,9 +30,18 @@ client2.on("message", (msg) => {
             const word = alcohol[randomIndex];
             msg.channel.send(word+" <:mme:625115196637315124>");
     };
-    if (msg.author.id === "523116257390886954" && (msg.content.toLowerCase().indexOf("мордекайзер") != -1 || msg.content.toLowerCase().indexOf("панцирь из металла") != -1)) {
+	if (msg.author.id === "523116257390886954" && (msg.content.toLowerCase().indexOf("мордекайзер") != -1 || msg.content.toLowerCase().indexOf("панцирь из металла") != -1)) {
 		msg.channel.send("```diff\n- В смерти нет смысла, Картус. Важно то, что ты делаешь после неё.```");
 	};
+	if (msg.author.id === "523116257390886954" && (msg.content.toLowerCase().indexOf("сион") != -1 || msg.content.toLowerCase().indexOf("эхо величия") != -1)) {
+		msg.channel.send("```diff\n- Даже смерть трепещет при виде меня.```");
+	};
+	if (msg.author.id === "523116257390886954" && msg.content.toLowerCase().indexOf("долго обманываешь смерть") != -1) {
+		msg.channel.send("```diff\n- Мне ещё так много нужно.. убить..```");
+	};
+	if (msg.author.id === "523116257390886954" && (msg.content.toLowerCase().indexOf("mordekaiser") != -1 || msg.content.toLowerCase().indexOf("a shell of metal") != -1)) {
+		msg.channel.send("```diff\n- Death has no meaning, Karthus, all that matters is one's purpose beyond it.```");
+	};	
 });
 
 client2.login(process.env.BOT_TOKEN2);
