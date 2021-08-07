@@ -24,12 +24,15 @@ client2.on("message", async (msg) => {
 });
 
 client2.on("message", (msg) => {
-  if (msg.content.toLowerCase().indexOf("ча")!=-1 && msg.content.toLowerCase().indexOf(" ча")!=-1 && msg.author.id === "654810705903484949"){
+    if (msg.content.toLowerCase().indexOf("ча")!=-1 && msg.content.toLowerCase().indexOf(" ча")!=-1 && msg.author.id === "654810705903484949"){
             const alcohol = poetry.alcohol;
             const randomIndex = Math.floor(Math.random() * alcohol.length);
             const word = alcohol[randomIndex];
             msg.channel.send(word+" <:mme:625115196637315124>");
     };
+    if (msg.author.id === "523116257390886954" && (msg.content.toLowerCase().indexOf("мордекайзер") != -1 || msg.content.toLowerCase().indexOf("панцирь из металла") != -1)) {
+		msg.channel.send("```diff\n- В смерти нет смысла, Картус. Важно то, что ты делаешь после неё.```");
+	};
 });
 
 client2.login(process.env.BOT_TOKEN2);
