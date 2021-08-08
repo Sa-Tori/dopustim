@@ -125,7 +125,27 @@ client.on('message', msg => {
             .setTimestamp()
             .setFooter('Утро тогда, когда проснулся. ', us.avatarURL({ dynamic: true }));
         msg.channel.send(embed);
-    }
+    };
+    const utra = poetry.utra;
+    if (msg.content === "Утра") {
+      const teafire = poetry.teafire;
+      const randteafire = Math.floor(Math.random() * teafire.length);
+      const rtf = teafire[randteafire];
+      const randomutra = Math.floor(Math.random() * utra.length);
+      const utras = utra[randomutra];
+      const drutra = poetry.drutra;
+      const randomIndex = Math.floor(Math.random() * drutra.length);
+      const drutras = drutra[randomIndex];
+      const embed = new MessageEmbed()
+        .setTitle(rtf + " И тебе, " + utras + ".")
+        .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
+        .setThumbnail('https://i.ibb.co/ctR84n3/torch11.gif')
+        .setColor(0x368ba2)
+        .setImage(drutras)
+        .setTimestamp()
+        .setFooter('Это не клиновый листок, это ДРАКОН! ', us.avatarURL({ dynamic: true }));
+      msg.channel.send(embed);
+    };
     if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
         const nihua = poetry.nihua;
         const randomIndex = Math.floor(Math.random() * nihua.length);
@@ -134,7 +154,7 @@ client.on('message', msg => {
             .setColor(0x368ba2)
             .setImage(word);
         msg.channel.send(embed);
-    }
+    };
     
 });
 
