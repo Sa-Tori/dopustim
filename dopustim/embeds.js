@@ -18,13 +18,13 @@ client.on("ready", () => {
       .setDescription("Досвидания, мне неприятно");
     message.channel.send(embed);
   };
-  if (message.content === "Утра") {
+  /*if (message.content === "Утра") {
     const embed = new MessageEmbed()
         .setTitle("И тебе, мой сладкий)")
         .setColor(0x368ba2)
         .setImage("https://media.discordapp.net/attachments/499796673598586941/526742577878401035/24728.gif");
     message.channel.send(embed);
-  };
+  };*/
   if (message.content === "мех") {
     if (message.author.id === "542663623789641729") {
     const embed = new MessageEmbed()
