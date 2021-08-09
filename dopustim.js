@@ -86,8 +86,8 @@ client3.on("ready", () => {
     client3.user.setPresence({
         status: 'online',
         activity: {
-            type: 'WATCHING',
-            name: 'на посетителей',
+            type: 'LISTENING',
+            name: 'посетителей',
         },
     });
 });
