@@ -87,7 +87,7 @@ client.on("message", (msg) => {
     /*if (msg.content.toLowerCase().indexOf("привет")!=-1 && msg.author.id === "542663623789641729") {
             msg.channel.send("Где ты пропала?");
     };*/
-    if (msg.content.toLowerCase().indexOf("523116257390886954") != -1 || msg.content.toLowerCase().indexOf("картус") != -1) {
+    if ((msg.content.toLowerCase().indexOf("523116257390886954") != -1 || msg.content.toLowerCase().indexOf("картус") != -1) && msg.content.toLowerCase().indexOf("?") != -1) {
         let q = ['да', 'нет', 'не знаю', 'наверное да', 'наверное нет'];
         let c = Math.floor(Math.random() * q.length);
         const a = q[c];
