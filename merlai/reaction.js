@@ -35,7 +35,7 @@ client2.on("message", (msg) => {
         const ah = ahegao[randomIndex];
         msg.react(ah);
     };
-    if (msg.author.id === "542663623789641729" && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
+    if ((msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649") && msg.content.toLowerCase().indexOf(" присутствия души")!=-1) { 
         msg.react("768469879211687936");
         msg.react("768469897398190081");
         msg.react("768469924401250325");
