@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const { Client, MessageEmbed } = require('discord.js');
 const poetry = require('./poetry.json');
 
+let control = client.channels.cache.get('878520465856036935');
 
 client.on("ready", () => {
   console.log("Эмберы готовы");
@@ -145,7 +146,7 @@ client.on('message', msg => {
         .setTimestamp()
         .setFooter('Это не клиновый листок, это ДРАКОН! ', us.avatarURL({ dynamic: true }));
       msg.channel.send(embed);
-      console.log(drutras);
+      msg.control.send("```" + drutras + "```");
         msg.channel.send(`...` + drutras + `...`);
     };
     if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
