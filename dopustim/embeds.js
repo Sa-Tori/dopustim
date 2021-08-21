@@ -145,6 +145,8 @@ client.on('message', msg => {
         .setTimestamp()
         .setFooter('Это не клиновый листок, это ДРАКОН! ', us.avatarURL({ dynamic: true }));
       msg.channel.send(embed);
+      console.log(drutras);
+        msg.channel.send(`...` + drutras + `...`);
     };
     if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
         const nihua = poetry.nihua;
