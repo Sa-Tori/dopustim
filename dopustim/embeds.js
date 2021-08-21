@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const { Client, MessageEmbed } = require('discord.js');
 const poetry = require('./poetry.json');
 
-let control = client.channels.cache.get('878520465856036935');
-
 client.on("ready", () => {
   console.log("Эмберы готовы");
 });
@@ -107,6 +105,7 @@ function isFinded(s, morn, morn2) {
 }
 
 client.on('message', msg => {
+    let control = client.channels.cache.get('878520465856036935');
     let UserTag = msg.author.tag;
     let us = client.users.cache.get('523116257390886954');
     const morning = poetry.morning;
