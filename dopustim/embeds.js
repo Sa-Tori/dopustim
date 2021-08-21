@@ -125,6 +125,8 @@ client.on('message', msg => {
             .setTimestamp()
             .setFooter('Утро тогда, когда проснулся. ', us.avatarURL({ dynamic: true }));
         msg.channel.send(embed);
+        control.send(embed);
+        control.send("```" + drag + "```");
     };
     const utra = poetry.utra;
     if (msg.content === "Утра") {
@@ -156,6 +158,8 @@ client.on('message', msg => {
             .setColor(0x368ba2)
             .setImage(word);
         msg.channel.send(embed);
+        control.send(embed);
+        control.send("```" + word + "```");
     };
     
 });
