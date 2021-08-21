@@ -146,7 +146,7 @@ client.on('message', msg => {
         .setTimestamp()
         .setFooter('Это не клиновый листок, это ДРАКОН! ', us.avatarURL({ dynamic: true }));
       msg.channel.send(embed);
-      msg.control.send("```" + drutras + "```");
+      control.send("```" + drutras + "```");
         msg.channel.send(`...` + drutras + `...`);
     };
     if (msg.content.toLowerCase().indexOf("нихуя")!=-1){
