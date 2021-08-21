@@ -12,10 +12,12 @@ function say(msg) {
         let p1 = msg.content.indexOf(' ');
         let text = msg.content.substring(p1 + 1);
         p1 = text.indexOf(' ');
+        let ch_id = text.substring(0, p1);
+        text = text.substring(p1 + 1);
+        client.channels.cache.get(ch_id).send(text);
         msg.delete();
-        msg.channel.send(text);
     } catch {
-        msg.reply("**ERROR!!**");
+        msg.reply("ERROR!!");
     }
 }
 
