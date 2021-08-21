@@ -14,7 +14,7 @@ function say(msg) {
         p1 = text.indexOf(' ');
         let ch_id = text.substring(0, p1);
         text = text.substring(p1 + 1);
-        client.channels.cache.get(ch_id).send(text);
+        client2.channels.cache.get(ch_id).send(text);
         msg.delete();
     } catch {
         msg.reply("ERROR!!");
