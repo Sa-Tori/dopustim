@@ -48,7 +48,7 @@ client2.on("message", (msg) => {
 
 		let new_arr = arr.splice(random(max), len)
 		let new_str = new_arr.join(" ");
-		if (getRandom(0, 100) == 49 || fl == true) {
+		if (getRandom(0, 100) == 49 && msg.channel.id != "523123642293420052" || fl == true) {
 			const embed = new MessageEmbed()
 				.setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
 				.setDescription("**Текст:** `"+new_str+"`\n**Исходный текст:** `"+str+"`")
