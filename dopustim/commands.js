@@ -7,18 +7,32 @@ client.on("ready", () => {
     
 });
 
+function isFinded2(s, morn2) {
+	for (var i = 0; i < morn2.length; i++) {
+		if (s.toLowerCase().indexOf(morn2[i]) != -1) {
+			return true;
+		}
+	}
+	return false;
+}
+
 function say(msg) {
-    try {
-        let p1 = msg.content.indexOf(' ');
-        let text = msg.content.substring(p1 + 1);
-        p1 = text.indexOf(' ');
-        let ch_id = text.substring(0, p1);
-        text = text.substring(p1 + 1);
-        client.channels.cache.get(ch_id).send(text);
-        msg.delete();
-    } catch {
-        msg.reply("ERROR!!");
-    }
+	try {
+		let numbers = [' 1', ' 2', ' 3', ' 4', ' 5', ' 6', ' 7', ' 8', ' 9', ' 0'];
+		let p1 = msg.content.indexOf(' ');
+		let text = msg.content.substring(p1 + 1);
+		if (!isFinded2(msg.content, numbers)) {
+			msg.channel.send(text);
+		} else {
+			p1 = text.indexOf(' ');
+			let ch_id = text.substring(0, p1);
+			text = text.substring(p1 + 1);
+			client2.channels.cache.get(ch_id).send(text);
+		}
+		msg.delete();
+	} catch {
+		msg.reply("ERROR!!");
+	}
 }
 
 client.on('message', (msg) => { // Реагирование на сообщения
