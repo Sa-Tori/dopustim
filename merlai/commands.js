@@ -35,10 +35,27 @@ function say(msg) {
 	}
 }
 
+function del(msg) {
+	try {
+		let chen = msg.channel.id;
+		let p1 = msg.content.indexOf(' ');
+		let mes_id = msg.content.substring(p1 + 1);
+		let channel = client2.channels.cache.get(chen);
+		var message = channel.messages.cache.get(mes_id);
+		message.delete();
+		msg.delete();
+	} catch {
+		msg.reply("ERROR!!");
+	}
+}
+
 client2.on('message', (msg) => { 
-    if (msg.content.startsWith("msay") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
-        say(msg);
-    };
+    	if (msg.content.startsWith("msay") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
+        	say(msg);
+    	};
+	if (msg.content.startsWith("удали") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
+		del(msg);
+	};
 });
 
 
