@@ -150,7 +150,7 @@ client.on("message", async (msg) => {
 
 client.on('messageDelete', async msg => {
 	let control = client.channels.cache.get('878520465856036935');
-	if (msg.author.id === "523116257390886954") {
+	if (msg.author.id === "523116257390886954" && executor.id != "776445694587306028") {
 		if (!msg.guild) return;
 		const fetchedLogs = await msg.guild.fetchAuditLogs({
 			limit: 1,
