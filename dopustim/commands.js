@@ -75,11 +75,14 @@ client.on('message', (msg) => { // Реагирование на сообщен�
     	if (msg.content.startsWith("ksay") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
         	say(msg);
     	};
+	
+});
+
+client.on('message', (msg) => { 
 	if (msg.content.startsWith("Картус удали") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
 		del(msg);
 	};
 });
-
 
 client.login(process.env.BOT_TOKEN);
 
