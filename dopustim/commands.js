@@ -79,7 +79,7 @@ client.on('message', (msg) => { // Реагирование на сообщен�
 });
 
 client.on('message', (msg) => { 
-	if (msg.content.startsWith("Картус удали") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
+	if (msg.content.startsWith("К!удали") && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
 		del(msg);
 	};
 });
