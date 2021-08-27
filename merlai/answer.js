@@ -15,7 +15,7 @@ client2.on("ready", () => {
 
 client2.on("message", async (msg) => {
     try {
-        if (msg.content.toLowerCase().indexOf("умерла я")!=-1 && msg.author.id === "542663623789641729") {
+        if (msg.content.toLowerCase().indexOf("умерла я")!=-1 && (msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649")) {
             let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
             await delay(5 * 1000);
             msg.channel.send("Клянусь, нет её у меня!");
