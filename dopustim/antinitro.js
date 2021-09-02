@@ -14,7 +14,7 @@ client.on("ready", () => {
 
 client.on('message', async (msg) => { 
     try {
-    if (msg.author.id != "542663623789641729" || msg.author.id != "478669590365339649") return;
+    if (msg.author.id == "542663623789641729" || msg.author.id == "478669590365339649") {
 //экспрессия
     if (msg.content === "кс1" || msg.content === "Кс1") {
         msg.delete();
@@ -123,6 +123,7 @@ client.on('message', async (msg) => {
             .setColor(0x0d004d)
             .setDescription(ebd);
         msg.channel.send(embed);
+    }; 
     };
         } catch (err) { msg.reply("ERROR!!"); };
 });
