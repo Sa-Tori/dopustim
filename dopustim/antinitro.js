@@ -12,8 +12,9 @@ client.on("ready", () => {
         msg.channel.send("");
     };*/
 
-client.on('message', (msg) => { 
-    if (msg.author.id != "542663623789641729") return;
+client.on('message', async (msg) => { 
+    try {
+    if (msg.author.id != "542663623789641729" || msg.author.id != "478669590365339649") return;
 //экспрессия
     if (msg.content === "кс1" || msg.content === "Кс1") {
         msg.delete();
@@ -123,6 +124,7 @@ client.on('message', (msg) => {
             .setDescription(ebd);
         msg.channel.send(embed);
     };
+        } catch (err) { msg.reply("ERROR!!"); };
 });
 
 
