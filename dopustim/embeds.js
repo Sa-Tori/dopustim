@@ -161,8 +161,7 @@ client.on('message', msg => {
         control.send(embed);
         control.send("```" + word + "```");
     };
-    //let control = client.channels.cache.get('878520465856036935');
-//let UserTag = msg.author.tag;
+
     let palish = client.channels.cache.get('883608296664203334');
 if (msg.guild.id == '532954366571708427' && msg.channel.id != '878520465856036935') {
      const embed = new MessageEmbed()
@@ -171,7 +170,15 @@ if (msg.guild.id == '532954366571708427' && msg.channel.id != '87852046585603693
             .setDescription(msg.content + "\n**Канал: **" + msg.channel.name)
             .setTimestamp();
         palish.send(embed);
-};
+      };
+      if (msg.guild.id == '622954155077533696' && msg.author.id != '523116257390886954') {
+     const embed = new MessageEmbed()
+            .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
+            .setColor(0x368ba2)
+            .setDescription(msg.content + "\nКанал: " + msg.channel.name)
+            .setTimestamp();
+        palish.send(embed);
+     };
     
 });
 
