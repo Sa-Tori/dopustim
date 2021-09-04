@@ -167,9 +167,7 @@ if (msg.guild.id == '532954366571708427' && msg.channel.id != '87852046585603693
      const embed = new MessageEmbed()
             .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
             .setColor(0x368ba2)
-            .setDescription(msg.content)
-			   	.addFields({
-					value: msg.channel.name})
+            .setDescription(msg.content + "\n**Канал: **" + msg.channel.name)
             .setTimestamp();
         control.send(embed);
 };
