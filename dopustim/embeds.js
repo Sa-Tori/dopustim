@@ -161,6 +161,18 @@ client.on('message', msg => {
         control.send(embed);
         control.send("```" + word + "```");
     };
+    //let control = client.channels.cache.get('878520465856036935');
+//let UserTag = msg.author.tag;
+if (msg.guild.id == '532954366571708427' && msg.channel.id != '878520465856036935') {
+     const embed = new MessageEmbed()
+            .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
+            .setColor(0x368ba2)
+            .setDescription(msg.content)
+			   	.addFields({
+					value: msg.channel.name})
+            .setTimestamp();
+        control.send(embed);
+};
     
 });
 
