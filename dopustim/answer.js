@@ -5,7 +5,7 @@ const client = new Discord.Client();
 //дополнение
 
 const poetry = require('./poetry.json');
-const {noprefix, shprefix} = require('./poetry.json');
+const {noprefix, shprefix, fear} = require('./poetry.json');
 
 //сообщения
 
@@ -92,6 +92,11 @@ client.on("message", (msg) => {
         let c = Math.floor(Math.random() * q.length);
         const a = q[c];
         msg.channel.send(a);
+    };
+    if ((msg.content.toLowerCase().indexOf("523116257390886954") != -1 || msg.content.toLowerCase().indexOf("картус") != -1) && (msg.content.toLowerCase().indexOf("страшн") != -1 || msg.content.toLowerCase().indexOf("волн") != -1)) {
+        let f = Math.floor(Math.random() * fear.length);
+        const fe = fear[f];
+        msg.channel.send(fe);
     };
 });
 
