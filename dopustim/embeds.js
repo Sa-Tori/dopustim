@@ -171,7 +171,7 @@ if (msg.guild.id == '532954366571708427' && msg.channel.id != '87852046585603693
             .setTimestamp();
         palish.send(embed);
       };
-      if (msg.guild.id == '622954155077533696' && msg.author.id != '523116257390886954') {
+      if (msg.guild.id == '622954155077533696') {
      const embed = new MessageEmbed()
             .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
             .setColor(0x368ba2)
