@@ -162,8 +162,8 @@ client.on('message', msg => {
         control.send("```" + word + "```");
     };
 
-     let palish = client.channels.cache.get('883608296664203334');
-     let filin = client.channels.cache.get('563752253090168863');
+     //let palish = client.channels.cache.get('883608296664203334');
+     //let filin = client.channels.cache.get('563752253090168863');
 /*if (msg.guild.id == '532954366571708427' && msg.channel.id != '878520465856036935') {
      const embed = new MessageEmbed()
             .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
@@ -173,15 +173,20 @@ client.on('message', msg => {
         palish.send(embed);
       };*/
       if (msg.guild.id == '622954155077533696') {
-      const embed = new MessageEmbed()
+        if (msg.channel.id == "666143344417570816") {
+            var palish = client.channels.cache.get('563752253090168863');
+            var descr = msg.content;
+        } else {
+            palish = client.channels.cache.get('883608296664203334');
+            descr = msg.content + "\n**Канал:** " + msg.channel.name + "\n**id канала:** " + msg.channel.id + "\n**id:** " + msg.id;
+        };
+        const embed = new MessageEmbed()
             .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
             .setColor(0x368ba2)
-            .setDescription(msg.content+"\n**Канал:** "+msg.channel.name+"\n**id канала:** "+msg.channel.id+"\n**id:** "+msg.id)
+            .setDescription(descr)
             .setTimestamp();
-            if (msg.channel.id == "666143344417570816") {
-                filin.send(embed);
-            } else palish.send(embed);
-     };
+         palish.send(embed);
+    };
     
 });
 
