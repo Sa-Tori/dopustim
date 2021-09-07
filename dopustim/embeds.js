@@ -163,19 +163,19 @@ client.on('message', msg => {
     };
 
     let palish = client.channels.cache.get('883608296664203334');
-if (msg.guild.id == '532954366571708427' && msg.channel.id != '878520465856036935') {
+/*if (msg.guild.id == '532954366571708427' && msg.channel.id != '878520465856036935') {
      const embed = new MessageEmbed()
             .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
             .setColor(0x368ba2)
             .setDescription(msg.content + "\n**Канал: **" + msg.channel.name)
             .setTimestamp();
         palish.send(embed);
-      };
+      };*/
       if (msg.guild.id == '622954155077533696') {
      const embed = new MessageEmbed()
             .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
             .setColor(0x368ba2)
-            .setDescription(msg.content + "\n**Канал:** " + msg.channel.name+"\n**id:** "+msg.id)
+            .setDescription(msg.content+"\n**Канал:** "+msg.channel.name+"\n**id канала:** "+msg.channel.id+"\n**id:** "+msg.id)
             .setTimestamp();
         palish.send(embed);
      };
