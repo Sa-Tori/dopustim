@@ -34,7 +34,7 @@ client3.on("message", async (msg) => {
     const acof = poetry.acof;
     const nocof = poetry.nocof;
     if (isFinded(msg.content, nocof)) return;
-    if (isFinded(msg.content, acof) && msg.author.id != "836240368206872576" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099")) {
+    if (isFinded(msg.content, acof) && msg.author.id != "836240368206872576" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099" || msg.guild.id == "884726247182184468")) {
         const cof = poetry.cof;
         const randomIndex = Math.floor(Math.random() * cof.length);
         const flot = cof[randomIndex];
