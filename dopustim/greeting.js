@@ -7,13 +7,13 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.cache.find(ch => ch.name === '🍓врата' || ch.name === "🤖ваш-покорный-слуга");
+  const channel = member.guild.channels.cache.find(ch => ch.name === '🍓врата' || ch.name === "🤖ваш-покорный-слуга" || ch.name === "🛋welcome");
   if (!channel) return;
-  channel.send(`${member} а ты ещё кто <:spdlkon:625115888743350272>`);
+  channel.send(`${member} а ты ещё кто такой <:ezgif1:840339018453090306>`);
 });
 
 client.on('guildMemberRemove', member => {
-  const channel = member.guild.channels.cache.find(ch => ch.name === '🍓врата' || ch.name === "🤖ваш-покорный-слуга");
+  const channel = member.guild.channels.cache.find(ch => ch.name === '🍓врата' || ch.name === "🤖ваш-покорный-слуга" || ch.name === "🛋welcome");
   if (!channel) return;
   channel.send(`Разбиты окна,\nМеркнет свет..\nНа голову надет пакет.`);
 });
