@@ -7,7 +7,7 @@ client2.on("ready", () => {
 });
 
 client2.on('guildMemberRemove', async (member) => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === '🍓врата' || ch.name === "🤖ваш-покорный-слуга");
+    const channel = member.guild.channels.cache.find(ch => ch.name === '🍓врата' || ch.name === "🤖ваш-покорный-слуга" || ch.name === "🛋welcome");
     let UserTag = member.user.tag;
     if (!channel) return;
     try {
