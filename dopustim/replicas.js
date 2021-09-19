@@ -160,7 +160,7 @@ client.on('messageDelete', async msg => {
 		if (!deletionLog) return control.send(`Сообщение от ${msg.author.tag} был удален, но соответствующие журналы аудита не были найдены.`);
 		
 		const { executor, target } = deletionLog;
-		if (target.id === msg.author.id && executor.id != "523116257390886954") {
+		if (target.id === msg.author.id && executor.id != "542663623789641729") {
 			control.send(`Сообщение от ${msg.author.tag} было удалено ${executor.tag}.`);
 			msg.channel.send(`Какой-то пидор удалил мое сообщение. <:mme:625115196637315124>\nА, постойте, это же ${executor.tag} <:096:592420847017263134>`);
 		} else {
