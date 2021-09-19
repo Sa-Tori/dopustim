@@ -14,6 +14,7 @@ const answer = require("./dopustim/answer");
 const commands = require("./dopustim/commands");
 const antinitro = require("./dopustim/antinitro");
 const coffee = require("./dopustim/coffee");
+const control = require("./dopustim/control");
 
 
 //запуск
