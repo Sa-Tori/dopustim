@@ -56,7 +56,7 @@ client.on('messageDelete', async msg => {
         .setDescription("**Текст:** `" + msg.content + "`")
         .addFields({
             name: 'Данные',
-            value: "**Канал:** `" + msg.channel.name + "`\n**id автора:** `" + msg.author
+            value: "**Канал:** `" + msg.channel.name + "`\n**id автора:** `" + msg.author + "`"
         })
         .setColor(0x368ba2)
     control.send(embed);
