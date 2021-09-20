@@ -31,7 +31,7 @@ client2.on('message', msg => {
     let control = client2.channels.cache.get('878520465856036935');
     let UserTag = msg.author.tag;
     var palish = client2.channels.cache.get('889592085747990589');
-      if (msg.guild.id == '532954366571708427') {
+      if (msg.guild.id == '884726247182184468') {
         const embed = new MessageEmbed()
             .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
             .setColor(0xf7fcff)
