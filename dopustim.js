@@ -53,6 +53,7 @@ const commands2 = require("./merlai/commands");
 const antinitro2 = require("./merlai/antinitro");
 const greeting2 = require("./merlai/greeting");
 const control2 = require("./merlai/control");
+const worker2 = require("./merlai/worker");
 
 client2.on("ready", () => {
     console.log("Мерлай жив!");
