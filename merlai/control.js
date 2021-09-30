@@ -20,7 +20,7 @@ client2.on('messageDelete', async msg => {
 		const { executor, target } = deletionLog;
 		if (target.id === msg.author.id && executor.id != "776445694587306028") {
 			control.send(`Сообщение от ${msg.author.tag} было удалено ${executor.tag}.`);
-			msg.channel.send(`Какой-то пидор удалил мое сообщение. <:mme:625115196637315124>\nА, постойте, это же ${executor.tag} <:096:592420847017263134>`);
+			msg.channel.send(`Какой-то пидор удалил мое сообщение. <:084:592420618084024320>\nА, постойте, это же ${executor.tag} <:096:592420847017263134>`);
 		} else {
 			control.send(`Сообщение от ${msg.author.tag} было удалено, но мы не знаем, кем.`);
 		};
