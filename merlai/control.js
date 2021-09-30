@@ -40,7 +40,7 @@ client2.on('message', msg => {
          palish.send(embed);
     };
 });
-
+ 
 
 
 client2.login(process.env.BOT_TOKEN2);
