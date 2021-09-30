@@ -55,7 +55,7 @@ client2.on('message', (msg) => {
 		for (let i = 0; i < anch.length; i++) {
 			if (msg.channel.id === anch[i]) return;
 		};
-		anblya(msg);
+		//anblya(msg);
 	};
 });
 
