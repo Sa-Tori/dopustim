@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; 
 const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 const poetry = require('./poetry.json');
