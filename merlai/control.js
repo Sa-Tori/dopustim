@@ -5,7 +5,7 @@ const { Client, MessageEmbed } = require('discord.js');
 client2.on ("ready", () => {
  console.log("Control Мерлая готов");
 });
-
+/*
 client2.on('messageDelete', async msg => {
 	let control = client2.channels.cache.get('878520465856036935');
 	if (msg.author.id === "776445694587306028") {
@@ -25,7 +25,7 @@ client2.on('messageDelete', async msg => {
 			control.send(`Сообщение от ${msg.author.tag} было удалено, но мы не знаем, кем.`);
 		};
 	};
-});
+});*/
 
 client2.on('message', msg => {
     let control = client2.channels.cache.get('878520465856036935');
