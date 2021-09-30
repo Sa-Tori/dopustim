@@ -22,19 +22,18 @@ function isFinded(s, morn) {
 
 function anblya(msg) {
 	try {
-		var str = msg.content;
-		for (let i = 0; i < blya.length; i++) {
-			if (str.toLowerCase().indexOf(blya[i]) != -1) {
-				str = str.toLowerCase();
-				var lt = str.length;
-				let w = blya[i];
-				var lb = w.length;
-				str = str.replace(w, '<:blyat:838469432103141377>');
-			};
+		let str_ini = msg.content
+		let str = msg.content
+		var x = '<:blyat:838469432103141377>'
+		blya.forEach(w => {
+			let patt = new RegExp(w, 'gi')//создаем шаблон для замены: слово + флаги, g - заменить все слова, i - неучитывать регистр
+			str = str.replace(patt, x)
+		});
+		if (str_ini !== str) {
+			if (str !== x) msg.reply('материться запрещено. Цензура:');
+			msg.channel.send(str)
+			msg.delete()
 		};
-		if (lt != lb) msg.reply('материться запрещено. Цензура:');
-		msg.channel.send(str);
-		msg.delete();
 	} catch {
 		msg.reply("ERROR!!");
 	}
