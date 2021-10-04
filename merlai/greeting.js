@@ -28,5 +28,12 @@ client2.on('guildMemberAdd',  async (member) => {
     member.roles.add(role);
 });
 
+client2.on('guildMemberAdd', async (member) => {
+    const channel = member.guild.channels.cache.get('532954367100452866');
+    if (!channel) return;
+    var role = member.guild.roles.cache.find(role => role.id === "894649795224956948");
+    member.roles.add(role);
+});
+
 client2.login(process.env.BOT_TOKEN2);
 
