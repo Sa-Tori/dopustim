@@ -13,7 +13,10 @@ let message1_id = "889942827172245555";
 let message2_id = "889942829160345630"; 
 let message3_id = "889942850379337730"; 
 
-//let role_id = "833365660004122646";
+let channel2_id = "557226495190499331";
+let message4_id = "894645182719479868";
+let message5_id = "894645183516393473";
+let message6_id = "894645186704056340";
 
 let delay = async duration => {
   return new Promise(resolve => {
@@ -450,5 +453,82 @@ client3.on("messageReactionRemove", async (messageReaction, user) => {
         console.log(err);
     }
 });
+
+//--------------------------------------------------------------------------------------------------------------rolewelcom
+
+client3.on("ready", async () => {
+    try {
+        await delay(1000); 
+        let channel = await client3.channels.cache.get(channel2_id);
+        var message = await channel.messages.fetch(message4_id);
+        var message = await channel.messages.fetch(message5_id);
+        var message = await channel.messages.fetch(message6_id);
+        return;
+    } catch (err) {
+        console.log(err);
+    }
+}); 
+
+function okey(messageReaction, user) {
+    if (fl1 === true && fl2 === true && fl3 === true) {
+        var flr = messageReaction.message.guild.roles.cache.find(role => role.id === "558356849347264512");
+        user.roles.add(flr);
+        var fаr = messageReaction.message.guild.roles.cache.find(role => role.id === "894649795224956948");
+        user.roles.remove(fаr);
+        fl1 = false;
+        fl2 = false;
+        fl3 = false;
+    };
+}
+
+var fl1 = false;
+var fl2 = false;
+var fl3 = false;
+client3.on("messageReactionAdd", async (messageReaction, user) => {
+    if (user.id === "836240368206872576") return;
+    try {
+        let channel = await client3.channels.cache.get(channel2_id);
+        let message = await channel.messages.fetch(message4_id);
+        var user = messageReaction.message.guild.members.cache.get(user.id);
+        if (messageReaction.emoji.id == "894270696245559336") {
+            fl1 = true;
+            okey(messageReaction, user);
+        };
+        if (messageReaction.emoji.id == "894271076908015626") {
+            fl2 = true;
+            okey(messageReaction, user);
+        };
+        if (messageReaction.emoji.id == "894270610774057003") {
+            fl3 = true;
+            okey(messageReaction, user);
+        };
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+client3.on("messageReactionRemove", async (messageReaction, user) => {
+    if (user.id === "836240368206872576") return;
+    try {
+        let channel = await client3.channels.cache.get(channel2_id);
+        var user = messageReaction.message.guild.members.cache.get(user.id);
+        if (messageReaction.emoji.id == "894270696245559336") {
+            var fg1 = messageReaction.message.guild.roles.cache.find(role => role.id === "890216187387052052");
+            user.roles.add(fg1);
+        };
+        if (messageReaction.emoji.id == "894271076908015626") {
+            var fg2 = messageReaction.message.guild.roles.cache.find(role => role.id === "890216255246712842");
+            user.roles.add(fg2);
+        };
+        if (messageReaction.emoji.id == "894270610774057003") {
+            var fg3 = messageReaction.message.guild.roles.cache.find(role => role.id === "890216382514466887");
+            user.roles.add(fg3);
+        };
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+
 
 client3.login(process.env.BOT_TOKEN3);
