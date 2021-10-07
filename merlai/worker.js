@@ -42,7 +42,8 @@ function anblya(msg) {
 client2.on('message', async (msg) => {
 	let bump = client2.channels.cache.get('570922055407501332');
 	try {
-		if ((msg.embeds.length > 0 && msg.embeds[0].description.toLowerCase().indexOf("server bumped by") != -1 && msg.guild.id == "532954366571708427" && msg.author.id == "315926021457051650") || (msg.author.id == "542663623789641729" && msg.content == "обновить таймер")) {
+		if ((msg.author.id == "315926021457051650" || msg.author.id == "542663623789641729") && msg.guild.id == "532954366571708427" && msg.embeds.length > 0 && msg.embeds[0].description != '') {
+		if (msg.embeds[0].description.toLowerCase().indexOf("server bumped by") != -1 || msg.content == "обновить таймер") {
 			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 			await delay(4 * 60 * 60 * 1000);
 			bump.send('<@&891331557300764712> Пора бампать!');
