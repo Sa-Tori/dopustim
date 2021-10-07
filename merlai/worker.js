@@ -47,7 +47,8 @@ client2.on('message', async (msg) => {
 			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 			await delay(4 * 60 * 60 * 1000);
 			bump.send('<@&891331557300764712> Пора бампать!');
-		}
+		};
+		};
 	} catch (err) { console.log(err); };
 });
 
