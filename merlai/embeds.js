@@ -10,7 +10,7 @@ client2.on ("ready", () => {
 
 client2.on('message', msg => {
     let control = client2.channels.cache.get('878520465856036935');
-    if (msg.content.toLowerCase().indexOf("треш") != -1 || msg.content.toLowerCase().indexOf("tresh") != -1) {
+    if ((msg.content.toLowerCase().indexOf("треш") != -1 || msg.content.toLowerCase().indexOf("tresh") != -1) && msg.channel.id != "878520465856036935") {
         const tresh = poetry.tresh;
         const randomIndex = Math.floor(Math.random() * tresh.length);
         const word = tresh[randomIndex];
