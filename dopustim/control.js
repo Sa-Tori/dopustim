@@ -49,7 +49,7 @@ client.on('messageDelete', async msg => {
 });
 
 client.on('messageDelete', async msg => {
-    let control = client.channels.cache.get('878520465856036935');
+    let deletin = client.channels.cache.get('878081921601642506');
     let UserTag = msg.author.tag;
     const embed = new MessageEmbed()
         .setAuthor(UserTag, msg.author.displayAvatarURL({ dynamic: true }))
@@ -59,7 +59,7 @@ client.on('messageDelete', async msg => {
             value: "**Канал:** `" + msg.channel.name + "`\n**id автора:** `" + msg.author + "`"
         })
         .setColor(0xb60808)
-    control.send(embed);
+    deletin.send(embed);
 });
 
 client.login(process.env.BOT_TOKEN);
