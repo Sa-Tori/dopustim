@@ -143,7 +143,12 @@ client.on("message", async (msg) => {
 				await delay(13 * 3600 * 1000);
 				msg.channel.send("```xl\n'" + word + "'```");
 			}
-		} catch (err) { console.log(err); };
+		} catch (err) { 
+			msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
+			let control = client.channels.cache.get('878520465856036935');
+			control.send('Мама, хлеп!');
+			console.log(err); 
+		};
 	}
 });
 
