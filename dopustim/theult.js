@@ -9,20 +9,27 @@ client.on ("ready", () => {
 
 client.cmd_limiter=-1;//создаем переменную, где будет хранится время, после которого очередную команду можно будет выполнять, устанавливаем отрицательное значение, чтоб бот понимал, что команда еще никогда не использовалась.
 
-client.on("message", async (message) => {try{
-  
- let now = new Date().getTime();
-   if(message.content.startsWith('Картус ультуй') || message.content.startsWith('Картус где ганги') && !message.author.bot){
-       if(client.cmd_limiter>now){
-           
-           let tag = client.cmd_limiter-now;
-           return message.channel.send('[R] - '+ Math.round(tag/1000) +' сек.');
-       }else{
-           message.channel.send('R');
-           client.cmd_limiter = now + 200*1000;//устанавливаем ограничительное время: сейчас + 200 с
-       };
-    };
-   
-}catch(err){console.log(err);}; });
+client.on("message", async (message) => {
+  try{
+
+  let now = new Date().getTime();
+    if(message.content.startsWith('Картус ультуй') || message.content.startsWith('Картус где ганги') && !message.author.bot){
+        if(client.cmd_limiter>now){
+
+            let tag = client.cmd_limiter-now;
+            return message.channel.send('[R] - '+ Math.round(tag/1000) +' сек.');
+        }else{
+            message.channel.send('R');
+            client.cmd_limiter = now + 200*1000;//устанавливаем ограничительное время: сейчас + 200 с
+        };
+     };
+
+ } catch(err) {
+  message.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
+			let control = client.channels.cache.get('878520465856036935');
+			control.send('Мама, хлеп!');
+  console.log(err);
+ }; 
+});
 
 client.login(process.env.BOT_TOKEN);
