@@ -16,7 +16,12 @@ client2.on('guildMemberRemove', async (member) => {
             await delay(5 * 1000);
             channel.send("Ниче не меркнет! Это " + UserTag + " покинул нас.");
         }
-    } catch (err) { console.log(err); };
+    } catch (err) { 
+        msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
+        let control = client2.channels.cache.get('878520465856036935');
+        control.send('Мама, хлеп!');
+        console.log(err); 
+    };
 });
 
 //выдача роли в империуме
