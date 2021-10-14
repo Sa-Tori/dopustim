@@ -31,7 +31,6 @@ client.on("ready", () => {
 });
 
 client.on("message", (msg) => {
-    //if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
     if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
         msg.channel.send("Изменения приняты, я жиф!");
     }
@@ -84,6 +83,7 @@ const answer3 = require("./baristan/answer");
 const coffee3 = require("./baristan/coffee");
 const reaction3 = require("./baristan/reaction");
 const rerole3 = require("./baristan/rerole");
+const greeting3 = require("./baristan/greeting");
 
 
 client3.on("ready", () => {
