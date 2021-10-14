@@ -475,6 +475,8 @@ function okey(messageReaction, user) {
         user.roles.add(flr);
         var fаr = messageReaction.message.guild.roles.cache.find(role => role.id === "894649795224956948");
         user.roles.remove(fаr);
+        var flr1 = messageReaction.message.guild.roles.cache.find(role => role.id === "897921546511863808");
+        user.roles.add(flr1);
         fl1 = false;
         fl2 = false;
         fl3 = false;
