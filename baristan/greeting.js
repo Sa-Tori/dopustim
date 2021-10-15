@@ -55,7 +55,7 @@ client3.on("message", async (msg) => {
         if (msg.author.id == "776445694587306028") { //Мерлай
             if (msg.content.toLowerCase().indexOf("зачем пожаловал к нам?") != -1) msg.channel.send("Будь повежливее с посетителями.");
             if (msg.content.toLowerCase().indexOf("надеюсь, ты ему там чай") != -1) msg.channel.send("У нас же закончился чай!");
-            if (msg.content.toLowerCase().indexOf("<@") != -1 && msg.content.length == 22) msg.channel.send("Ну и зачем ты пинганул посетителя?");
+            if (msg.content.indexOf("<@") != -1 && msg.content.length == 22) msg.channel.send("Ну и зачем ты пинганул посетителя?");
             if (msg.content.toLowerCase().indexOf("обы ему было неприятно") != -1) msg.channel.send("Ты что! А вдруг он уйдет?");
             if (msg.content.toLowerCase().indexOf("отведай этот прекрасный") != -1) msg.channel.send("Что ты там ему предлагаешь?<:ezgif1:840339018453090306>");
             if (msg.content.toLowerCase().indexOf("сего лишь кофе с ликером") != -1) msg.channel.send("Но у нас же закончился кофе!");
