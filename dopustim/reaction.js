@@ -6,7 +6,7 @@ const poetry = require('./poetry.json');
 const flower = require('./poetry.json');
 const { fire, tea } = require('./poetry.json');
 const ahegao = require('./poetry.json');
-//const tea = require('./poetry.json');
+const tea = require('./poetry.json');
 
 client.on('ready', () => {
   console.log('Реакции готовы');
@@ -51,15 +51,15 @@ client.on("message", (msg) => {
         msg.react(fir);
     };*/
 //чайные реакции 
-    /*if ((msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) || (msg.guild.id == "532954366571708427" && (msg.content.toLowerCase().indexOf("чай") != -1 || msg.content.toLowerCase().indexOf("чая ") != -1))) {
+    if ((msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) || (msg.guild.id == "532954366571708427" && (msg.content.toLowerCase().indexOf("чай") != -1 || msg.content.toLowerCase().indexOf("чая ") != -1))) {
         if (msg.content.toLowerCase().indexOf("новый год") != -1) return;
         const tea = poetry.tea;
         const randomIndex = Math.floor(Math.random() * tea.length);
         const flot = tea[randomIndex];
         const reactionEmoji = client.emojis.cache.get(flot);
         msg.react(reactionEmoji);
-    };*/
-    /*if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
+    };
+    if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
         const rng = getRandom(1, 5);
         if (rng == 1) {
             msg.react("768779785114484736");
@@ -100,7 +100,7 @@ client.on("message", (msg) => {
         const randomIndex = Math.floor(Math.random() * ng.length);
         const emoji = ng[randomIndex];
         msg.channel.send(emoji);
-    };*/
+    };
     if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
         msg.channel.send("<a:g2774:760531480824512512>");
     };
