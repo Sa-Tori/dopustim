@@ -60,7 +60,7 @@ client.on("message", (msg) => {
         msg.react(reactionEmoji);
     };
     if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
-        const rng = getRandom(1, 5);
+        const rng = getRandom(1, 6);
         if (rng == 1) {
             msg.react("909086950496018503");
             msg.react("909086950672203836");
