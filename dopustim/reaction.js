@@ -62,26 +62,26 @@ client.on("message", (msg) => {
     if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
         const rng = getRandom(1, 5);
         if (rng == 1) {
-            msg.react("768779785114484736");
-            msg.react("768779737765511169");
-            msg.react("768779760456302602");
+            msg.react("909086950496018503");
+            msg.react("909086950672203836");
+            msg.react("909086950605082644");
         }
         if (rng == 2) {
-            msg.react("789577059315613696");
-            msg.react("789577035898421258");
-            msg.react("789577009453858816");
-            msg.react("789576988112584704");
-            msg.react("789576942172372992");
-            msg.react("789576909108281346");
+            msg.react("909086949128667137");
+            msg.react("909086950852538378");
+            msg.react("909086950416351252");
+            msg.react("909086950143721494");
+            msg.react("909086950022053958");
+            msg.react("909086950324064256");
         }
         if (rng == 3) {
-            msg.react("789573460417314876");
-            msg.react("789573427669106709");
-            msg.react("789573398623551569");
-            msg.react("789573370861453313");
-            msg.react("789573337596166144");
-            msg.react("789573307594571787");
-            msg.react("789573263855583313");
+            msg.react("909086949439070278");
+            msg.react("909086949883670528");
+            msg.react("909086949829124126");
+            msg.react("909086949845901373");
+            msg.react("909086950064025640");
+            msg.react("909086950064009246");
+            msg.react("909086950458273823");
         }
         if (rng == 4) {
             msg.react("789566255996076032");
@@ -89,10 +89,10 @@ client.on("message", (msg) => {
             msg.react("789566183707115530");
         }
         if (rng == 5) {
-            msg.react("789559203345858612");
-            msg.react("789559170767912970");
-            msg.react("789559132767125544");
-            msg.react("789559101205643294");
+            msg.react("909086949468418058");
+            msg.react("909086949560692818");
+            msg.react("909086950030446653");
+            msg.react("909086950022078484");
         }
     }; 
     if (msg.content.toLowerCase().indexOf("зажги") != -1 || msg.content.toLowerCase().indexOf("гори") != -1) {
