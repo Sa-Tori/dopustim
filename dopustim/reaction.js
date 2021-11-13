@@ -6,7 +6,7 @@ const poetry = require('./poetry.json');
 const flower = require('./poetry.json');
 const { fire, tea } = require('./poetry.json');
 const ahegao = require('./poetry.json');
-const tea = require('./poetry.json');
+//const tea = require('./poetry.json');
 
 client.on('ready', () => {
   console.log('Реакции готовы');
