@@ -35,29 +35,35 @@ client.on("message", async (msg) => {
     const atea = poetry.atea;
     const notea = poetry.notea;
     if (isFinded(msg.content, notea)) return;
-    if ((isFinded(msg.content, atea) && msg.author.id != "523116257390886954" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099" || msg.guild.id == "884726247182184468")) || 
-        msg.author.id != "523116257390886954" && msg.author.id != "654810705903484949" && (msg.content.startsWith("чaй") || msg.content.startsWith("Чaй")) && msg.guild.id == "622954155077533696") {
-        const tea = poetry.tea;
-        const randomIndex = Math.floor(Math.random() * tea.length);
-        const flot = tea[randomIndex];
-     
-        const teafire = poetry.teafire;
-        const randteafire = Math.floor(Math.random() * teafire.length);
-        const rtf = teafire[randteafire];
-        
-        const ptea = poetry.ptea;
-        const randptea = Math.floor(Math.random() * ptea.length);
-        const word = ptea[randptea];
-        msg.channel.send(rtf + " " + word);
-        msg.channel.send(flot);
+    try {
+      if ((isFinded(msg.content, atea) && msg.author.id != "523116257390886954" && (msg.guild.id == "532954366571708427" || msg.guild.id == "466006517288665099" || msg.guild.id == "884726247182184468")) || 
+          msg.author.id != "523116257390886954" && msg.author.id != "654810705903484949" && (msg.content.startsWith("чaй") || msg.content.startsWith("Чaй")) && msg.guild.id == "622954155077533696") {
+          const tea = poetry.tea;
+          const randomIndex = Math.floor(Math.random() * tea.length);
+          const flot = tea[randomIndex];
+
+          const teafire = poetry.teafire;
+          const randteafire = Math.floor(Math.random() * teafire.length);
+          const rtf = teafire[randteafire];
+
+          const ptea = poetry.ptea;
+          const randptea = Math.floor(Math.random() * ptea.length);
+          const word = ptea[randptea];
+          msg.channel.send(rtf + " " + word);
+          msg.channel.send(flot);
+      };
+      if (msg.content === "<:tea002:796066261565833226>" && msg.author.id === "523116257390886954") {
+              msg.channel.send('Приятно пожевать <:096:592420847017263134>');
+      };
+      if (msg.content.startsWith("<:tea0") && msg.author.id === "523116257390886954") {
+              teareact(msg);
+      };
+    } catch (err) { 
+        msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
+        let control = client2.channels.cache.get('878520465856036935');
+        control.send('Мама, хлеп!');
+        console.log(err); 
     };
-    if (msg.content === "<:tea002:796066261565833226>" && msg.author.id === "523116257390886954") {
-            msg.channel.send('Приятно пожевать <:096:592420847017263134>');
-    };
-    if (msg.content.startsWith("<:tea0") && msg.author.id === "523116257390886954") {
-            teareact(msg);
-    };
-    
 });
 
 
