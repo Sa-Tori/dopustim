@@ -21,6 +21,8 @@ const control = require("./dopustim/control");
 
 client.on("ready", () => {
     console.log("Картус жив!");
+    let control = client.channels.cache.get('878520465856036935');
+        control.send('Перезапуск приложения...');
     client.user.setPresence({
         status: 'online',
         activity: {
