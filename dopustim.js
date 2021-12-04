@@ -58,7 +58,7 @@ const worker2 = require("./merlai/worker");
 
 client2.on("ready", () => {
     console.log("Мерлай жив!");
-    let center = client.channels.cache.get('522817871370387472');
+    //let center = client.channels.cache.get('522817871370387472');
         center.send("```xl\n'Чуть потускнело.. но всё же работает!'```");
     client2.user.setPresence({
         status: 'online',
