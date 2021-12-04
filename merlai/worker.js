@@ -5,6 +5,9 @@ const poetry = require('./poetry.json');
 const blya = poetry.blya;
 const anch = poetry.anch;
 
+const page = 'worker';
+var point = '';
+
 //сообщения
 
 client2.on("ready", () => {
@@ -42,6 +45,7 @@ function anblya(msg) {
 client2.on('message', async (msg) => {
 	let bump = client2.channels.cache.get('570922055407501332');
 	try {
+        point = '1';
 		if ((msg.author.id == "315926021457051650" || msg.author.id == "542663623789641729") && msg.guild.id == "532954366571708427" && msg.embeds.length > 0 && msg.embeds[0].description != '') {
 		if (msg.embeds[0].description.toLowerCase().indexOf("server bumped by") != -1 || msg.content == "обновить таймер") {
 			let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
@@ -51,19 +55,26 @@ client2.on('message', async (msg) => {
 		};
 	} catch (err) { 
 		msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
-		let control = client2.channels.cache.get('878520465856036935');
-		control.send('Мама, хлеп!');
+		let center = client2.channels.cache.get('522817871370387472');
+                center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
 		console.log(err); 
 	};
 });
 
-client2.on('message', (msg) => {
+client2.on('message', async (msg) => {
+   try {
+   point = '2';
 	if (isFinded(msg.content, blya) && msg.guild.id == "532954366571708427" && !msg.author.bot) {
 		for (let i = 0; i < anch.length; i++) {
 			if (msg.channel.id === anch[i]) return;
 		};
 		anblya(msg);
 	};
+   } catch (err) { 
+     let center = client2.channels.cache.get('522817871370387472');
+     center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+     console.log(err); 
+   };
 });
 
 
