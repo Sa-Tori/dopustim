@@ -2,6 +2,9 @@ const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 const { Client, MessageEmbed } = require('discord.js');
 
+const page = 'control';
+var point = '';
+
 client2.on ("ready", () => {
  console.log("Control Мерлая готов");
 });
@@ -27,7 +30,9 @@ client2.on('messageDelete', async msg => {
 	};
 });*/
 
-client2.on('message', msg => {
+client2.on('message', async msg => {
+    try {
+    point = '1';
     let control = client2.channels.cache.get('878520465856036935');
     let UserTag = msg.author.tag;
     var palish = client2.channels.cache.get('889592085747990589');
@@ -38,6 +43,11 @@ client2.on('message', msg => {
             .setDescription(msg.content + "\n**Канал:** " + msg.channel.name + "\n**id канала:** " + msg.channel.id + "\n**id:** " + msg.id)
             .setTimestamp();
          palish.send(embed);
+    };
+    } catch (err) { 
+      let center = client2.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err); 
     };
 });
  
