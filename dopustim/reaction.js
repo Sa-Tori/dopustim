@@ -8,6 +8,9 @@ const { fire, tea } = require('./poetry.json');
 const ahegao = require('./poetry.json');
 //const tea = require('./poetry.json');
 
+const page = 'reaction';
+var point = '';
+
 client.on('ready', () => {
   console.log('Реакции готовы');
 });
@@ -16,7 +19,9 @@ function getRandom(l, r) {
     return Math.round((Math.random() * r)) % (r - l) + l;
 }
 
-client.on("message", (msg) => {
+client.on("message", async (msg) => {
+  point = '1';
+  try {
     if (msg.author.id === "519186885331910676" && (getRandom(0, 2) == 1)) {
         const flower = poetry.flower;
         const randomIndex = Math.floor(Math.random() * flower.length);
@@ -112,10 +117,16 @@ client.on("message", (msg) => {
         const ah = ahegao[randomIndex];
         msg.react(ah);
     };
+  } catch (err) { 
+    let center = client.channels.cache.get('522817871370387472');
+    center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+    console.log(err); 
+  };
 });
 
 client.on("message", async (msg) => {
-    if ((msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649") && (getRandom(0, 13) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
+   point = '2';
+   if ((msg.author.id === "542663623789641729" || msg.author.id === "478669590365339649") && (getRandom(0, 13) == 4) && msg.content.toLowerCase().indexOf("нов") == -1 && msg.content.toLowerCase().indexOf("год") == -1) {
    let f = '';
    try{
         const fire = poetry.fire;
@@ -127,9 +138,9 @@ client.on("message", async (msg) => {
         msg.react(reactionEmoji);
      }catch(err){
        msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
-        let control = client.channels.cache.get('878520465856036935');
-        control.send('Мама, хлеп!');
-       console.log('ЭМОДЖИ '+f);
+       let center = client.channels.cache.get('522817871370387472');
+       center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+       center.log('ЭМОДЖИ '+f);
        console.log(err);
      }
     };
