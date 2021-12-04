@@ -66,7 +66,7 @@ client.on('messageDelete', async msg => {
 });
 
 client.on('messageDelete', async msg => {
-  point = '2';
+  point = '3';
   try {
     let deletin = client.channels.cache.get('878081921601642506');
     let UserTag = msg.author.tag;
