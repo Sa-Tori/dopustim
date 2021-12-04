@@ -104,7 +104,7 @@ client.on("message", async (msg) => {
     };
   } catch (err) { 
   let center = client.channels.cache.get('522817871370387472');
-  center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.);
+  center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
   console.log(err); 
  };
 });
