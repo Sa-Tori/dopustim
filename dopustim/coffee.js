@@ -4,6 +4,8 @@ const client = new Discord.Client();
 
 const poetry = require('./poetry.json');
 const {tea, ptea, teafire, notea} = require('./poetry.json');
+const page = 'coffee';
+var point = '';
 
 client.on ("ready", () => {
  console.log("Чай готов!");
@@ -32,6 +34,7 @@ function teareact(msg) {
 }
 
 client.on("message", async (msg) => {
+    point = '1';
     const atea = poetry.atea;
     const notea = poetry.notea;
     if (isFinded(msg.content, notea)) return;
@@ -59,9 +62,9 @@ client.on("message", async (msg) => {
               teareact(msg);
       };
     } catch (err) { 
-        msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
-        let control = client.channels.cache.get('878520465856036935');
-        control.send('Мама, хлеп!');
+        msg.channel.send('<@542663623789641729> мама, я упал <a:hlepng:882291167948079165>'); 
+        let center = client.channels.cache.get('522817871370387472');
+        center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.);
         console.log(err); 
     };
 });
