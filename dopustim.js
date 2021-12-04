@@ -21,8 +21,8 @@ const control = require("./dopustim/control");
 
 client.on("ready", () => {
     console.log("Картус жив!");
-    let control = client.channels.cache.get('878520465856036935');
-        control.send('Перезапуск приложения...');
+    let center = client.channels.cache.get('522817871370387472');
+        center.send('Перезапуск приложения...');
     client.user.setPresence({
         status: 'online',
         activity: {
@@ -58,6 +58,8 @@ const worker2 = require("./merlai/worker");
 
 client2.on("ready", () => {
     console.log("Мерлай жив!");
+    let center = client.channels.cache.get('522817871370387472');
+        center.send("```xl\n'Чуть потускнело.. но всё же работает!'```");
     client2.user.setPresence({
         status: 'online',
         activity: {
