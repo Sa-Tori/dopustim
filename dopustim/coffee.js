@@ -64,7 +64,7 @@ client.on("message", async (msg) => {
     } catch (err) { 
         msg.channel.send('<@542663623789641729> мама, я упал <a:hlepng:882291167948079165>'); 
         let center = client.channels.cache.get('522817871370387472');
-        center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.);
+        center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
         console.log(err); 
     };
 });
