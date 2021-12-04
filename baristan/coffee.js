@@ -4,6 +4,9 @@ const client3 = new Discord3.Client();
 
 const poetry = require('./poetry.json');
 
+const page = 'coffee';
+var point = '';
+
 client3.on("ready", () => {
     console.log("Кофе готов!");
 });
@@ -31,6 +34,8 @@ function cofreact(msg) {
 }
 
 client3.on("message", async (msg) => {
+  try {
+  point = '1';
     const acof = poetry.acof;
     const nocof = poetry.nocof;
     if (isFinded(msg.content, nocof)) return;
@@ -55,7 +60,11 @@ client3.on("message", async (msg) => {
     if (msg.content.startsWith("<:cof") && msg.author.id === "836240368206872576") {
         cofreact(msg);
     };
-
+  } catch (err) { 
+    let center = client3.channels.cache.get('522817871370387472');
+    center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+    console.log(err); 
+  };
 });
 
  
