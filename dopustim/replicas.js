@@ -6,6 +6,8 @@ const poetry = require('./poetry.json');
 const league = require('./league.json');
 //const servers = ["381829822982389771", "471630590806851584"];
 
+const page = 'replicas';
+var point = '';
 
 client.on ("ready", () => {
  console.log("Реплики Картуса готовы");
@@ -84,8 +86,8 @@ function getStrof(s, w) {
 
 
 client.on("message", (msg) => {
-
- 
+  point = '1';
+  try {
 	if ((msg.guild.id == "683107614589976657" || msg.guild.id == "532954366571708427" || msg.guild.id == "622954155077533696" || msg.guild.id == "466006517288665099" || msg.guild.id == "683107614589976657" || msg.guild.id == "611111608219074570" || msg.content.startsWith('ds')) && msg.author.id != "523116257390886954") {
 		var m = msg.content; // получаем весь текст сообщения
 		var fl = 0;
@@ -107,6 +109,11 @@ client.on("message", (msg) => {
 			msg.channel.send("Прошу простить, меня ждут крипы.");
 		}
 	}
+   } catch (err) { 
+     let center = client.channels.cache.get('522817871370387472');
+     center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+     console.log(err); 
+   };
 });
 
 
@@ -117,37 +124,53 @@ client.on("message", async (msg) => {
 		const word = hokku[randomIndex];
 		const rng = getRandom(0, 1021);
 		try {
+                     point = '2';
 			if (rng == 222) {
 				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 				await delay(22 * 3600 * 1000);
 				msg.channel.send("```xl\n'" + word + "'```");
 			}
-		} catch (err) { console.log(err); };
+		} catch (err) { 
+                  let center = client.channels.cache.get('522817871370387472');
+                  center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+                  console.log(err); 
+                };
 		try {
+                  point = '3';
 			if (rng == 444) {
 				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 				await delay(4 * 3600 * 1000);
 				msg.channel.send("```xl\n'" + word + "'```");
 			}
-		} catch (err) { console.log(err); };
+		} catch (err) { 
+                  let center = client.channels.cache.get('522817871370387472');
+                  center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+                  console.log(err); 
+                };
 		try {
+                  point = '4';
 			if (rng == 777) {
 				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 				await delay(15 * 3600 * 1000);
 				msg.channel.send("```xl\n'" + word + "'```");
 			}
-		} catch (err) { console.log(err); };
+		} catch (err) { 
+                  let center = client.channels.cache.get('522817871370387472');
+                  center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+                  console.log(err); 
+                };
 		try {
+                  point = '5';
 			if (rng == 13) {
 				let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
 				await delay(13 * 3600 * 1000);
 				msg.channel.send("```xl\n'" + word + "'```");
 			}
 		} catch (err) { 
-			msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
-			let control = client.channels.cache.get('878520465856036935');
-			control.send('Мама, хлеп!');
-			console.log(err); 
+		  msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>'); 
+ 	          let center = client.channels.cache.get('522817871370387472');
+                  center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+                  console.log(err); 
 		};
 	}
 });
