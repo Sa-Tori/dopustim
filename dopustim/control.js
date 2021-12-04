@@ -2,12 +2,17 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const { Client, MessageEmbed } = require('discord.js');
 
+const page = 'control';
+var point = '';
+
 client.on ("ready", () => {
  console.log("Control Картуса готов");
 });
 
 
-client.on('message', msg => {
+client.on('message', async (msg) => {
+    point = '1';
+    try {
     let control = client.channels.cache.get('878520465856036935');
     let UserTag = msg.author.tag;
       if (msg.guild.id == '622954155077533696') {
@@ -25,9 +30,16 @@ client.on('message', msg => {
             .setTimestamp();
          palish.send(embed);
     };
+    } catch (err) { 
+      let center = client.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err); 
+    };
 });
 
 client.on('messageDelete', async msg => {
+    point = '2';
+    try {
 	let control = client.channels.cache.get('878520465856036935');
 	if (msg.author.id === "523116257390886954") {
 		if (!msg.guild) return;
@@ -46,9 +58,16 @@ client.on('messageDelete', async msg => {
 			control.send(`Сообщение от ${msg.author.tag} было удалено, но мы не знаем, кем.`);
 		};
 	};
+    } catch (err) { 
+      let center = client.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err); 
+    };
 });
 
 client.on('messageDelete', async msg => {
+  point = '2';
+  try {
     let deletin = client.channels.cache.get('878081921601642506');
     let UserTag = msg.author.tag;
     const embed = new MessageEmbed()
@@ -60,6 +79,11 @@ client.on('messageDelete', async msg => {
         })
         .setColor(0xb60808)
     deletin.send(embed);
+  } catch (err) { 
+    let center = client.channels.cache.get('522817871370387472');
+    center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+    console.log(err); 
+  };
 });
 
 client.login(process.env.BOT_TOKEN);
