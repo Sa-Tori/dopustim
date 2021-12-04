@@ -3,6 +3,8 @@ const Discord3 = require("discord.js");
 const client3 = new Discord3.Client();
 const role = new Discord3.Role();
 
+const page = 'rerole';
+var point = '';
 
 client3.on("ready", () => {
     console.log("Роли готовы");
@@ -26,6 +28,7 @@ let delay = async duration => {
 
 client3.on("ready", async () => {
   try {
+  point = '1';
     //вешаем обработку события:"готовность бота для взаимодействия с API discord"
     //_______________________
     await delay(1000); //ставим таймаут в 1 сек, чтобы структура успела построиться
@@ -37,6 +40,8 @@ client3.on("ready", async () => {
     //так как это сообщение создалось до, того как бот запустился, нужно добавить его в память бота
     return;
   } catch (err) {
+    let center = client3.channels.cache.get('522817871370387472');
+    center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
     console.log(err);
   }
 }); // \ready
@@ -109,6 +114,7 @@ function remrol(messageReaction, user) {
 client3.on("messageReactionAdd", async (messageReaction, user) => {
     if(user.id === "836240368206872576") return;
     try {
+    point = '2';
         let channel = await client3.channels.cache.get(channel_id);
         let message = await channel.messages.fetch(message1_id);
         var user = messageReaction.message.guild.members.cache.get(user.id);
@@ -164,13 +170,16 @@ client3.on("messageReactionAdd", async (messageReaction, user) => {
             user.roles.add(r10);
         };
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 }); 
 
 client3.on("messageReactionAdd", async (messageReaction, user) => {
     if(user.id === "836240368206872576") return;
     try {
+    point = '3';
         let channel = await client3.channels.cache.get(channel_id);
         let message = await channel.messages.fetch(message2_id);
         var user = messageReaction.message.guild.members.cache.get(user.id);
@@ -226,6 +235,8 @@ client3.on("messageReactionAdd", async (messageReaction, user) => {
             user.roles.add(r20);
         };
     } catch (err) {
+        let center = client3.channels.cache.get('522817871370387472');
+        center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
         console.log(err);
     }
 }); 
@@ -233,7 +244,7 @@ client3.on("messageReactionAdd", async (messageReaction, user) => {
 client3.on("messageReactionAdd", async (messageReaction, user) => {
     if(user.id === "836240368206872576") return;
     try {
-
+    point = '4';
         let channel = await client3.channels.cache.get(channel_id);
         let message = await channel.messages.fetch(message3_id);
         var user = messageReaction.message.guild.members.cache.get(user.id);
@@ -289,7 +300,9 @@ client3.on("messageReactionAdd", async (messageReaction, user) => {
             user.roles.add(r30);
         };
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 }); 
 
@@ -298,7 +311,7 @@ client3.on("messageReactionAdd", async (messageReaction, user) => {
 client3.on("messageReactionRemove", async (messageReaction, user) => {
     if(user.id === "836240368206872576") return;
     try {
-
+    point = '5';
         let channel = await client3.channels.cache.get(channel_id);
         let message = await channel.messages.fetch(message1_id);
         var user = messageReaction.message.guild.members.cache.get(user.id);
@@ -344,14 +357,16 @@ client3.on("messageReactionRemove", async (messageReaction, user) => {
             user.roles.remove(r10);
         };
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 });
 
 client3.on("messageReactionRemove", async (messageReaction, user) => {
     if(user.id === "836240368206872576") return;
     try {
-
+    point = '6';
         let channel = await client3.channels.cache.get(channel_id);
         let message = await channel.messages.fetch(message1_id);
         var user = messageReaction.message.guild.members.cache.get(user.id);
@@ -397,14 +412,16 @@ client3.on("messageReactionRemove", async (messageReaction, user) => {
             user.roles.remove(r20);
         };
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 });
 
 client3.on("messageReactionRemove", async (messageReaction, user) => {
     if(user.id === "836240368206872576") return;
     try {
-
+    point = '7';
         let channel = await client3.channels.cache.get(channel_id);
         let message = await channel.messages.fetch(message1_id);
         var user = messageReaction.message.guild.members.cache.get(user.id);
@@ -450,13 +467,16 @@ client3.on("messageReactionRemove", async (messageReaction, user) => {
             user.roles.remove(r30);
         };
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 });
 
 //--------------------------------------------------------------------------------------------------------------rolewelcom
 
 client3.on("ready", async () => {
+    point = '8';
     try {
         await delay(1000); 
         let channel = await client3.channels.cache.get(channel2_id);
@@ -465,7 +485,9 @@ client3.on("ready", async () => {
         var message = await channel.messages.fetch(message6_id);
         return;
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 }); 
 
@@ -488,6 +510,7 @@ var fl2 = false;
 var fl3 = false;
 client3.on("messageReactionAdd", async (messageReaction, user) => {
     if (user.id === "836240368206872576") return;
+    point = '9';
     try {
         let channel = await client3.channels.cache.get(channel2_id);
         let message = await channel.messages.fetch(message4_id);
@@ -505,12 +528,15 @@ client3.on("messageReactionAdd", async (messageReaction, user) => {
             okey(messageReaction, user);
         };
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 });
 
 client3.on("messageReactionRemove", async (messageReaction, user) => {
     if (user.id === "836240368206872576") return;
+    point = '10';
     try {
         let channel = await client3.channels.cache.get(channel2_id);
         var user = messageReaction.message.guild.members.cache.get(user.id);
@@ -527,7 +553,9 @@ client3.on("messageReactionRemove", async (messageReaction, user) => {
             user.roles.add(fg3);
         };
     } catch (err) {
-        console.log(err);
+      let center = client3.channels.cache.get('522817871370387472');
+      center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+      console.log(err);
     }
 });
 
