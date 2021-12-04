@@ -6,6 +6,9 @@ const poetry = require('./poetry.json');
 const ahegao = require('./poetry.json');
 const { fire, tea } = require('./poetry.json');
 
+const page = 'reaction';
+var point = '';
+
 client2.on("ready", () => {
     console.log('Реакции Мерлая готовы');
 });
@@ -14,7 +17,9 @@ function getRandom(l, r) {
     return Math.round((Math.random() * r)) % (r - l) + l;
 }
 
-client2.on("message", (msg) => {
+client2.on("message", async (msg) => {
+  try {
+  point = '1';
   if (msg.author.id === "523116257390886954" && msg.content.toLowerCase().indexOf("часть смерти явно")!=-1) { 
       msg.react("768469879211687936");
   };
@@ -50,6 +55,11 @@ client2.on("message", (msg) => {
         const fir = fire[randomIndex];
         msg.react(fir);
     };
+  } catch (err) { 
+    let center = client2.channels.cache.get('522817871370387472');
+    center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+    console.log(err); 
+  };
 });
 
 
