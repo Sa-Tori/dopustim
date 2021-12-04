@@ -6,6 +6,8 @@ const client = new Discord.Client();
 
 const poetry = require('./poetry.json');
 const {noprefix, shprefix, fear} = require('./poetry.json');
+const page = 'answer';
+var point = '';
 
 //сообщения
 
@@ -13,7 +15,9 @@ client.on ("ready", () => {
     console.log("Ответы Картуса готовы");
 });
 
-client.on("message", (msg) => {
+client.on("message", async (msg) => {
+  point = '1';
+  try {
     /*if (msg.content.startsWith("ping")) {
         if (msg.author.id === "224197682510561280") {
             msg.channel.send("Отстань от Кофуку ");
@@ -98,6 +102,11 @@ client.on("message", (msg) => {
         const fe = fear[f];
         msg.channel.send(fe);
     };
+  } catch (err) { 
+  let center = client.channels.cache.get('522817871370387472');
+  center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.);
+  console.log(err); 
+ };
 });
 
 /*client.on("message", async (msg) => {
