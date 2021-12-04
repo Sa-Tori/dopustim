@@ -2,14 +2,16 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const { Client, MessageEmbed } = require('discord.js');
 const poetry = require('./poetry.json');
+const page = 'embeds';
+var point = '';
 
 client.on("ready", () => {
   console.log("Эмберы готовы");
 });
 
-
-   client.on('message', message => {
- 
+client.on('message', async (message) => {
+point = '1';
+try { 
   if (message.content === "Привет" && message.author.id != "542663623789641729") {
     const embed = new MessageEmbed()
       .setTitle("Приветствие")
@@ -87,6 +89,11 @@ client.on("ready", () => {
         .setImage("https://media1.tenor.com/images/25ec03203265dee174003d8557e7c668/tenor.gif");
     message.channel.send(embed);
     };
+ } catch (err) { 
+   let center = client.channels.cache.get('522817871370387472');
+   center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+   console.log(err); 
+ };
 });
 
 
@@ -104,7 +111,9 @@ function isFinded(s, morn, morn2) {
     return false;
 }
 
-client.on('message', msg => {
+client.on('message', async msg => {
+  point = '2';
+  try { 
     let control = client.channels.cache.get('878520465856036935');
     let UserTag = msg.author.tag;
     let us = client.users.cache.get('523116257390886954');
@@ -172,8 +181,12 @@ client.on('message', msg => {
             .setTimestamp();
         palish.send(embed);
       };*/
-     
-    
+   
+ } catch (err) { 
+   let center = client.channels.cache.get('522817871370387472');
+   center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+   console.log(err); 
+ };
 });
 
 
