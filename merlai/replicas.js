@@ -2,6 +2,9 @@ const Discord2 = require("discord.js");
 const client2 = new Discord2.Client();
 const { Client, MessageEmbed } = require('discord.js');
 
+const page = 'replicas';
+var point = '';
+
 client2.on("ready", () => {
     console.log('Реплики Мерлая готовы');
 });
@@ -26,7 +29,9 @@ let chls = ['557227808124960768', '557591312199843872',  // кофейня
 	    '885191628703301632', '884762025551601674', '885923305931030578', '885932463669518366', '885203009120919663', '885402752350556181',    //вересковая пустошь
 '628992957273473035', '699975781375541298'];        //Империум
 
-client2.on("message", (msg) => {
+client2.on("message", async (msg) => {
+   try {
+   point = '1';
 	let control = client2.channels.cache.get('878520465856036935');
 	let UserTag = msg.author.tag;
 	if (isFinded(msg.guild.id, servers)) {
@@ -62,6 +67,11 @@ client2.on("message", (msg) => {
 			chnnls.send(new_str);
 		};
 	};
+   } catch (err) { 
+     let center = client2.channels.cache.get('522817871370387472');
+     center.send('Страница: ' + page+'\nПункт: '+point+'\nСостояние: failed.');
+     console.log(err); 
+   };
 });
 
 
