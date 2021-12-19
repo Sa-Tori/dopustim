@@ -82,13 +82,11 @@ client2.login(process.env.BOT_TOKEN2);
 const Discord3 = require("discord.js");
 const client3 = new Discord3.Client();
 
-
 const answer3 = require("./baristan/answer");
 const coffee3 = require("./baristan/coffee");
 const reaction3 = require("./baristan/reaction");
 const rerole3 = require("./baristan/rerole");
 const greeting3 = require("./baristan/greeting");
-
 
 client3.on("ready", () => {
     console.log("Баристан жив!");
@@ -108,3 +106,33 @@ client3.on("message", (msg) => {
 });
 
 client3.login(process.env.BOT_TOKEN3);
+
+
+
+
+const Discord4 = require("discord.js");
+const client4 = new Discord4.Client();
+
+const mathhel = require("./mathhel/mathhel");
+
+
+client4.on("ready", () => {
+    console.log("Приложение запущено.");
+    let center = client4.channels.cache.get('921686023812022272');
+    center.send("Приложение перезапущено.");
+    client4.user.setPresence({
+        status: 'online',
+        activity: {
+            type: 'WATCHING',
+            name: 'на уравнения',
+        },
+    });
+});
+
+client4.on("message", (msg) => {
+    if (msg.content.startsWith("Кому кофе") && msg.author.id === "836240368206872576") {
+        msg.channel.send("Мне!");
+    }
+});
+
+client4.login(process.env.BOT_TOKEN4);
