@@ -191,7 +191,7 @@ client4.on('message', async (msg) => {
 	try {
 		if (msg.content.toLowerCase().indexOf("нов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
 			const rng = getRandom(1, 6);
-			if (msg.content.toLowerCase().indexOf("") != -1 || rng == 1) {
+			if (rng == 1) {
 				msg.react("909086950496018503");
 				msg.react("909086950672203836");
 				msg.react("909086950605082644");
