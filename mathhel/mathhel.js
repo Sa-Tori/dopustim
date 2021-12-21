@@ -345,7 +345,7 @@ client4.on("message", async (msg) => {
 			for (var i = 0; i < terms.length; i++)
 				if (lowerCase(terms[i]).includes(rd))
 					b.push(terms[i]);
-			if (b.length != 0 && (getRandom(0, 100) == 72 || fl == 1)) {
+			if (b.length != 0 && (getRandom(0, 10) == 7 || fl == 1)) {
 				var t = getRandom(0, b.length);
 				msg.channel.send("```" + b[t] + "```");
 			}
