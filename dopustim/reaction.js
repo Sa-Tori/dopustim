@@ -99,7 +99,7 @@ client.on("message", async (msg) => {
             msg.react("909086950030446653");
             msg.react("909086950022078484");
         }
-    }; 
+    };  
     if (msg.content.toLowerCase().indexOf("зажги") != -1 || msg.content.toLowerCase().indexOf("гори") != -1) {
         const ng = poetry.ng;
         const randomIndex = Math.floor(Math.random() * ng.length);
