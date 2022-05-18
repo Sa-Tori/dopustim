@@ -54,7 +54,7 @@ client.on("message", async (msg) => {
         const randomIndex = Math.floor(Math.random() * fire.length);
         const fir = fire[randomIndex];
         msg.react(fir);
-    };*/
+    };*/ 
 //чайные реакции 
     /*if ((msg.author.id === "654810705903484949" && (getRandom(0, 2) == 1)) || (msg.guild.id == "532954366571708427" && (msg.content.toLowerCase().indexOf("чай") != -1 || msg.content.toLowerCase().indexOf("чая ") != -1))) {
         if (msg.content.toLowerCase().indexOf("новый год") != -1) return;
