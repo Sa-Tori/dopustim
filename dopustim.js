@@ -33,7 +33,7 @@ client.on("ready", () => {
 });
 
 client.on("message", (msg) => {
-    if (msg.content.toLowerCase().indexOf("отчет") != -1 && msg.author.id === "542663623789641729") {
+    if (msg.content.toLowerCase().indexOf("перекличка") != -1 && msg.author.id === "542663623789641729") {
         msg.channel.send("Изменения приняты, я жиф!");
     }
 });
