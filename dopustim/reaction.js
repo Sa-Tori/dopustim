@@ -64,7 +64,7 @@ client.on("message", async (msg) => {
         const reactionEmoji = client.emojis.cache.get(flot);
         msg.react(reactionEmoji);
     };*/
-    /*if (msg.content.toLowerCase().indexOf("ов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
+    if (msg.content.toLowerCase().indexOf("нов") != -1 && msg.content.toLowerCase().indexOf("год") != -1) {
         const rng = getRandom(1, 6);
         if (rng == 1) {
             msg.react("909086950496018503");
@@ -105,7 +105,7 @@ client.on("message", async (msg) => {
         const randomIndex = Math.floor(Math.random() * ng.length);
         const emoji = ng[randomIndex];
         msg.channel.send(emoji);
-    };*/
+    };
     if (msg.content.toLowerCase().indexOf("хлеп") != -1) {
         msg.channel.send("<a:g2774:760531480824512512>");
     };
