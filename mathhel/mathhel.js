@@ -7,6 +7,13 @@ const poetry = require('./poetry.json');
 var event = '';
 var point = '';
 
+client4.on('guildMemberAdd',  async (member) => {
+    const channel = member.guild.channels.cache.get('1122856220567539752');
+    if (!channel) return;
+    var role = member.guild.roles.cache.find(role => role.id === "1122852244245729321");
+    member.roles.add(role);
+});
+
 client4.on("ready", () => {
 	console.log("Приложение подключено");
 });
