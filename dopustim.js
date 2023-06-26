@@ -109,7 +109,7 @@ client3.login(process.env.BOT_TOKEN3);
 
 
 
-/*
+
 const Discord4 = require("discord.js");
 const client4 = new Discord4.Client();
 
@@ -135,4 +135,4 @@ client4.on("message", (msg) => {
     }
 });
 
-client4.login(process.env.BOT_TOKEN4);*/
+client4.login(process.env.BOT_TOKEN4);
