@@ -59,6 +59,37 @@ client.on('guildMemberAdd', async (member) => {
     };
 });
 
+//приветствие дипломной работы
+client.on('guildMemberAdd', async (member) => {
+    let greet = poetry.greet;
+    const channel = member.guild.channels.cache.get('1122856220567539752');
+    if (!channel) return;
+    let fl = 0;
+    try {
+        if (channel) {
+            let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
+            await delay(5 * 1000);
+            let str = member.id;
+            str = str + "";
+            if (str.lastIndexOf('3') == 17 || str.lastIndexOf('5') == 17 || str.lastIndexOf('9') == 17) {
+                if (getRandom(1, 2) == 2) {
+                    greet = poetry.greet2;
+                    fl = 1;
+                }
+                let r = Math.floor(Math.random() * greet.length);
+                const greeting = greet[r];
+                if (fl == 1) channel.send('${member}' + greeting);
+                else channel.send(greeting);
+            }
+        }
+    } catch (err) {
+        msg.channel.send('<@542663623789641729> мам, я упал <a:hlepng:882291167948079165>');
+        let control = client.channels.cache.get('878520465856036935');
+        control.send('Мама, хлеп!');
+        console.log(err);
+    };
+});
+
 client.on("message", async (msg) => {
     try {
         let delay = async (duration) => { await new Promise(resolve => setTimeout(resolve, duration)) };
